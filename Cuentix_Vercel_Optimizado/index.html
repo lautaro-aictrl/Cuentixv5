@@ -51,7 +51,7 @@ import { createClient } from 'https://esm.sh/@supabase/supabase-js@2.43.4';
 
 const PROJECT_URL = 'https://yedcpumndtmdnczalspg.supabase.co';
 const ANON_KEY = 'sb_publishable_gtYK6qmfLMku2oxgBtRPzQ_Jg_iVEL9';
-const APP_VERSION = '2026.05.11.8';
+const APP_VERSION = '2026.05.11.9';
 const supabase = createClient(PROJECT_URL, ANON_KEY, {
   auth: {
     persistSession: true,
@@ -393,12 +393,12 @@ function openForm(type,id){
     supplier_movement:['Movimiento A Pagar','supplier_movements',[['supplier_id','Proveedor','selectRows','suppliers'],['reference','Número / referencia'],['issue_date','Fecha','date'],['due_date','Vencimiento','date'],['type','Tipo'],['currency','Moneda','select',['ARS','USD']],['amount','Importe','number'],['detail','Detalle'],['status','Estado','select',['pendiente','pagada','vencida']],['document','Adjunto','file']]],
     payment:['Pago','payments',[['client_id','Cliente','selectRows','clients'],['payment_date','Fecha','date'],['method','Medio','select',['efectivo','transferencia','cheque','tarjeta','Mercado Pago']],['currency','Moneda','select',['ARS','USD']],['amount','Importe','number'],['exchange_rate','Tipo de cambio','number'],['reference','Referencia'],['notes','Notas']]],
     supplier_payment:['Pago a proveedor','supplier_payments',[['supplier_id','Proveedor','selectRows','suppliers'],['payment_date','Fecha','date'],['method','Medio','select',['efectivo','transferencia','cheque','tarjeta','Mercado Pago']],['currency','Moneda','select',['ARS','USD']],['amount','Importe','number'],['exchange_rate','Tipo de cambio','number'],['reference','Referencia'],['notes','Notas']]],
-    budget:['Presupuesto','budgets',[['budget_number','Número'],['issue_date','Fecha','date'],['currency','Moneda','select',['ARS','USD']],['company_data','Datos empresa'],['budget_client_name','Cliente'],['budget_client_tax','CUIT/NIF'],['budget_client_cif','CIF opcional'],['budget_client_address','Domicilio'],['budget_client_phone','Teléfono'],['budget_client_email','Email'],['payment_terms','Condición de venta / pago'],['discount_enabled','Agregar descuento','checkbox'],['items_text','Ítems: código | descripción | unidad | cantidad | precio | descuento'],['iva','IVA %','number'],['color','Color de barras','color'],['logo','Logo','file']]],
+    budget:['Presupuesto','budgets',[['budget_number','Número'],['issue_date','Fecha','date'],['currency','Moneda','select',['ARS','USD']],['company_data','Datos empresa'],['budget_client_name','Cliente'],['budget_client_tax','CUIT/NIF'],['budget_client_cif','CIF opcional'],['budget_client_address','Domicilio'],['budget_client_phone','Teléfono'],['budget_client_email','Email'],['payment_terms','Condición de venta / pago'],['discount_enabled','Agregar descuento','checkbox'],['iva','IVA %','number'],['color','Color de barras','color'],['logo','Logo','file']]],
     reminder:['Recordatorio','reminders',[['title','Título'],['due_date','Fecha límite','date'],['notes','Notas']]]
   };
   const [title,table,fields] = configs[type];
   byId('modalTitle').textContent = `${id?'Editar':'Nuevo'} ${title}`;
-  byId('modalBody').innerHTML = `<div class="grid2">${fields.map(f=>fieldHtml(f,row)).join('')}</div><div id="modalMsg"></div>`;
+  byId('modalBody').innerHTML = `<div class="grid2">${fields.map(f=>fieldHtml(f,row)).join('')}</div>${type==='budget'?'<input type="hidden" name="items_text"><div id="budgetItemsEditor" style="grid-column:1/-1"></div>':''}<div id="modalMsg"></div>`;
   const saveButton = byId('modalForm').querySelector('.btn-primary');
   saveButton.disabled = false;
   saveButton.textContent = 'Guardar';
@@ -415,8 +415,7 @@ function openForm(type,id){
       for(const f of fields){
         if(f[2]==='file') continue;
         if(type === 'budget' && f[0].startsWith('budget_')) continue;
-        if(f[0]==='items_text') payload.items = parseItems(fd.get(f[0]));
-        else payload[f[0]] = fd.get(f[0]) || null;
+        payload[f[0]] = fd.get(f[0]) || null;
       }
       if(type==='client' && !id) payload.opening_balance = 0;
       if(type==='budget'){
@@ -433,6 +432,7 @@ function openForm(type,id){
           `Cond. Vta.: ${fd.get('payment_terms') || ''}`
         ].join('\n');
         payload.discount_enabled = fd.get('discount_enabled') === 'on';
+        payload.items = readBudgetItems();
         payload.total = totalItems(payload.items, Number(payload.iva||0));
         if(!payload.budget_number) payload.budget_number = `P-${today().replaceAll('-','')}-${String(state.data.budgets.length+1).padStart(4,'0')}`;
         if(!payload.items.length) throw new Error('Agregá al menos un ítem al presupuesto.');
@@ -460,7 +460,6 @@ function fieldHtml(f,row){
   if(type==='checkbox') return `<div><label>${label}</label><input name="${name}" type="checkbox" ${row?.[name]?'checked':''}></div>`;
   if(type==='selectRows') return `<div><label>${label}</label><select name="${name}" required><option value="">Seleccionar</option>${state.data[opt].map(r=>`<option value="${r.id}" ${r.id===val?'selected':''}>${esc(r.name)}</option>`).join('')}</select></div>`;
   if(type==='file') return `<div><label>${label}</label><input name="${name}" type="file" accept="image/*,.pdf"></div>`;
-  if(name==='items_text') return `<div style="grid-column:1/-1"><label>Ítems</label><input type="hidden" name="${name}" value="${esc((row.items||[]).map(i=>[i.code,i.description,i.unit,i.quantity,i.unit_price,i.discount].join(' | ')).join('\\n'))}"><div id="budgetItemsEditor"></div></div>`;
   if(name.startsWith('budget_client_')) return `<div><label>${label}</label><input name="${name}" type="${type||'text'}" value="${esc(budgetClientField(row,name))}"></div>`;
   return `<div><label>${label}</label><input name="${name}" type="${type||'text'}" value="${esc(val)}"></div>`;
 }
