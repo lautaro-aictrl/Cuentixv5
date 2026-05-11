@@ -16,6 +16,7 @@ input,select,textarea{width:100%;padding:10px 14px;border:1.5px solid var(--line
 .section{display:none;animation:fadeUp .22s ease}.section.active{display:block}@keyframes fadeUp{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}.panel{padding:22px}.panel h2{margin:0 0 4px;font-size:24px;color:var(--brand2);font-weight:800;letter-spacing:-.5px}.toolbar{display:flex;gap:10px;justify-content:space-between;align-items:center;flex-wrap:wrap;margin-bottom:18px}.stats{display:grid;grid-template-columns:repeat(5,minmax(160px,1fr));gap:14px;margin-bottom:22px}.stat{padding:20px 22px;position:relative;overflow:hidden}.stat::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--brand),#49C464);opacity:.4}.stat .t{font-size:12px;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.05em}.stat .v{font-size:26px;font-weight:800;margin-top:8px;color:var(--brand2);letter-spacing:-.5px}
 .table-wrap{overflow:auto;border-radius:12px;border:1px solid var(--line)}.table{width:100%;border-collapse:collapse}.table th{padding:11px 14px;border-bottom:1.5px solid var(--line);text-align:left;font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;font-weight:700;background:#fafcff}.table td{padding:12px 14px;border-bottom:1px solid #f0f4f9;font-size:14px;vertical-align:middle}.table tbody tr:hover{background:#f5f9ff}.actions{display:flex;gap:5px;flex-wrap:wrap}.badge{display:inline-flex;align-items:center;padding:3px 10px;border-radius:999px;font-size:11px;font-weight:700}.b-ok{background:#dcfce7;color:#166534}.b-bad{background:#fee2e2;color:#991b1b}.b-warn,.b-pend{background:#fef3c7;color:#92400e}.empty{padding:32px;text-align:center;color:var(--muted);font-size:14px}.modal{position:fixed;inset:0;background:rgba(15,23,42,.5);display:none;align-items:center;justify-content:center;padding:16px;z-index:60;backdrop-filter:blur(4px)}.modal.open{display:flex}.box{width:min(860px,100%);background:#fff;border-radius:20px;border:1px solid var(--line);box-shadow:0 24px 60px rgba(0,0,0,.2);overflow:hidden}.head{padding:18px 22px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;background:#fafcff}.body{padding:22px;max-height:72vh;overflow:auto}.foot{padding:14px 22px;border-top:1px solid var(--line);display:flex;justify-content:flex-end;gap:10px;background:#fafcff}.close{background:none;color:var(--muted);font-size:20px;padding:4px 8px}.file-chip{display:inline-flex;align-items:center;background:#fef3c7;color:#92400e;border-radius:6px;padding:4px 10px;font-size:12px;font-weight:600}.status-dot{width:9px;height:9px;border-radius:50%;display:inline-block;background:#d1d5db}.status-dot.online{background:#22c55e;box-shadow:0 0 0 3px rgba(34,197,94,.25)}
 @media(max-width:960px){.auth{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}.grid3,.grid4{grid-template-columns:1fr}.topbar{height:auto;padding:14px 16px}.tabs{width:100%}}@media(max-width:640px){.stats,.grid2{grid-template-columns:1fr}.brand h1,.topbar .brand h1{font-size:20px}.tab{font-size:13px;padding:8px 12px}}
+.item-editor-title{display:flex;justify-content:space-between;gap:10px;align-items:center;margin:8px 0}.item-grid-head{display:grid;grid-template-columns:1fr 2fr 1.15fr 1.1fr 1fr .9fr .9fr 1.3fr;gap:6px;font-size:11px;color:var(--muted);font-weight:800;text-transform:uppercase;letter-spacing:.04em;margin:12px 0 6px}.item-row,.item-row.no-discount{display:grid;grid-template-columns:1fr 2fr 1.15fr 1.1fr 1fr 1fr 1.3fr;gap:6px;align-items:end;margin-bottom:8px;padding:8px;border:1px solid var(--line);border-radius:12px;background:#fafcff}.item-row.has-discount{grid-template-columns:1fr 2fr 1.15fr 1.1fr 1fr .9fr .9fr 1.3fr}.code-btn,.unit-btn,.qty-label{background:#e8eff7;color:var(--brand2);border-radius:8px;padding:8px 9px;text-align:center;font-weight:800;font-size:12px}.qty-box{display:flex;gap:4px}.qty-box input{text-align:center}.item-row input,.item-row select{padding:8px 9px;font-size:13px}.item-actions{display:flex;gap:4px;flex-wrap:wrap}@media(max-width:900px){.item-grid-head{display:none}.item-row,.item-row.no-discount,.item-row.has-discount{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -50,7 +51,7 @@ import { createClient } from 'https://esm.sh/@supabase/supabase-js@2.43.4';
 
 const PROJECT_URL = 'https://yedcpumndtmdnczalspg.supabase.co';
 const ANON_KEY = 'sb_publishable_gtYK6qmfLMku2oxgBtRPzQ_Jg_iVEL9';
-const APP_VERSION = '2026.05.11.6';
+const APP_VERSION = '2026.05.11.8';
 const supabase = createClient(PROJECT_URL, ANON_KEY, {
   auth: {
     persistSession: true,
@@ -398,12 +399,16 @@ function openForm(type,id){
   const [title,table,fields] = configs[type];
   byId('modalTitle').textContent = `${id?'Editar':'Nuevo'} ${title}`;
   byId('modalBody').innerHTML = `<div class="grid2">${fields.map(f=>fieldHtml(f,row)).join('')}</div><div id="modalMsg"></div>`;
+  const saveButton = byId('modalForm').querySelector('.btn-primary');
+  saveButton.disabled = false;
+  saveButton.textContent = 'Guardar';
   byId('modal').classList.add('open');
   if(type === 'budget') setupBudgetModal(row);
   byId('modalForm').onsubmit = async e => {
     e.preventDefault();
     const submitButton = byId('modalForm').querySelector('.btn-primary');
     submitButton.disabled = true;
+    submitButton.textContent = 'Guardando...';
     try {
       if(type === 'budget') syncBudgetItemsToHidden();
       const fd = new FormData(e.target); const payload = { business_id: state.profile.business_id };
@@ -438,10 +443,13 @@ function openForm(type,id){
       const { error } = await q;
       if(error) throw error;
       msg(byId('modalMsg'),'Guardado correctamente.','ok');
+      submitButton.disabled = false;
+      submitButton.textContent = 'Guardar';
       closeModal(); await refreshBusinessData();
     } catch(error) {
       msg(byId('modalMsg'),`Error al guardar: ${error.message || error}`);
       submitButton.disabled = false;
+      submitButton.textContent = 'Guardar';
     }
   };
 }
@@ -491,8 +499,8 @@ function renderBudgetItems(items){
   if(!editor) return;
   const discount = byId('modalForm').discount_enabled?.checked;
   const templates = state.data.budget_item_templates || [];
-  editor.innerHTML = `<div class="item-tools"><button type="button" class="btn-secondary mini-btn" data-add-item="Ítem">+ Agregar ítem</button><button type="button" class="btn-secondary mini-btn" data-add-item="Producto">+ Producto</button><button type="button" class="btn-secondary mini-btn" data-add-item="Servicio">+ Servicio</button><button type="button" class="btn-secondary mini-btn" data-add-item="Mano de obra">+ Mano de obra</button><button type="button" class="btn-secondary mini-btn" data-add-item="Material">+ Material</button><button type="button" class="btn-secondary mini-btn" data-add-item="Otro">+ Otro</button>${templates.length?`<select id="templatePick" style="width:auto"><option value="">Plantillas frecuentes</option>${templates.map(t=>`<option value="${t.id}">${esc(t.description)}</option>`).join('')}</select>`:''}</div>
-  <div id="budgetItemRows">${items.map((item,i)=>itemRowHtml(item,i,discount)).join('')}</div><div class="budget-total-line"><span>Subtotal: <b id="budgetSubtotal"></b></span><span>Total: <b id="budgetGrandTotal"></b></span></div>`;
+  editor.innerHTML = `<div class="item-editor-title"><b>Ítems del presupuesto</b><span class="small">Elegí código, U.M. y cantidad por ítem. Descripción y precio se escriben manualmente.</span></div><div class="item-tools"><button type="button" class="btn-secondary mini-btn" data-add-item="Ítem">+ Agregar ítem</button><button type="button" class="btn-secondary mini-btn" data-add-item="Producto">+ Producto</button><button type="button" class="btn-secondary mini-btn" data-add-item="Servicio">+ Servicio</button><button type="button" class="btn-secondary mini-btn" data-add-item="Mano de obra">+ Mano de obra</button><button type="button" class="btn-secondary mini-btn" data-add-item="Material">+ Material</button><button type="button" class="btn-secondary mini-btn" data-add-item="Otro">+ Otro</button>${templates.length?`<select id="templatePick" style="width:auto"><option value="">Plantillas frecuentes</option>${templates.map(t=>`<option value="${t.id}">${esc(t.description)}</option>`).join('')}</select>`:''}</div>
+  <div class="item-grid-head ${discount?'':'no-discount'}"><span>Código</span><span>Descripción</span><span>U.M.</span><span>Cantidad</span><span>Precio</span>${discount?'<span>Desc.</span><span>Precio desc.</span>':''}<span>Importe</span><span>Acciones</span></div><div id="budgetItemRows">${items.map((item,i)=>itemRowHtml(item,i,discount)).join('')}</div><div class="budget-total-line"><span>Subtotal: <b id="budgetSubtotal"></b></span><span>Total: <b id="budgetGrandTotal"></b></span></div>`;
   editor.querySelectorAll('[data-add-item]').forEach(b=>b.onclick=()=>{const arr=readBudgetItems();arr.push({code:'',description:b.dataset.addItem,unit:b.dataset.addItem==='Servicio'?'Servicio':'Unidad',quantity:1,unit_price:0,discount:0});renderBudgetItems(arr);});
   const pick = byId('templatePick');
   if(pick) pick.onchange=()=>{const t=templates.find(x=>x.id===pick.value); if(t){const arr=readBudgetItems();arr.push({code:t.code||'',description:t.description,unit:t.unit,quantity:1,unit_price:Number(t.price||0),discount:0});renderBudgetItems(arr);}};
@@ -504,11 +512,11 @@ function itemRowHtml(item,i,discount){
   const unit = unitOptions.includes(item.unit) ? item.unit : 'Otro';
   const custom = unit === 'Otro' ? item.unit : '';
   const totals = itemTotals(item);
-  return `<div class="item-row ${discount?'':'no-discount'}" data-row="${i}">
-    <input data-field="code" placeholder="Código" value="${esc(item.code||'')}">
+  return `<div class="item-row ${discount?'has-discount':'no-discount'}" data-row="${i}">
+    <div><button type="button" class="code-btn" data-action="code" data-index="${i}">CÓDIGO</button><input data-field="code" placeholder="Código" value="${esc(item.code||'')}" style="margin-top:4px"></div>
     <input data-field="description" placeholder="Descripción" value="${esc(item.description||'')}">
-    <div><select data-field="unit">${unitOptions.map(u=>`<option ${u===unit?'selected':''}>${u}</option>`).join('')}</select><input class="${unit==='Otro'?'':'hidden'}" data-field="unit_custom" placeholder="U.M." value="${esc(custom)}" style="margin-top:4px"></div>
-    <div class="qty-box"><button type="button" data-action="dec" data-index="${i}">-</button><input data-field="quantity" type="number" min="0" step="0.01" value="${Number(item.quantity||0)}"><button type="button" data-action="inc" data-index="${i}">+</button></div>
+    <div><div class="unit-btn">U.M.</div><select data-field="unit" style="margin-top:4px">${unitOptions.map(u=>`<option ${u===unit?'selected':''}>${u}</option>`).join('')}</select><input class="${unit==='Otro'?'':'hidden'}" data-field="unit_custom" placeholder="U.M." value="${esc(custom)}" style="margin-top:4px"></div>
+    <div><div class="qty-label">CANTIDAD</div><div class="qty-box" style="margin-top:4px"><button type="button" data-action="dec" data-index="${i}">-</button><input data-field="quantity" type="number" min="0" step="0.01" value="${Number(item.quantity||0)}"><button type="button" data-action="inc" data-index="${i}">+</button></div></div>
     <input data-field="unit_price" type="number" min="0" step="0.01" placeholder="Precio" value="${Number(item.unit_price||0)}">
     ${discount?`<input data-field="discount" type="number" min="0" max="100" step="0.01" placeholder="% desc." value="${Number(item.discount||0)}"><input readonly value="${money(totals.priceWithDiscount,byId('modalForm').currency?.value||'ARS')}">`:''}
     <input readonly value="${money(totals.amount,byId('modalForm').currency?.value||'ARS')}">
@@ -537,6 +545,11 @@ function updateBudgetTotals(){
 }
 async function budgetItemAction(action,index){
   const arr = readBudgetItems();
+  if(action==='code'){
+    const current = arr[index]?.code || '';
+    const next = prompt('Código del ítem', current);
+    if(next !== null) arr[index].code = next.trim();
+  }
   if(action==='inc') arr[index].quantity += 1;
   if(action==='dec') arr[index].quantity = Math.max(0,arr[index].quantity-1);
   if(action==='dup') arr.splice(index+1,0,{...arr[index]});
@@ -618,7 +631,12 @@ async function printBudget(id){
   <div class="terms">Condiciones de pago: ${esc(b.payment_terms||'')}</div><div class="sign"><div class="line">Firma de la Empresa</div><div class="line">Firma del Cliente</div></div></div></body></html>`);
   win.document.close();
 }
-function closeModal(){byId('modal').classList.remove('open'); byId('modalForm').reset();}
+function closeModal(){
+  const btn = byId('modalForm').querySelector('.btn-primary');
+  if(btn){ btn.disabled = false; btn.textContent = 'Guardar'; }
+  byId('modal').classList.remove('open');
+  byId('modalForm').reset();
+}
 byId('modalClose').onclick=closeModal; byId('modalCancel').onclick=closeModal; byId('modal').onclick=e=>{if(e.target.id==='modal')closeModal();}
 
 function downloadCsv(filename, rows){ if(!rows?.length) return alert('Sin datos para exportar.'); const keys=Object.keys(rows[0]); const csv=[keys.join(','),...rows.map(r=>keys.map(k=>`"${String(r[k]??'').replaceAll('"','""')}"`).join(','))].join('\\n'); const a=document.createElement('a'); a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8'})); a.download=filename; a.click(); URL.revokeObjectURL(a.href); }
