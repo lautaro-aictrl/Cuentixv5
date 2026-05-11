@@ -8,7 +8,7 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap');
 :root{--bg:#eef3f8;--panel:#fff;--line:#d9e3ee;--text:#1f2937;--muted:#6b7280;--brand:#0F4C81;--brand2:#0B3154;--ok:#16a34a;--warn:#d97706;--bad:#dc2626;--radius:14px;--radius-sm:10px;--shadow:0 4px 20px rgba(14,32,61,.08);--shadow-lg:0 12px 40px rgba(14,32,61,.13);--transition:all .18s cubic-bezier(.4,0,.2,1)}
 *{box-sizing:border-box}html,body{margin:0;font-family:'DM Sans',Arial,sans-serif;color:var(--text);background:var(--bg)}body::before{content:"";position:fixed;inset:0;background-image:url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%230F4C81'/%3E%3Cstop offset='100%25' stop-color='%230B3154'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M28 14h38l26 26v52c0 7.7-6.3 14-14 14H28c-7.7 0-14-6.3-14-14V28c0-7.7 6.3-14 14-14z' fill='none' stroke='url(%23g)' stroke-width='6' stroke-linejoin='round'/%3E%3Cpath d='M66 14v18c0 5.5 4.5 10 10 10h16' fill='none' stroke='url(%23g)' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ctext x='40' y='56' text-anchor='middle' font-size='30' font-weight='700' fill='%230F4C81'%3E$%3C/text%3E%3Crect x='30' y='67' width='10' height='18' rx='2' fill='%2349C464'/%3E%3Crect x='46' y='58' width='10' height='27' rx='2' fill='%2349C464'/%3E%3Crect x='62' y='48' width='10' height='37' rx='2' fill='%2349C464'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:center;background-size:min(72vw,900px);opacity:.05;pointer-events:none}
-.hidden{display:none!important}.logo{width:60px;height:60px;flex:0 0 auto}.brand{display:flex;align-items:center;gap:14px}.brand h1{margin:0;font-size:32px;color:var(--brand2);line-height:1;font-weight:800;letter-spacing:-.5px}.brand p{margin:4px 0 0;color:var(--muted);font-size:14px}
+.hidden{display:none!important}.logo{width:60px;height:60px;flex:0 0 auto}.brand{display:flex;align-items:center;gap:14px}.brand h1{margin:0;font-size:32px;color:var(--brand2);line-height:1;font-weight:800;letter-spacing:-.5px}.brand p{margin:4px 0 0;color:var(--muted);font-size:14px}.view-loading{padding:28px;color:var(--muted);font-weight:700}.skeleton{height:12px;border-radius:999px;background:linear-gradient(90deg,#edf3f9,#fff,#edf3f9);background-size:220% 100%;animation:shimmer .8s linear infinite;margin:10px 0}.skeleton.big{height:42px;width:55%}@keyframes shimmer{to{background-position:-220% 0}}
 button{border:none;border-radius:var(--radius-sm);padding:9px 16px;font-weight:600;cursor:pointer;font-family:inherit;transition:var(--transition);font-size:14px;letter-spacing:-.01em}button:disabled{opacity:.5;cursor:not-allowed}button:active{transform:scale(.97)!important}.btn-primary{background:var(--brand);color:#fff;box-shadow:0 2px 8px rgba(15,76,129,.28)}.btn-primary:hover{background:#1560a0;box-shadow:0 4px 16px rgba(15,76,129,.38);transform:translateY(-1px)}.btn-secondary{background:#e8eff7;color:var(--brand2)}.btn-secondary:hover{background:#dae6f3;transform:translateY(-1px)}.btn-danger{background:#fee2e2;color:#991b1b}.btn-danger:hover{background:#fecaca;transform:translateY(-1px)}
 input,select,textarea{width:100%;padding:10px 14px;border:1.5px solid var(--line);border-radius:var(--radius-sm);background:#fff;font:inherit;font-size:14px;transition:var(--transition);outline:none;color:var(--text)}input:focus,select:focus,textarea:focus{border-color:var(--brand);box-shadow:0 0 0 3px rgba(15,76,129,.1)}label{display:block;font-size:12px;color:var(--muted);margin:0 0 5px 2px;font-weight:700;text-transform:uppercase;letter-spacing:.04em}
 .card{background:rgba(255,255,255,.97);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow)}.auth{max-width:620px;margin:26px auto;padding:16px;display:grid;grid-template-columns:1fr;gap:20px}.auth .card{padding:26px}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}.grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.small{font-size:13px;color:var(--muted)}.msg{margin-top:12px;padding:10px 14px;border-radius:var(--radius-sm);font-size:14px}.msg.err{background:#fee2e2;color:#991b1b}.msg.ok{background:#dcfce7;color:#166534}
@@ -50,15 +50,22 @@ import { createClient } from 'https://esm.sh/@supabase/supabase-js@2.43.4';
 
 const PROJECT_URL = 'https://yedcpumndtmdnczalspg.supabase.co';
 const ANON_KEY = 'sb_publishable_gtYK6qmfLMku2oxgBtRPzQ_Jg_iVEL9';
-const supabase = createClient(PROJECT_URL, ANON_KEY);
+const APP_VERSION = '2026.05.11.3';
+const supabase = createClient(PROJECT_URL, ANON_KEY, {
+  auth: {
+    persistSession: true,
+    autoRefreshToken: true,
+    detectSessionInUrl: false
+  }
+});
 
 const logo = `<svg class="logo" viewBox="0 0 120 120" aria-hidden="true"><defs><linearGradient id="cuentixBlue" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0F4C81"/><stop offset="100%" stop-color="#0B3154"/></linearGradient></defs><path d="M28 14h38l26 26v52c0 7.7-6.3 14-14 14H28c-7.7 0-14-6.3-14-14V28c0-7.7 6.3-14 14-14z" fill="none" stroke="url(#cuentixBlue)" stroke-width="6" stroke-linejoin="round"/><path d="M66 14v18c0 5.5 4.5 10 10 10h16" fill="none" stroke="url(#cuentixBlue)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><text x="40" y="56" text-anchor="middle" font-size="30" font-weight="700" fill="#0F4C81">$</text><rect x="30" y="67" width="10" height="18" rx="2" fill="#49C464"/><rect x="46" y="58" width="10" height="27" rx="2" fill="#49C464"/><rect x="62" y="48" width="10" height="37" rx="2" fill="#49C464"/></svg>`;
 document.getElementById('logoA').innerHTML = logo;
 document.getElementById('logoB').innerHTML = logo.replace('cuentixBlue','cuentixBlue2');
 
-const state = { session:null, profile:null, business:null, data:{}, tab:'resumen' };
+const state = { session:null, profile:null, business:null, data:{}, tab:'resumen', dataLoaded:false, dataLoading:null, booting:false };
 const tabs = [
-  ['resumen','📊 Resumen'],['clientes','👥 Clientes'],['cobrar','📋 A Cobrar'],['proveedores','🏭 Proveedores'],['pagar','💸 A Pagar'],['presupuestos','🧾 Presupuestos'],['pagos','💳 Pagos'],['cc','📒 Cuenta corriente'],['recordatorios','🔔 Recordatorios']
+  ['resumen','📊 Resumen'],['clientes','👥 Clientes'],['cobrar','📋 A Cobrar'],['pagos','💳 Pagos'],['proveedores','🏭 Proveedores'],['pagar','💸 A Pagar'],['presupuestos','🧾 Presupuestos'],['cc','📒 Cuenta corriente'],['recordatorios','🔔 Recordatorios']
 ];
 const tables = ['clients','invoices','payments','suppliers','supplier_movements','supplier_payments','budgets','reminders'];
 
@@ -69,37 +76,95 @@ function money(v,c='ARS'){return new Intl.NumberFormat('es-AR',{style:'currency'
 function esc(v){return String(v ?? '').replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]))}
 function today(){return new Date().toISOString().slice(0,10)}
 function badge(s){const cls = ['activo','al día','cobrada','pagada','hecho'].includes(s) ? 'b-ok' : ['moroso','vencida','inactivo'].includes(s) ? 'b-bad' : 'b-warn'; return `<span class="badge ${cls}">${esc(s||'pendiente')}</span>`}
+function setBusy(button, busy, text){
+  if(!button) return;
+  button.disabled = busy;
+  if(text) button.textContent = busy ? text : button.dataset.label || button.textContent;
+}
+function resetSessionState(){
+  state.session = null; state.profile = null; state.business = null; state.data = {}; state.tab = 'resumen'; state.dataLoaded = false; state.dataLoading = null;
+}
+function clearSupabaseSessionStorage(){
+  try {
+    Object.keys(localStorage).forEach(k => {
+      if(k.startsWith('sb-') || k.includes('supabase.auth')) localStorage.removeItem(k);
+    });
+    Object.keys(sessionStorage).forEach(k => {
+      if(k.startsWith('sb-') || k.includes('supabase.auth')) sessionStorage.removeItem(k);
+    });
+  } catch {}
+}
+function showShellLoading(){
+  byId('sections').innerHTML = `<section class="section active"><div class="card panel"><div class="skeleton big"></div><div class="skeleton"></div><div class="skeleton"></div><div class="view-loading">Cargando datos...</div></div></section>`;
+}
+function installVersionGuard(){
+  try {
+    const previous = localStorage.getItem('cuentix_app_version');
+    if(previous && previous !== APP_VERSION) {
+      sessionStorage.clear();
+    }
+    localStorage.setItem('cuentix_app_version', APP_VERSION);
+  } catch {}
+
+  setInterval(async () => {
+    try {
+      const res = await fetch(`${location.origin}${location.pathname}?vcheck=${Date.now()}`, { cache: 'no-store' });
+      const html = await res.text();
+      const match = html.match(/const APP_VERSION = '([^']+)'/);
+      if(match?.[1] && match[1] !== APP_VERSION) location.reload();
+    } catch {}
+  }, 120000);
+}
 
 async function login(){
   msg(byId('loginMsg'),'');
   const username = byId('loginUser').value.trim().toLowerCase();
   const password = byId('loginPass').value;
   if(!username || !password) return msg(byId('loginMsg'),'Ingresá usuario y contraseña.');
-  const { data:p } = await supabase.from('profiles').select('username,active').eq('username',username).maybeSingle();
-  if(!p || !p.active) return msg(byId('loginMsg'),'Usuario inexistente o inactivo.');
-  const { error } = await supabase.auth.signInWithPassword({ email: emailForUsername(username), password });
-  if(error) return msg(byId('loginMsg'),'Usuario o contraseña incorrectos.');
+  const btn = byId('btnLogin');
+  btn.dataset.label = btn.dataset.label || btn.textContent;
+  setBusy(btn, true, 'Ingresando...');
+  try {
+    const { data, error } = await supabase.auth.signInWithPassword({ email: emailForUsername(username), password });
+    if(error) return msg(byId('loginMsg'),'Usuario o contraseña incorrectos.');
+    await init(data.session);
+  } finally {
+    setBusy(btn, false);
+  }
 }
 
-async function init(){
-  const { data } = await supabase.auth.getSession();
-  state.session = data.session;
+async function init(existingSession){
+  if(state.booting) return;
+  state.booting = true;
+  const session = existingSession || (await supabase.auth.getSession()).data.session;
+  state.session = session;
   if(!state.session) return showAuth();
   const { data:profile, error } = await supabase.from('profiles').select('*').eq('id',state.session.user.id).single();
-  if(error || !profile?.active){ await supabase.auth.signOut(); return showAuth(); }
+  if(error || !profile?.active){ resetSessionState(); await supabase.auth.signOut(); state.booting = false; return showAuth(); }
   state.profile = profile;
-  await supabase.from('profiles').update({last_seen_at:new Date().toISOString(),online_at:new Date().toISOString()}).eq('id',profile.id);
+  supabase.from('profiles').update({last_seen_at:new Date().toISOString(),online_at:new Date().toISOString()}).eq('id',profile.id);
   showApp();
+  state.booting = false;
 }
-supabase.auth.onAuthStateChange(() => init());
+supabase.auth.onAuthStateChange((event, session) => {
+  if(event === 'SIGNED_OUT') { resetSessionState(); showAuth(); }
+  if(event === 'TOKEN_REFRESHED') state.session = session;
+});
 byId('btnLogin').onclick = login;
-byId('btnLogout').onclick = () => supabase.auth.signOut();
+byId('btnLogout').onclick = () => {
+  const oldProfile = state.profile;
+  if(oldProfile?.id) supabase.from('profiles').update({online_at:null}).eq('id',oldProfile.id);
+  resetSessionState();
+  clearSupabaseSessionStorage();
+  showAuth();
+  supabase.auth.signOut().catch(() => {});
+};
 
-function showAuth(){byId('auth').classList.remove('hidden');byId('app').classList.add('hidden')}
+function showAuth(){state.booting=false;byId('auth').classList.remove('hidden');byId('app').classList.add('hidden');byId('loginPass').value='';msg(byId('loginMsg'),'')}
 async function showApp(){
   byId('auth').classList.add('hidden');byId('app').classList.remove('hidden');
   byId('sessionLabel').textContent = `${state.profile.username} · ${state.profile.role}`;
-  if(state.profile.role === 'admin') await renderAdmin(); else await renderBusiness();
+  if(state.profile.role === 'admin') renderAdmin(); else renderBusiness();
 }
 
 async function callFn(name, body){
@@ -160,24 +225,48 @@ async function renderAdmin(){
   byId('adminShell').querySelectorAll('[data-del]').forEach(b => b.onclick = async () => { if(confirm('Eliminar negocio y todos sus datos?')){ await callFn('admin-delete-business',{business_id:b.dataset.del}); renderAdmin(); } });
 }
 
-async function renderBusiness(){
+function renderBusiness(){
   byId('adminShell').classList.add('hidden'); byId('bizShell').classList.remove('hidden');
   byId('tabs').innerHTML = tabs.map(t => `<button class="tab ${state.tab===t[0]?'active':''}" data-tab="${t[0]}">${t[1]}</button>`).join('');
   byId('tabs').querySelectorAll('button').forEach(b => b.onclick = () => { state.tab=b.dataset.tab; renderBusiness(); });
-  await loadData();
+  if(!state.dataLoaded){
+    showShellLoading();
+    loadData().then(() => {
+      state.dataLoaded = true;
+      renderBusiness();
+    }).catch(err => {
+      byId('sections').innerHTML = `<section class="section active"><div class="card panel"><h2>Error al cargar</h2><div class="msg err">${esc(err.message)}</div><button class="btn-secondary" id="retryLoad">Reintentar</button></div></section>`;
+      byId('retryLoad').onclick = () => { state.dataLoading = null; renderBusiness(); };
+    });
+    return;
+  }
   const renderers = {resumen,clientes,cobrar,proveedores,pagar,presupuestos,pagos,cc,recordatorios};
   byId('sections').innerHTML = `<section class="section active">${renderers[state.tab]()}</section>`;
   bindBusinessActions();
 }
 
 async function loadData(){
+  if(state.dataLoading) return state.dataLoading;
+  state.dataLoading = (async () => {
   const [business,...results] = await Promise.all([
     supabase.from('businesses').select('*').eq('id',state.profile.business_id).single(),
-    ...tables.map(t => supabase.from(t).select('*').order('created_at',{ascending:false}))
+    ...tables.map(t => supabase.from(t).select('*').order('created_at',{ascending:false}).limit(500))
   ]);
   state.business = business.data;
   state.data = {};
   tables.forEach((t,i)=>state.data[t]=results[i].data||[]);
+  state.dataLoading = null;
+  return state.data;
+  })();
+  return state.dataLoading;
+}
+
+async function refreshBusinessData(){
+  state.dataLoaded = false;
+  state.dataLoading = null;
+  await loadData();
+  state.dataLoaded = true;
+  renderBusiness();
 }
 
 function resumen(){
@@ -189,21 +278,44 @@ function proveedores(){ return panel('Proveedores', `<input id="searchSuppliers"
 function cobrar(){ return panel('A Cobrar', `<button class="btn-primary" data-open="invoice">+ Nuevo movimiento</button><button class="btn-secondary" data-print>📄 PDF</button><button class="btn-secondary" data-csv="invoices">📊 CSV</button>`, tableHtml(['Número / Ref','Cliente','Fecha','Vencimiento','Tipo','Moneda','Importe','Archivo','Estado',''], state.data.invoices.map(i=>[i.reference,clientName(i.client_id),i.issue_date,i.due_date,i.type,i.currency,money(i.amount,i.currency),fileTag(i.document_path),badge(i.status),actions('invoice',i.id)]))); }
 function pagos(){ return panel('Pagos', `<button class="btn-primary" data-open="payment">+ Registrar pago</button><button class="btn-secondary" data-print>📄 PDF</button><button class="btn-secondary" data-csv="payments">📊 CSV</button>`, tableHtml(['Fecha','Cliente','Medio','Moneda','Importe','TC','Referencia'], state.data.payments.map(p=>[p.payment_date,clientName(p.client_id),p.method,p.currency,money(p.amount,p.currency),p.exchange_rate,p.reference]))); }
 function pagar(){ return panel('A Pagar', `<button class="btn-primary" data-open="supplier_movement">+ Nuevo movimiento</button><button class="btn-secondary" data-open="supplier_payment">+ Registrar pago</button><button class="btn-secondary" data-print>📄 PDF</button><button class="btn-secondary" data-csv="supplier_movements">📊 CSV</button>`, tableHtml(['Número / Ref','Proveedor','Fecha','Vencimiento','Tipo','Moneda','Importe','Archivo','Estado',''], state.data.supplier_movements.map(i=>[i.reference,supplierName(i.supplier_id),i.issue_date,i.due_date,i.type,i.currency,money(i.amount,i.currency),fileTag(i.document_path),badge(i.status),actions('supplier_movement',i.id)])) + `<h2 style="font-size:18px;margin-top:22px">Pagos a proveedores</h2>` + tableHtml(['Fecha','Proveedor','Medio','Moneda','Importe','TC','Referencia'], state.data.supplier_payments.map(p=>[p.payment_date,supplierName(p.supplier_id),p.method,p.currency,money(p.amount,p.currency),p.exchange_rate,p.reference]))); }
-function presupuestos(){ return panel('Presupuestos', `<button class="btn-primary" data-open="budget">+ Nuevo presupuesto</button><button class="btn-secondary" data-print>Imprimir / PDF</button>`, tableHtml(['N° Presupuesto','Fecha','Cliente','IVA','Total'], state.data.budgets.map(b=>[b.budget_number,b.issue_date,clientName(b.client_id),b.iva,money(b.total)]))); }
 function recordatorios(){ return panel('Recordatorios', `<button class="btn-primary" data-open="reminder">+ Nuevo recordatorio</button>`, tableHtml(['Título','Fecha límite','Estado',''], state.data.reminders.map(r=>[r.title,r.due_date,badge(r.done?'hecho':(r.due_date<today()?'vencido':r.due_date===today()?'hoy':'próximo')),`<div class="actions"><button class="btn-secondary" data-done="${r.id}">${r.done?'Pendiente':'Hecho'}</button><button class="btn-danger" data-delete="reminders:${r.id}">Eliminar</button></div>`]))); }
+function presupuestos(){
+  return panel('Presupuestos', `<button class="btn-primary" data-open="budget">+ NUEVO</button><button class="btn-secondary" data-print>Imprimir / PDF</button>`, tableHtml(['N° Presupuesto','Fecha','Cliente','IVA','Total'], state.data.budgets.map(b=>[b.budget_number,b.issue_date,b.client_data?.split('\n')[0] || '-',b.iva,money(b.total)])));
+}
 function cc(){
-  const rows = [];
-  state.data.clients.forEach(c => {
-    let saldo = Number(c.opening_balance||0);
-    rows.push(['',c.name,'Saldo inicial','ARS',money(saldo),money(0),money(saldo)]);
-    [...state.data.invoices.filter(i=>i.client_id===c.id).map(i=>({d:i.issue_date,t:i.type,x:i.reference,debe:Number(i.amount),haber:0,c:i.currency})),...state.data.payments.filter(p=>p.client_id===c.id).map(p=>({d:p.payment_date,t:'Pago',x:p.reference||p.method,debe:0,haber:Number(p.amount)*Number(p.exchange_rate||1),c:p.currency}))].sort((a,b)=>String(a.d).localeCompare(String(b.d))).forEach(m=>{saldo += m.debe-m.haber; rows.push([m.d,c.name,`${m.t} ${m.x||''}`,m.c,money(m.debe,m.c),money(m.haber,m.c),money(saldo)]);});
+  const selected = sessionStorage.getItem('cuentix_cc_client') || '';
+  const options = `<select id="ccClientSelect" style="width:300px"><option value="">Seleccionar cliente</option>${state.data.clients.map(c=>`<option value="${c.id}" ${c.id===selected?'selected':''}>${esc(c.name)}</option>`).join('')}</select>`;
+  const header = `<div class="brand" style="margin-bottom:18px">${logo}<div><h1>Cuentix</h1><p>Cuentas corrientes para mini pymes y comercios.</p></div></div>`;
+  if(!selected) return panel('Cuenta corriente', `${options}<button class="btn-secondary" data-print>📄 PDF</button>`, `${header}<div class="empty">Seleccioná un cliente para ver su cuenta corriente.</div>`);
+  const client = state.data.clients.find(c=>c.id===selected);
+  if(!client) return panel('Cuenta corriente', options, `${header}<div class="empty">Cliente no encontrado.</div>`);
+  let saldo = Number(client.opening_balance||0);
+  const movements = [
+    ...state.data.invoices.filter(i=>i.client_id===client.id).map(i=>({d:i.issue_date,t:i.type,x:i.reference,debe:toArs(i.amount,i.currency),haber:0,c:i.currency})),
+    ...state.data.payments.filter(p=>p.client_id===client.id).map(p=>({d:p.payment_date,t:'Pago',x:p.reference||p.method,debe:0,haber:toArs(p.amount,p.currency,p.exchange_rate),c:p.currency}))
+  ].sort((a,b)=>String(a.d||'').localeCompare(String(b.d||'')));
+  const rows = movements.map(m => {
+    saldo += m.debe - m.haber;
+    return [m.d, m.t, m.x || '-', 'ARS', money(m.debe), money(m.haber), money(saldo)];
   });
-  return panel('Cuenta corriente', `<button class="btn-secondary" data-print>📄 PDF</button><button class="btn-secondary" data-csv-custom="cc">📊 CSV</button>`, tableHtml(['Fecha','Cliente','Detalle','Moneda','Debe','Haber','Saldo'], rows));
+  rows.push(['','','','', '', '<b>SALDO TOTAL</b>', `<b>${money(saldo)}</b>`]);
+  return panel('Cuenta corriente', `${options}<button class="btn-secondary" data-print>📄 PDF</button><button class="btn-secondary" data-csv-custom="cc">📊 CSV</button>`, `${header}<div class="small" style="margin-bottom:12px">Cliente: <b>${esc(client.name)}</b></div>${tableHtml(['Fecha','Tipo','Detalle','Moneda','Debe','Haber','Saldo'], rows)}`);
+}
+function currentAccountRows(){
+  const selected = sessionStorage.getItem('cuentix_cc_client') || '';
+  const client = state.data.clients.find(c=>c.id===selected);
+  if(!client) return [];
+  let saldo = Number(client.opening_balance||0);
+  const rows = [];
+  [...state.data.invoices.filter(i=>i.client_id===client.id).map(i=>({d:i.issue_date,t:i.type,x:i.reference,debe:toArs(i.amount,i.currency),haber:0})),...state.data.payments.filter(p=>p.client_id===client.id).map(p=>({d:p.payment_date,t:'Pago',x:p.reference||p.method,debe:0,haber:toArs(p.amount,p.currency,p.exchange_rate)}))].sort((a,b)=>String(a.d||'').localeCompare(String(b.d||''))).forEach(m=>{saldo += m.debe-m.haber; rows.push({fecha:m.d,tipo:m.t,detalle:m.x,debe:m.debe,haber:m.haber,saldo});});
+  rows.push({fecha:'',tipo:'',detalle:'SALDO TOTAL',debe:'',haber:'',saldo});
+  return rows;
 }
 
 function panel(title, toolbar, content){ return `<div class="card panel"><div class="toolbar"><h2>${title}</h2><div class="row">${toolbar}</div></div>${content}</div>`}
 function tableHtml(headers, rows){ if(!rows.length) return '<div class="empty">Sin registros.</div>'; return `<div class="table-wrap"><table class="table"><thead><tr>${headers.map(h=>`<th>${h}</th>`).join('')}</tr></thead><tbody>${rows.map(r=>`<tr>${r.map(c=>`<td>${c??'-'}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`}
 function sum(rows,k){return rows.reduce((a,r)=>a+Number(r[k]||0),0)}
+function toArs(amount,currency,exchangeRate=1){return Number(amount||0) * (currency === 'USD' ? Number(exchangeRate||1) : 1)}
 function clientName(id){return state.data.clients.find(c=>c.id===id)?.name || '-'}
 function supplierName(id){return state.data.suppliers.find(s=>s.id===id)?.name || '-'}
 function fileTag(path){return path ? `<span class="file-chip">Adjunto</span>` : '-'}
@@ -213,22 +325,25 @@ function tableFor(type){return {client:'clients',supplier:'suppliers',invoice:'i
 function bindBusinessActions(){
   document.querySelectorAll('[data-open]').forEach(b=>b.onclick=()=>openForm(b.dataset.open));
   document.querySelectorAll('[data-edit]').forEach(b=>b.onclick=()=>openForm(...b.dataset.edit.split(':')));
-  document.querySelectorAll('[data-delete]').forEach(b=>b.onclick=async()=>{const [table,id]=b.dataset.delete.split(':'); if(confirm('Eliminar registro?')){await supabase.from(table).delete().eq('id',id); renderBusiness();}});
-  document.querySelectorAll('[data-done]').forEach(b=>b.onclick=async()=>{const r=state.data.reminders.find(x=>x.id===b.dataset.done); await supabase.from('reminders').update({done:!r.done}).eq('id',r.id); renderBusiness();});
+  const ccSelect = byId('ccClientSelect');
+  if(ccSelect) ccSelect.onchange = () => { sessionStorage.setItem('cuentix_cc_client', ccSelect.value); renderBusiness(); };
+  document.querySelectorAll('[data-delete]').forEach(b=>b.onclick=async()=>{const [table,id]=b.dataset.delete.split(':'); if(confirm('Eliminar registro?')){b.disabled=true;await supabase.from(table).delete().eq('id',id); await refreshBusinessData();}});
+  document.querySelectorAll('[data-done]').forEach(b=>b.onclick=async()=>{const r=state.data.reminders.find(x=>x.id===b.dataset.done); b.disabled=true; await supabase.from('reminders').update({done:!r.done}).eq('id',r.id); await refreshBusinessData();});
   document.querySelectorAll('[data-print]').forEach(b=>b.onclick=()=>window.print());
   document.querySelectorAll('[data-csv]').forEach(b=>b.onclick=()=>downloadCsv(`${b.dataset.csv}.csv`, state.data[b.dataset.csv]));
+  document.querySelectorAll('[data-csv-custom="cc"]').forEach(b=>b.onclick=()=>downloadCsv('cuenta-corriente.csv', currentAccountRows()));
 }
 
 function openForm(type,id){
   const row = id ? state.data[tableFor(type)].find(x=>x.id===id) : {};
   const configs = {
-    client:['Cliente','clients',[['name','Nombre / razón social'],['tax_id','CUIT'],['phone','Teléfono'],['email','Email'],['address','Dirección'],['notes','Notas'],['opening_balance','Saldo inicial','number'],['status','Estado','select',['al día','pendiente','moroso']]]],
+    client:['Cliente','clients',[['name','Nombre / razón social'],['tax_id','CUIT'],['phone','Teléfono'],['email','Email'],['address','Dirección'],['notes','Notas'],['status','Estado','select',['al día','pendiente','moroso']]]],
     supplier:['Proveedor','suppliers',[['name','Nombre / razón social'],['tax_id','CUIT'],['phone','Teléfono'],['email','Email'],['address','Dirección'],['notes','Notas']]],
     invoice:['Movimiento A Cobrar','invoices',[['client_id','Cliente','selectRows','clients'],['reference','Número / referencia'],['issue_date','Fecha','date'],['due_date','Vencimiento','date'],['type','Tipo','select',['Factura A','Factura B','Factura C','Recibo','Presupuesto','Nota de débito']],['currency','Moneda','select',['ARS','USD']],['amount','Importe','number'],['detail','Detalle'],['status','Estado','select',['pendiente','cobrada','vencida']],['document','Adjunto','file']]],
     supplier_movement:['Movimiento A Pagar','supplier_movements',[['supplier_id','Proveedor','selectRows','suppliers'],['reference','Número / referencia'],['issue_date','Fecha','date'],['due_date','Vencimiento','date'],['type','Tipo'],['currency','Moneda','select',['ARS','USD']],['amount','Importe','number'],['detail','Detalle'],['status','Estado','select',['pendiente','pagada','vencida']],['document','Adjunto','file']]],
     payment:['Pago','payments',[['client_id','Cliente','selectRows','clients'],['payment_date','Fecha','date'],['method','Medio','select',['efectivo','transferencia','cheque','tarjeta','Mercado Pago']],['currency','Moneda','select',['ARS','USD']],['amount','Importe','number'],['exchange_rate','Tipo de cambio','number'],['reference','Referencia'],['notes','Notas']]],
     supplier_payment:['Pago a proveedor','supplier_payments',[['supplier_id','Proveedor','selectRows','suppliers'],['payment_date','Fecha','date'],['method','Medio','select',['efectivo','transferencia','cheque','tarjeta','Mercado Pago']],['currency','Moneda','select',['ARS','USD']],['amount','Importe','number'],['exchange_rate','Tipo de cambio','number'],['reference','Referencia'],['notes','Notas']]],
-    budget:['Presupuesto','budgets',[['client_id','Cliente','selectRows','clients'],['budget_number','Número'],['issue_date','Fecha','date'],['company_data','Datos empresa'],['client_data','Datos cliente'],['items_text','Ítems: código | descripción | unidad | cantidad | precio | descuento'],['iva','IVA %','number'],['color','Color','color'],['logo','Logo','file']]],
+    budget:['Presupuesto','budgets',[['budget_number','Número'],['issue_date','Fecha','date'],['company_data','Datos empresa'],['budget_client_name','Cliente'],['budget_client_tax','CUIT'],['budget_client_address','Dirección'],['budget_client_phone','Teléfono'],['budget_client_email','Email'],['budget_terms','Condiciones'],['items_text','Ítems: código | descripción | unidad | cantidad | precio | descuento'],['iva','IVA %','number'],['color','Color','color'],['logo','Logo','file']]],
     reminder:['Recordatorio','reminders',[['title','Título'],['due_date','Fecha límite','date'],['notes','Notas']]]
   };
   const [title,table,fields] = configs[type];
@@ -240,15 +355,31 @@ function openForm(type,id){
     const fd = new FormData(e.target); const payload = { business_id: state.profile.business_id };
     for(const f of fields){
       if(f[2]==='file') continue;
+      if(type === 'budget' && f[0].startsWith('budget_')) continue;
       if(f[0]==='items_text') payload.items = parseItems(fd.get(f[0]));
       else payload[f[0]] = fd.get(f[0]) || null;
     }
-    if(type==='budget'){ payload.total = totalItems(payload.items, Number(payload.iva||0)); if(!payload.budget_number) payload.budget_number = `P-${today().replaceAll('-','')}-${String(state.data.budgets.length+1).padStart(4,'0')}`; }
+    if(type==='client' && !id) payload.opening_balance = 0;
+    if(type==='budget'){
+      payload.client_id = null;
+      payload.client_data = [
+        fd.get('budget_client_name') || '',
+        `CUIT: ${fd.get('budget_client_tax') || ''}`,
+        `Dirección: ${fd.get('budget_client_address') || ''}`,
+        `Teléfono: ${fd.get('budget_client_phone') || ''}`,
+        `Email: ${fd.get('budget_client_email') || ''}`,
+        `Condiciones: ${fd.get('budget_terms') || ''}`
+      ].join('\n');
+      payload.total = totalItems(payload.items, Number(payload.iva||0));
+      if(!payload.budget_number) payload.budget_number = `P-${today().replaceAll('-','')}-${String(state.data.budgets.length+1).padStart(4,'0')}`;
+    }
     const fileInput = e.target.querySelector('input[type=file]');
     if(fileInput?.files?.[0]) payload[type==='budget'?'logo_path':'document_path'] = await uploadFile(fileInput.files[0], table);
+    const submitButton = byId('modalForm').querySelector('.btn-primary');
+    submitButton.disabled = true;
     const q = id ? supabase.from(table).update(payload).eq('id',id) : supabase.from(table).insert(payload);
-    const { error } = await q; if(error) return msg(byId('modalMsg'),error.message);
-    closeModal(); renderBusiness();
+    const { error } = await q; if(error){ submitButton.disabled = false; return msg(byId('modalMsg'),error.message); }
+    closeModal(); await refreshBusinessData();
   };
 }
 
@@ -268,6 +399,7 @@ byId('modalClose').onclick=closeModal; byId('modalCancel').onclick=closeModal; b
 
 function downloadCsv(filename, rows){ if(!rows?.length) return alert('Sin datos para exportar.'); const keys=Object.keys(rows[0]); const csv=[keys.join(','),...rows.map(r=>keys.map(k=>`"${String(r[k]??'').replaceAll('"','""')}"`).join(','))].join('\\n'); const a=document.createElement('a'); a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8'})); a.download=filename; a.click(); URL.revokeObjectURL(a.href); }
 setInterval(()=>{ if(state.profile) supabase.from('profiles').update({online_at:new Date().toISOString(),last_seen_at:new Date().toISOString()}).eq('id',state.profile.id); },30000);
+installVersionGuard();
 init();
 </script>
 </body>
