@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Cuentix</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap');
+:root{--bg:#eef3f8;--panel:#fff;--line:#d9e3ee;--text:#1f2937;--muted:#6b7280;--brand:#0F4C81;--brand2:#0B3154;--ok:#16a34a;--warn:#d97706;--bad:#dc2626;--radius:14px;--radius-sm:10px;--shadow:0 4px 20px rgba(14,32,61,.08);--shadow-lg:0 12px 40px rgba(14,32,61,.13);--transition:all .18s cubic-bezier(.4,0,.2,1)}
+*{box-sizing:border-box}html,body{margin:0;font-family:'DM Sans',Arial,sans-serif;color:var(--text);background:var(--bg)}body::before{content:"";position:fixed;inset:0;background-image:url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%230F4C81'/%3E%3Cstop offset='100%25' stop-color='%230B3154'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M28 14h38l26 26v52c0 7.7-6.3 14-14 14H28c-7.7 0-14-6.3-14-14V28c0-7.7 6.3-14 14-14z' fill='none' stroke='url(%23g)' stroke-width='6' stroke-linejoin='round'/%3E%3Cpath d='M66 14v18c0 5.5 4.5 10 10 10h16' fill='none' stroke='url(%23g)' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ctext x='40' y='56' text-anchor='middle' font-size='30' font-weight='700' fill='%230F4C81'%3E$%3C/text%3E%3Crect x='30' y='67' width='10' height='18' rx='2' fill='%2349C464'/%3E%3Crect x='46' y='58' width='10' height='27' rx='2' fill='%2349C464'/%3E%3Crect x='62' y='48' width='10' height='37' rx='2' fill='%2349C464'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:center;background-size:min(72vw,900px);opacity:.05;pointer-events:none}
+.hidden{display:none!important}.logo{width:60px;height:60px;flex:0 0 auto}.brand{display:flex;align-items:center;gap:14px}.brand h1{margin:0;font-size:32px;color:var(--brand2);line-height:1;font-weight:800;letter-spacing:-.5px}.brand p{margin:4px 0 0;color:var(--muted);font-size:14px}
+button{border:none;border-radius:var(--radius-sm);padding:9px 16px;font-weight:600;cursor:pointer;font-family:inherit;transition:var(--transition);font-size:14px;letter-spacing:-.01em}button:disabled{opacity:.5;cursor:not-allowed}button:active{transform:scale(.97)!important}.btn-primary{background:var(--brand);color:#fff;box-shadow:0 2px 8px rgba(15,76,129,.28)}.btn-primary:hover{background:#1560a0;box-shadow:0 4px 16px rgba(15,76,129,.38);transform:translateY(-1px)}.btn-secondary{background:#e8eff7;color:var(--brand2)}.btn-secondary:hover{background:#dae6f3;transform:translateY(-1px)}.btn-danger{background:#fee2e2;color:#991b1b}.btn-danger:hover{background:#fecaca;transform:translateY(-1px)}
+input,select,textarea{width:100%;padding:10px 14px;border:1.5px solid var(--line);border-radius:var(--radius-sm);background:#fff;font:inherit;font-size:14px;transition:var(--transition);outline:none;color:var(--text)}input:focus,select:focus,textarea:focus{border-color:var(--brand);box-shadow:0 0 0 3px rgba(15,76,129,.1)}label{display:block;font-size:12px;color:var(--muted);margin:0 0 5px 2px;font-weight:700;text-transform:uppercase;letter-spacing:.04em}
+.card{background:rgba(255,255,255,.97);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow)}.auth{max-width:620px;margin:26px auto;padding:16px;display:grid;grid-template-columns:1fr;gap:20px}.auth .card{padding:26px}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}.grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.small{font-size:13px;color:var(--muted)}.msg{margin-top:12px;padding:10px 14px;border-radius:var(--radius-sm);font-size:14px}.msg.err{background:#fee2e2;color:#991b1b}.msg.ok{background:#dcfce7;color:#166534}
+.topbar{height:72px;display:flex;align-items:center;justify-content:space-between;padding:0 22px;background:rgba(255,255,255,.97);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20;box-shadow:0 2px 12px rgba(14,32,61,.05)}.topbar .brand h1{font-size:28px}.shell{max-width:1300px;margin:22px auto;padding:0 16px 100px}.tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:20px;background:#fff;padding:6px;border-radius:16px;border:1px solid var(--line);box-shadow:var(--shadow);width:fit-content}.tab{background:transparent;border:none;color:var(--muted);font-size:14px;padding:9px 18px;border-radius:10px;font-weight:600}.tab:hover{background:#f0f6ff;color:var(--brand2)}.tab.active{background:var(--brand);color:#fff;box-shadow:0 3px 10px rgba(15,76,129,.3)}
+.section{display:none;animation:fadeUp .22s ease}.section.active{display:block}@keyframes fadeUp{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}.panel{padding:22px}.panel h2{margin:0 0 4px;font-size:24px;color:var(--brand2);font-weight:800;letter-spacing:-.5px}.toolbar{display:flex;gap:10px;justify-content:space-between;align-items:center;flex-wrap:wrap;margin-bottom:18px}.stats{display:grid;grid-template-columns:repeat(5,minmax(160px,1fr));gap:14px;margin-bottom:22px}.stat{padding:20px 22px;position:relative;overflow:hidden}.stat::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--brand),#49C464);opacity:.4}.stat .t{font-size:12px;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.05em}.stat .v{font-size:26px;font-weight:800;margin-top:8px;color:var(--brand2);letter-spacing:-.5px}
+.table-wrap{overflow:auto;border-radius:12px;border:1px solid var(--line)}.table{width:100%;border-collapse:collapse}.table th{padding:11px 14px;border-bottom:1.5px solid var(--line);text-align:left;font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;font-weight:700;background:#fafcff}.table td{padding:12px 14px;border-bottom:1px solid #f0f4f9;font-size:14px;vertical-align:middle}.table tbody tr:hover{background:#f5f9ff}.actions{display:flex;gap:5px;flex-wrap:wrap}.badge{display:inline-flex;align-items:center;padding:3px 10px;border-radius:999px;font-size:11px;font-weight:700}.b-ok{background:#dcfce7;color:#166534}.b-bad{background:#fee2e2;color:#991b1b}.b-warn,.b-pend{background:#fef3c7;color:#92400e}.empty{padding:32px;text-align:center;color:var(--muted);font-size:14px}.modal{position:fixed;inset:0;background:rgba(15,23,42,.5);display:none;align-items:center;justify-content:center;padding:16px;z-index:60;backdrop-filter:blur(4px)}.modal.open{display:flex}.box{width:min(860px,100%);background:#fff;border-radius:20px;border:1px solid var(--line);box-shadow:0 24px 60px rgba(0,0,0,.2);overflow:hidden}.head{padding:18px 22px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;background:#fafcff}.body{padding:22px;max-height:72vh;overflow:auto}.foot{padding:14px 22px;border-top:1px solid var(--line);display:flex;justify-content:flex-end;gap:10px;background:#fafcff}.close{background:none;color:var(--muted);font-size:20px;padding:4px 8px}.file-chip{display:inline-flex;align-items:center;background:#fef3c7;color:#92400e;border-radius:6px;padding:4px 10px;font-size:12px;font-weight:600}.status-dot{width:9px;height:9px;border-radius:50%;display:inline-block;background:#d1d5db}.status-dot.online{background:#22c55e;box-shadow:0 0 0 3px rgba(34,197,94,.25)}
+@media(max-width:960px){.auth{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}.grid3,.grid4{grid-template-columns:1fr}.topbar{height:auto;padding:14px 16px}.tabs{width:100%}}@media(max-width:640px){.stats,.grid2{grid-template-columns:1fr}.brand h1,.topbar .brand h1{font-size:20px}.tab{font-size:13px;padding:8px 12px}}
+</style>
+</head>
+<body>
+<div id="auth" class="auth">
+  <div class="card">
+    <div class="brand"><div id="logoA"></div><div><h1>Cuentix</h1><p>Cuentas corrientes para mini pymes y comercios.</p></div></div>
+    <div class="grid2" style="margin-top:22px">
+      <div><label>Usuario</label><input id="loginUser" autocomplete="username" placeholder="Ej: miempresa" /></div>
+      <div><label>Contraseña</label><input id="loginPass" autocomplete="current-password" type="password" placeholder="••••••••" /></div>
+    </div>
+    <div class="row" style="margin-top:16px"><button class="btn-primary" id="btnLogin">Ingresar</button></div>
+    <div id="loginMsg"></div>
+  </div>
+</div>
+
+<div id="app" class="hidden">
+  <div class="topbar">
+    <div class="brand"><div id="logoB"></div><div><h1>Cuentix</h1><p id="sessionLabel">Sesión</p></div></div>
+    <button class="btn-secondary" id="btnLogout">Cerrar sesión</button>
+  </div>
+  <div class="shell" id="adminShell" class="hidden"></div>
+  <div class="shell hidden" id="bizShell">
+    <div class="tabs" id="tabs"></div>
+    <div id="sections"></div>
+  </div>
+</div>
+
+<div id="modal" class="modal"><div class="box"><div class="head"><strong id="modalTitle"></strong><button class="close" id="modalClose">×</button></div><form id="modalForm"><div class="body" id="modalBody"></div><div class="foot"><button type="button" class="btn-secondary" id="modalCancel">Cancelar</button><button class="btn-primary">Guardar</button></div></form></div></div>
+
+<script type="module">
+import { createClient } from 'https://esm.sh/@supabase/supabase-js@2.43.4';
+
+const PROJECT_URL = 'https://yedcpumndtmdnczalspg.supabase.co';
+const ANON_KEY = 'sb_publishable_gtYK6qmfLMku2oxgBtRPzQ_Jg_iVEL9';
+const supabase = createClient(PROJECT_URL, ANON_KEY);
+
+const logo = `<svg class="logo" viewBox="0 0 120 120" aria-hidden="true"><defs><linearGradient id="cuentixBlue" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0F4C81"/><stop offset="100%" stop-color="#0B3154"/></linearGradient></defs><path d="M28 14h38l26 26v52c0 7.7-6.3 14-14 14H28c-7.7 0-14-6.3-14-14V28c0-7.7 6.3-14 14-14z" fill="none" stroke="url(#cuentixBlue)" stroke-width="6" stroke-linejoin="round"/><path d="M66 14v18c0 5.5 4.5 10 10 10h16" fill="none" stroke="url(#cuentixBlue)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><text x="40" y="56" text-anchor="middle" font-size="30" font-weight="700" fill="#0F4C81">$</text><rect x="30" y="67" width="10" height="18" rx="2" fill="#49C464"/><rect x="46" y="58" width="10" height="27" rx="2" fill="#49C464"/><rect x="62" y="48" width="10" height="37" rx="2" fill="#49C464"/></svg>`;
+document.getElementById('logoA').innerHTML = logo;
+document.getElementById('logoB').innerHTML = logo.replace('cuentixBlue','cuentixBlue2');
+
+const state = { session:null, profile:null, business:null, data:{}, tab:'resumen' };
+const tabs = [
+  ['resumen','📊 Resumen'],['clientes','👥 Clientes'],['cobrar','📋 A Cobrar'],['proveedores','🏭 Proveedores'],['pagar','💸 A Pagar'],['presupuestos','🧾 Presupuestos'],['pagos','💳 Pagos'],['cc','📒 Cuenta corriente'],['recordatorios','🔔 Recordatorios']
+];
+const tables = ['clients','invoices','payments','suppliers','supplier_movements','supplier_payments','budgets','reminders'];
+
+function byId(id){return document.getElementById(id)}
+function msg(el,text,type='err'){el.innerHTML = text ? `<div class="msg ${type}">${text}</div>` : ''}
+function emailForUsername(username){return `${username.trim().toLowerCase()}@cuentix.local`}
+function money(v,c='ARS'){return new Intl.NumberFormat('es-AR',{style:'currency',currency:c||'ARS'}).format(Number(v||0))}
+function esc(v){return String(v ?? '').replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]))}
+function today(){return new Date().toISOString().slice(0,10)}
+function badge(s){const cls = ['activo','al día','cobrada','pagada','hecho'].includes(s) ? 'b-ok' : ['moroso','vencida','inactivo'].includes(s) ? 'b-bad' : 'b-warn'; return `<span class="badge ${cls}">${esc(s||'pendiente')}</span>`}
+
+async function login(){
+  msg(byId('loginMsg'),'');
+  const username = byId('loginUser').value.trim().toLowerCase();
+  const password = byId('loginPass').value;
+  if(!username || !password) return msg(byId('loginMsg'),'Ingresá usuario y contraseña.');
+  const { data:p } = await supabase.from('profiles').select('username,active').eq('username',username).maybeSingle();
+  if(!p || !p.active) return msg(byId('loginMsg'),'Usuario inexistente o inactivo.');
+  const { error } = await supabase.auth.signInWithPassword({ email: emailForUsername(username), password });
+  if(error) return msg(byId('loginMsg'),'Usuario o contraseña incorrectos.');
+}
+
+async function init(){
+  const { data } = await supabase.auth.getSession();
+  state.session = data.session;
+  if(!state.session) return showAuth();
+  const { data:profile, error } = await supabase.from('profiles').select('*').eq('id',state.session.user.id).single();
+  if(error || !profile?.active){ await supabase.auth.signOut(); return showAuth(); }
+  state.profile = profile;
+  await supabase.from('profiles').update({last_seen_at:new Date().toISOString(),online_at:new Date().toISOString()}).eq('id',profile.id);
+  showApp();
+}
+supabase.auth.onAuthStateChange(() => init());
+byId('btnLogin').onclick = login;
+byId('btnLogout').onclick = () => supabase.auth.signOut();
+
+function showAuth(){byId('auth').classList.remove('hidden');byId('app').classList.add('hidden')}
+async function showApp(){
+  byId('auth').classList.add('hidden');byId('app').classList.remove('hidden');
+  byId('sessionLabel').textContent = `${state.profile.username} · ${state.profile.role}`;
+  if(state.profile.role === 'admin') await renderAdmin(); else await renderBusiness();
+}
+
+async function callFn(name, body){
+  const rpcMap = {
+    'admin-create-business': ['admin_create_business', {
+      p_commercial_name: body.commercial_name,
+      p_username: body.username,
+      p_password: body.password,
+      p_active: body.active
+    }],
+    'admin-reset-password': ['admin_reset_password', {
+      p_username: body.username,
+      p_password: body.password
+    }],
+    'admin-delete-business': ['admin_delete_business', {
+      p_business_id: body.business_id
+    }]
+  };
+  const [rpcName, params] = rpcMap[name];
+  const { data, error } = await supabase.rpc(rpcName, params);
+  if(error) throw error;
+  if(data?.error) throw new Error(data.error);
+  return data;
+}
+
+async function renderAdmin(){
+  byId('adminShell').classList.remove('hidden'); byId('bizShell').classList.add('hidden');
+  const { data:businesses } = await supabase.from('businesses').select('*, profiles(id,username,active,last_seen_at,online_at)').order('created_at',{ascending:false});
+  byId('adminShell').innerHTML = `
+    <div class="card panel">
+      <div class="toolbar"><h2>Crear negocios / usuarios</h2><button class="btn-secondary" id="refreshAdmin">Actualizar</button></div>
+      <form id="createBiz" class="grid4">
+        <div><label>Nombre comercial</label><input name="commercial_name" required></div>
+        <div><label>Usuario</label><input name="username" required></div>
+        <div><label>Contraseña inicial</label><input name="password" type="password" minlength="8" required></div>
+        <div><label>Estado</label><select name="active"><option value="true">Activo</option><option value="false">Inactivo</option></select></div>
+        <div class="row"><button class="btn-primary">Crear usuario</button></div>
+      </form>
+      <div id="adminMsg"></div>
+    </div>
+    <div class="card panel">
+      <div class="toolbar"><h2>Negocios creados</h2></div>
+      ${tableHtml(['Nombre comercial','Usuario','Estado','Última conexión','Online','Acciones'], (businesses||[]).map(b => {
+        const p = b.profiles?.[0]; const online = p?.online_at && Date.now() - new Date(p.online_at).getTime() < 90000;
+        return [b.commercial_name,p?.username||'-',badge(b.active?'activo':'inactivo'),p?.last_seen_at?new Date(p.last_seen_at).toLocaleString('es-AR'):'-',`<span class="status-dot ${online?'online':''}"></span> ${online?'Sí':'No'}`,
+        `<div class="actions"><button class="btn-secondary" data-editbiz="${b.id}" data-name="${esc(b.commercial_name)}">Editar</button><button class="btn-secondary" data-reset="${p?.username||''}">Reset</button><button class="btn-secondary" data-toggle="${b.id}" data-profile="${p?.id||''}" data-active="${b.active}">${b.active?'Desactivar':'Activar'}</button><button class="btn-danger" data-del="${b.id}">Eliminar</button></div>`];
+      }))}
+    </div>`;
+  byId('refreshAdmin').onclick = renderAdmin;
+  byId('createBiz').onsubmit = async e => {
+    e.preventDefault(); const fd = new FormData(e.target);
+    try{ await callFn('admin-create-business',{commercial_name:fd.get('commercial_name'),username:fd.get('username'),password:fd.get('password'),active:fd.get('active')==='true'}); msg(byId('adminMsg'),'Negocio creado.','ok'); e.target.reset(); renderAdmin(); }
+    catch(err){ msg(byId('adminMsg'),err.message); }
+  };
+  byId('adminShell').querySelectorAll('[data-reset]').forEach(b => b.onclick = async () => { const password = prompt('Nueva contraseña, mínimo 8 caracteres'); if(!password) return; await callFn('admin-reset-password',{username:b.dataset.reset,password}); alert('Contraseña actualizada'); });
+  byId('adminShell').querySelectorAll('[data-editbiz]').forEach(b => b.onclick = async () => { const commercial_name = prompt('Nombre comercial', b.dataset.name); if(!commercial_name) return; await supabase.from('businesses').update({commercial_name}).eq('id',b.dataset.editbiz); renderAdmin(); });
+  byId('adminShell').querySelectorAll('[data-toggle]').forEach(b => b.onclick = async () => { const active = b.dataset.active !== 'true'; await supabase.from('businesses').update({active}).eq('id',b.dataset.toggle); if(b.dataset.profile) await supabase.from('profiles').update({active}).eq('id',b.dataset.profile); renderAdmin(); });
+  byId('adminShell').querySelectorAll('[data-del]').forEach(b => b.onclick = async () => { if(confirm('Eliminar negocio y todos sus datos?')){ await callFn('admin-delete-business',{business_id:b.dataset.del}); renderAdmin(); } });
+}
+
+async function renderBusiness(){
+  byId('adminShell').classList.add('hidden'); byId('bizShell').classList.remove('hidden');
+  byId('tabs').innerHTML = tabs.map(t => `<button class="tab ${state.tab===t[0]?'active':''}" data-tab="${t[0]}">${t[1]}</button>`).join('');
+  byId('tabs').querySelectorAll('button').forEach(b => b.onclick = () => { state.tab=b.dataset.tab; renderBusiness(); });
+  await loadData();
+  const renderers = {resumen,clientes,cobrar,proveedores,pagar,presupuestos,pagos,cc,recordatorios};
+  byId('sections').innerHTML = `<section class="section active">${renderers[state.tab]()}</section>`;
+  bindBusinessActions();
+}
+
+async function loadData(){
+  const [business,...results] = await Promise.all([
+    supabase.from('businesses').select('*').eq('id',state.profile.business_id).single(),
+    ...tables.map(t => supabase.from(t).select('*').order('created_at',{ascending:false}))
+  ]);
+  state.business = business.data;
+  state.data = {};
+  tables.forEach((t,i)=>state.data[t]=results[i].data||[]);
+}
+
+function resumen(){
+  const fact = sum(state.data.invoices,'amount'), cob = sum(state.data.payments,'amount'), pag = sum(state.data.supplier_payments,'amount'), pend = fact - cob;
+  return `<div class="stats"><div class="card stat"><div class="t">Clientes</div><div class="v">${state.data.clients.length}</div></div><div class="card stat"><div class="t">Facturado</div><div class="v">${money(fact)}</div></div><div class="card stat"><div class="t">Cobrado</div><div class="v">${money(cob)}</div></div><div class="card stat"><div class="t">Pagado</div><div class="v">${money(pag)}</div></div><div class="card stat"><div class="t">Saldo pendiente</div><div class="v">${money(pend)}</div></div></div>`;
+}
+function clientes(){ return panel('Clientes', `<input id="searchClients" placeholder="🔍 Buscar por nombre o CUIT" style="width:260px"><button class="btn-primary" data-open="client">+ Nuevo cliente</button>`, tableHtml(['Nombre / razón social','CUIT','Teléfono','Email','Saldo inicial','Estado',''], state.data.clients.map(c=>[c.name,c.tax_id,c.phone,c.email,money(c.opening_balance),badge(c.status),actions('client',c.id)]))); }
+function proveedores(){ return panel('Proveedores', `<input id="searchSuppliers" placeholder="🔍 Buscar proveedor" style="width:260px"><button class="btn-primary" data-open="supplier">+ Nuevo proveedor</button>`, tableHtml(['Nombre / razón social','CUIT','Teléfono','Email',''], state.data.suppliers.map(s=>[s.name,s.tax_id,s.phone,s.email,actions('supplier',s.id)]))); }
+function cobrar(){ return panel('A Cobrar', `<button class="btn-primary" data-open="invoice">+ Nuevo movimiento</button><button class="btn-secondary" data-print>📄 PDF</button><button class="btn-secondary" data-csv="invoices">📊 CSV</button>`, tableHtml(['Número / Ref','Cliente','Fecha','Vencimiento','Tipo','Moneda','Importe','Archivo','Estado',''], state.data.invoices.map(i=>[i.reference,clientName(i.client_id),i.issue_date,i.due_date,i.type,i.currency,money(i.amount,i.currency),fileTag(i.document_path),badge(i.status),actions('invoice',i.id)]))); }
+function pagos(){ return panel('Pagos', `<button class="btn-primary" data-open="payment">+ Registrar pago</button><button class="btn-secondary" data-print>📄 PDF</button><button class="btn-secondary" data-csv="payments">📊 CSV</button>`, tableHtml(['Fecha','Cliente','Medio','Moneda','Importe','TC','Referencia'], state.data.payments.map(p=>[p.payment_date,clientName(p.client_id),p.method,p.currency,money(p.amount,p.currency),p.exchange_rate,p.reference]))); }
+function pagar(){ return panel('A Pagar', `<button class="btn-primary" data-open="supplier_movement">+ Nuevo movimiento</button><button class="btn-secondary" data-open="supplier_payment">+ Registrar pago</button><button class="btn-secondary" data-print>📄 PDF</button><button class="btn-secondary" data-csv="supplier_movements">📊 CSV</button>`, tableHtml(['Número / Ref','Proveedor','Fecha','Vencimiento','Tipo','Moneda','Importe','Archivo','Estado',''], state.data.supplier_movements.map(i=>[i.reference,supplierName(i.supplier_id),i.issue_date,i.due_date,i.type,i.currency,money(i.amount,i.currency),fileTag(i.document_path),badge(i.status),actions('supplier_movement',i.id)])) + `<h2 style="font-size:18px;margin-top:22px">Pagos a proveedores</h2>` + tableHtml(['Fecha','Proveedor','Medio','Moneda','Importe','TC','Referencia'], state.data.supplier_payments.map(p=>[p.payment_date,supplierName(p.supplier_id),p.method,p.currency,money(p.amount,p.currency),p.exchange_rate,p.reference]))); }
+function presupuestos(){ return panel('Presupuestos', `<button class="btn-primary" data-open="budget">+ Nuevo presupuesto</button><button class="btn-secondary" data-print>Imprimir / PDF</button>`, tableHtml(['N° Presupuesto','Fecha','Cliente','IVA','Total'], state.data.budgets.map(b=>[b.budget_number,b.issue_date,clientName(b.client_id),b.iva,money(b.total)]))); }
+function recordatorios(){ return panel('Recordatorios', `<button class="btn-primary" data-open="reminder">+ Nuevo recordatorio</button>`, tableHtml(['Título','Fecha límite','Estado',''], state.data.reminders.map(r=>[r.title,r.due_date,badge(r.done?'hecho':(r.due_date<today()?'vencido':r.due_date===today()?'hoy':'próximo')),`<div class="actions"><button class="btn-secondary" data-done="${r.id}">${r.done?'Pendiente':'Hecho'}</button><button class="btn-danger" data-delete="reminders:${r.id}">Eliminar</button></div>`]))); }
+function cc(){
+  const rows = [];
+  state.data.clients.forEach(c => {
+    let saldo = Number(c.opening_balance||0);
+    rows.push(['',c.name,'Saldo inicial','ARS',money(saldo),money(0),money(saldo)]);
+    [...state.data.invoices.filter(i=>i.client_id===c.id).map(i=>({d:i.issue_date,t:i.type,x:i.reference,debe:Number(i.amount),haber:0,c:i.currency})),...state.data.payments.filter(p=>p.client_id===c.id).map(p=>({d:p.payment_date,t:'Pago',x:p.reference||p.method,debe:0,haber:Number(p.amount)*Number(p.exchange_rate||1),c:p.currency}))].sort((a,b)=>String(a.d).localeCompare(String(b.d))).forEach(m=>{saldo += m.debe-m.haber; rows.push([m.d,c.name,`${m.t} ${m.x||''}`,m.c,money(m.debe,m.c),money(m.haber,m.c),money(saldo)]);});
+  });
+  return panel('Cuenta corriente', `<button class="btn-secondary" data-print>📄 PDF</button><button class="btn-secondary" data-csv-custom="cc">📊 CSV</button>`, tableHtml(['Fecha','Cliente','Detalle','Moneda','Debe','Haber','Saldo'], rows));
+}
+
+function panel(title, toolbar, content){ return `<div class="card panel"><div class="toolbar"><h2>${title}</h2><div class="row">${toolbar}</div></div>${content}</div>`}
+function tableHtml(headers, rows){ if(!rows.length) return '<div class="empty">Sin registros.</div>'; return `<div class="table-wrap"><table class="table"><thead><tr>${headers.map(h=>`<th>${h}</th>`).join('')}</tr></thead><tbody>${rows.map(r=>`<tr>${r.map(c=>`<td>${c??'-'}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`}
+function sum(rows,k){return rows.reduce((a,r)=>a+Number(r[k]||0),0)}
+function clientName(id){return state.data.clients.find(c=>c.id===id)?.name || '-'}
+function supplierName(id){return state.data.suppliers.find(s=>s.id===id)?.name || '-'}
+function fileTag(path){return path ? `<span class="file-chip">Adjunto</span>` : '-'}
+function actions(type,id){return `<div class="actions"><button class="btn-secondary" data-edit="${type}:${id}">Editar</button><button class="btn-danger" data-delete="${tableFor(type)}:${id}">Eliminar</button></div>`}
+function tableFor(type){return {client:'clients',supplier:'suppliers',invoice:'invoices',supplier_movement:'supplier_movements'}[type]||type}
+
+function bindBusinessActions(){
+  document.querySelectorAll('[data-open]').forEach(b=>b.onclick=()=>openForm(b.dataset.open));
+  document.querySelectorAll('[data-edit]').forEach(b=>b.onclick=()=>openForm(...b.dataset.edit.split(':')));
+  document.querySelectorAll('[data-delete]').forEach(b=>b.onclick=async()=>{const [table,id]=b.dataset.delete.split(':'); if(confirm('Eliminar registro?')){await supabase.from(table).delete().eq('id',id); renderBusiness();}});
+  document.querySelectorAll('[data-done]').forEach(b=>b.onclick=async()=>{const r=state.data.reminders.find(x=>x.id===b.dataset.done); await supabase.from('reminders').update({done:!r.done}).eq('id',r.id); renderBusiness();});
+  document.querySelectorAll('[data-print]').forEach(b=>b.onclick=()=>window.print());
+  document.querySelectorAll('[data-csv]').forEach(b=>b.onclick=()=>downloadCsv(`${b.dataset.csv}.csv`, state.data[b.dataset.csv]));
+}
+
+function openForm(type,id){
+  const row = id ? state.data[tableFor(type)].find(x=>x.id===id) : {};
+  const configs = {
+    client:['Cliente','clients',[['name','Nombre / razón social'],['tax_id','CUIT'],['phone','Teléfono'],['email','Email'],['address','Dirección'],['notes','Notas'],['opening_balance','Saldo inicial','number'],['status','Estado','select',['al día','pendiente','moroso']]]],
+    supplier:['Proveedor','suppliers',[['name','Nombre / razón social'],['tax_id','CUIT'],['phone','Teléfono'],['email','Email'],['address','Dirección'],['notes','Notas']]],
+    invoice:['Movimiento A Cobrar','invoices',[['client_id','Cliente','selectRows','clients'],['reference','Número / referencia'],['issue_date','Fecha','date'],['due_date','Vencimiento','date'],['type','Tipo','select',['Factura A','Factura B','Factura C','Recibo','Presupuesto','Nota de débito']],['currency','Moneda','select',['ARS','USD']],['amount','Importe','number'],['detail','Detalle'],['status','Estado','select',['pendiente','cobrada','vencida']],['document','Adjunto','file']]],
+    supplier_movement:['Movimiento A Pagar','supplier_movements',[['supplier_id','Proveedor','selectRows','suppliers'],['reference','Número / referencia'],['issue_date','Fecha','date'],['due_date','Vencimiento','date'],['type','Tipo'],['currency','Moneda','select',['ARS','USD']],['amount','Importe','number'],['detail','Detalle'],['status','Estado','select',['pendiente','pagada','vencida']],['document','Adjunto','file']]],
+    payment:['Pago','payments',[['client_id','Cliente','selectRows','clients'],['payment_date','Fecha','date'],['method','Medio','select',['efectivo','transferencia','cheque','tarjeta','Mercado Pago']],['currency','Moneda','select',['ARS','USD']],['amount','Importe','number'],['exchange_rate','Tipo de cambio','number'],['reference','Referencia'],['notes','Notas']]],
+    supplier_payment:['Pago a proveedor','supplier_payments',[['supplier_id','Proveedor','selectRows','suppliers'],['payment_date','Fecha','date'],['method','Medio','select',['efectivo','transferencia','cheque','tarjeta','Mercado Pago']],['currency','Moneda','select',['ARS','USD']],['amount','Importe','number'],['exchange_rate','Tipo de cambio','number'],['reference','Referencia'],['notes','Notas']]],
+    budget:['Presupuesto','budgets',[['client_id','Cliente','selectRows','clients'],['budget_number','Número'],['issue_date','Fecha','date'],['company_data','Datos empresa'],['client_data','Datos cliente'],['items_text','Ítems: código | descripción | unidad | cantidad | precio | descuento'],['iva','IVA %','number'],['color','Color','color'],['logo','Logo','file']]],
+    reminder:['Recordatorio','reminders',[['title','Título'],['due_date','Fecha límite','date'],['notes','Notas']]]
+  };
+  const [title,table,fields] = configs[type];
+  byId('modalTitle').textContent = `${id?'Editar':'Nuevo'} ${title}`;
+  byId('modalBody').innerHTML = `<div class="grid2">${fields.map(f=>fieldHtml(f,row)).join('')}</div><div id="modalMsg"></div>`;
+  byId('modal').classList.add('open');
+  byId('modalForm').onsubmit = async e => {
+    e.preventDefault();
+    const fd = new FormData(e.target); const payload = { business_id: state.profile.business_id };
+    for(const f of fields){
+      if(f[2]==='file') continue;
+      if(f[0]==='items_text') payload.items = parseItems(fd.get(f[0]));
+      else payload[f[0]] = fd.get(f[0]) || null;
+    }
+    if(type==='budget'){ payload.total = totalItems(payload.items, Number(payload.iva||0)); if(!payload.budget_number) payload.budget_number = `P-${today().replaceAll('-','')}-${String(state.data.budgets.length+1).padStart(4,'0')}`; }
+    const fileInput = e.target.querySelector('input[type=file]');
+    if(fileInput?.files?.[0]) payload[type==='budget'?'logo_path':'document_path'] = await uploadFile(fileInput.files[0], table);
+    const q = id ? supabase.from(table).update(payload).eq('id',id) : supabase.from(table).insert(payload);
+    const { error } = await q; if(error) return msg(byId('modalMsg'),error.message);
+    closeModal(); renderBusiness();
+  };
+}
+
+function fieldHtml(f,row){
+  const [name,label,type,opt] = f; const val = row?.[name] ?? (name==='exchange_rate'?1:name==='iva'?21:name==='issue_date'||name==='payment_date'||name==='due_date'?today():'');
+  if(type==='select') return `<div><label>${label}</label><select name="${name}">${opt.map(o=>`<option ${o===val?'selected':''}>${o}</option>`).join('')}</select></div>`;
+  if(type==='selectRows') return `<div><label>${label}</label><select name="${name}" required><option value="">Seleccionar</option>${state.data[opt].map(r=>`<option value="${r.id}" ${r.id===val?'selected':''}>${esc(r.name)}</option>`).join('')}</select></div>`;
+  if(type==='file') return `<div><label>${label}</label><input name="${name}" type="file" accept="image/*,.pdf"></div>`;
+  if(name==='items_text') return `<div style="grid-column:1/-1"><label>${label}</label><textarea name="${name}" rows="4">${(row.items||[]).map(i=>[i.code,i.description,i.unit,i.quantity,i.unit_price,i.discount].join(' | ')).join('\\n')}</textarea></div>`;
+  return `<div><label>${label}</label><input name="${name}" type="${type||'text'}" value="${esc(val)}"></div>`;
+}
+async function uploadFile(file, folder){ const path = `${state.profile.business_id}/${folder}/${Date.now()}-${file.name.replace(/[^\\w.\\-]+/g,'_')}`; const { error } = await supabase.storage.from('documents').upload(path,file); if(error) throw error; return path; }
+function parseItems(text){return String(text||'').split('\\n').filter(Boolean).map(line=>{const [code,description,unit,quantity,unit_price,discount]=line.split('|').map(x=>x.trim()); return {code,description,unit,quantity:Number(quantity||0),unit_price:Number(unit_price||0),discount:Number(discount||0)};});}
+function totalItems(items,iva){const base=items.reduce((s,i)=>s+i.quantity*i.unit_price*(1-i.discount/100),0);return base*(1+iva/100)}
+function closeModal(){byId('modal').classList.remove('open'); byId('modalForm').reset();}
+byId('modalClose').onclick=closeModal; byId('modalCancel').onclick=closeModal; byId('modal').onclick=e=>{if(e.target.id==='modal')closeModal();}
+
+function downloadCsv(filename, rows){ if(!rows?.length) return alert('Sin datos para exportar.'); const keys=Object.keys(rows[0]); const csv=[keys.join(','),...rows.map(r=>keys.map(k=>`"${String(r[k]??'').replaceAll('"','""')}"`).join(','))].join('\\n'); const a=document.createElement('a'); a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8'})); a.download=filename; a.click(); URL.revokeObjectURL(a.href); }
+setInterval(()=>{ if(state.profile) supabase.from('profiles').update({online_at:new Date().toISOString(),last_seen_at:new Date().toISOString()}).eq('id',state.profile.id); },30000);
+init();
+</script>
+</body>
+</html>
