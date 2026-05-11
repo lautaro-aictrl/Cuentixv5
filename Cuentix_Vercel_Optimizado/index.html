@@ -8,7 +8,7 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap');
 :root{--bg:#eef3f8;--panel:#fff;--line:#d9e3ee;--text:#1f2937;--muted:#6b7280;--brand:#0F4C81;--brand2:#0B3154;--ok:#16a34a;--warn:#d97706;--bad:#dc2626;--radius:14px;--radius-sm:10px;--shadow:0 4px 20px rgba(14,32,61,.08);--shadow-lg:0 12px 40px rgba(14,32,61,.13);--transition:all .18s cubic-bezier(.4,0,.2,1)}
 *{box-sizing:border-box}html,body{margin:0;font-family:'DM Sans',Arial,sans-serif;color:var(--text);background:var(--bg)}body::before{content:"";position:fixed;inset:0;background-image:url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%230F4C81'/%3E%3Cstop offset='100%25' stop-color='%230B3154'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M28 14h38l26 26v52c0 7.7-6.3 14-14 14H28c-7.7 0-14-6.3-14-14V28c0-7.7 6.3-14 14-14z' fill='none' stroke='url(%23g)' stroke-width='6' stroke-linejoin='round'/%3E%3Cpath d='M66 14v18c0 5.5 4.5 10 10 10h16' fill='none' stroke='url(%23g)' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ctext x='40' y='56' text-anchor='middle' font-size='30' font-weight='700' fill='%230F4C81'%3E$%3C/text%3E%3Crect x='30' y='67' width='10' height='18' rx='2' fill='%2349C464'/%3E%3Crect x='46' y='58' width='10' height='27' rx='2' fill='%2349C464'/%3E%3Crect x='62' y='48' width='10' height='37' rx='2' fill='%2349C464'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:center;background-size:min(72vw,900px);opacity:.05;pointer-events:none}
-.hidden{display:none!important}.logo{width:60px;height:60px;flex:0 0 auto}.brand{display:flex;align-items:center;gap:14px}.brand h1{margin:0;font-size:32px;color:var(--brand2);line-height:1;font-weight:800;letter-spacing:-.5px}.brand p{margin:4px 0 0;color:var(--muted);font-size:14px}.view-loading{padding:28px;color:var(--muted);font-weight:700}.skeleton{height:12px;border-radius:999px;background:linear-gradient(90deg,#edf3f9,#fff,#edf3f9);background-size:220% 100%;animation:shimmer .8s linear infinite;margin:10px 0}.skeleton.big{height:42px;width:55%}@keyframes shimmer{to{background-position:-220% 0}}
+.hidden{display:none!important}.logo{width:60px;height:60px;flex:0 0 auto}.brand{display:flex;align-items:center;gap:14px}.brand h1{margin:0;font-size:32px;color:var(--brand2);line-height:1;font-weight:800;letter-spacing:-.5px}.brand p{margin:4px 0 0;color:var(--muted);font-size:14px}.view-loading{padding:28px;color:var(--muted);font-weight:700}.skeleton{height:12px;border-radius:999px;background:linear-gradient(90deg,#edf3f9,#fff,#edf3f9);background-size:220% 100%;animation:shimmer .8s linear infinite;margin:10px 0}.skeleton.big{height:42px;width:55%}.breakdown{font-size:12px;color:var(--muted);line-height:1.45;margin-top:8px}.budget-preview{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px;margin-top:12px}.sort-select{width:auto;min-width:190px}.item-tools{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0}.item-row{display:grid;grid-template-columns:.7fr 1.7fr 1fr 1.05fr .9fr .8fr .9fr .9fr 1.15fr;gap:6px;align-items:end;margin-bottom:8px}.item-row.no-discount{grid-template-columns:.7fr 1.8fr 1fr 1.05fr 1fr 1fr 1.15fr}.item-row input,.item-row select{padding:8px 9px;font-size:13px}.qty-box{display:flex;gap:4px}.qty-box button{padding:7px 9px}.item-actions{display:flex;gap:4px;flex-wrap:wrap}.mini-btn{padding:7px 9px;font-size:12px}.budget-total-line{display:flex;justify-content:flex-end;gap:18px;margin-top:10px;font-weight:800;color:var(--brand2)}@media(max-width:900px){.item-row,.item-row.no-discount{grid-template-columns:1fr}.item-actions{justify-content:flex-start}}@keyframes shimmer{to{background-position:-220% 0}}
 button{border:none;border-radius:var(--radius-sm);padding:9px 16px;font-weight:600;cursor:pointer;font-family:inherit;transition:var(--transition);font-size:14px;letter-spacing:-.01em}button:disabled{opacity:.5;cursor:not-allowed}button:active{transform:scale(.97)!important}.btn-primary{background:var(--brand);color:#fff;box-shadow:0 2px 8px rgba(15,76,129,.28)}.btn-primary:hover{background:#1560a0;box-shadow:0 4px 16px rgba(15,76,129,.38);transform:translateY(-1px)}.btn-secondary{background:#e8eff7;color:var(--brand2)}.btn-secondary:hover{background:#dae6f3;transform:translateY(-1px)}.btn-danger{background:#fee2e2;color:#991b1b}.btn-danger:hover{background:#fecaca;transform:translateY(-1px)}
 input,select,textarea{width:100%;padding:10px 14px;border:1.5px solid var(--line);border-radius:var(--radius-sm);background:#fff;font:inherit;font-size:14px;transition:var(--transition);outline:none;color:var(--text)}input:focus,select:focus,textarea:focus{border-color:var(--brand);box-shadow:0 0 0 3px rgba(15,76,129,.1)}label{display:block;font-size:12px;color:var(--muted);margin:0 0 5px 2px;font-weight:700;text-transform:uppercase;letter-spacing:.04em}
 .card{background:rgba(255,255,255,.97);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow)}.auth{max-width:620px;margin:26px auto;padding:16px;display:grid;grid-template-columns:1fr;gap:20px}.auth .card{padding:26px}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}.grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.small{font-size:13px;color:var(--muted)}.msg{margin-top:12px;padding:10px 14px;border-radius:var(--radius-sm);font-size:14px}.msg.err{background:#fee2e2;color:#991b1b}.msg.ok{background:#dcfce7;color:#166534}
@@ -50,7 +50,7 @@ import { createClient } from 'https://esm.sh/@supabase/supabase-js@2.43.4';
 
 const PROJECT_URL = 'https://yedcpumndtmdnczalspg.supabase.co';
 const ANON_KEY = 'sb_publishable_gtYK6qmfLMku2oxgBtRPzQ_Jg_iVEL9';
-const APP_VERSION = '2026.05.11.2';
+const APP_VERSION = '2026.05.11.6';
 const supabase = createClient(PROJECT_URL, ANON_KEY, {
   auth: {
     persistSession: true,
@@ -59,23 +59,71 @@ const supabase = createClient(PROJECT_URL, ANON_KEY, {
   }
 });
 
-const logo = `<svg class="logo" viewBox="0 0 120 120" aria-hidden="true"><defs><linearGradient id="cuentixBlue" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0F4C81"/><stop offset="100%" stop-color="#0B3154"/></linearGradient></defs><path d="M28 14h38l26 26v52c0 7.7-6.3 14-14 14H28c-7.7 0-14-6.3-14-14V28c0-7.7 6.3-14 14-14z" fill="none" stroke="url(#cuentixBlue)" stroke-width="6" stroke-linejoin="round"/><path d="M66 14v18c0 5.5 4.5 10 10 10h16" fill="none" stroke="url(#cuentixBlue)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><text x="40" y="56" text-anchor="middle" font-size="30" font-weight="700" fill="#0F4C81">$</text><rect x="30" y="67" width="10" height="18" rx="2" fill="#49C464"/><rect x="46" y="58" width="10" height="27" rx="2" fill="#49C464"/><rect x="62" y="48" width="10" height="37" rx="2" fill="#49C464"/></svg>`;
+function logoSvg(id){
+  return `<svg class="logo" viewBox="0 0 120 120" aria-hidden="true"><defs><linearGradient id="${id}" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0F4C81"/><stop offset="100%" stop-color="#0B3154"/></linearGradient></defs><path d="M28 14h38l26 26v52c0 7.7-6.3 14-14 14H28c-7.7 0-14-6.3-14-14V28c0-7.7 6.3-14 14-14z" fill="none" stroke="url(#${id})" stroke-width="6" stroke-linejoin="round"/><path d="M66 14v18c0 5.5 4.5 10 10 10h16" fill="none" stroke="url(#${id})" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><text x="40" y="56" text-anchor="middle" font-size="30" font-weight="700" fill="#0F4C81">$</text><rect x="30" y="67" width="10" height="18" rx="2" fill="#49C464"/><rect x="46" y="58" width="10" height="27" rx="2" fill="#49C464"/><rect x="62" y="48" width="10" height="37" rx="2" fill="#49C464"/></svg>`;
+}
+const logo = logoSvg('cuentixBlueLogin');
 document.getElementById('logoA').innerHTML = logo;
-document.getElementById('logoB').innerHTML = logo.replace('cuentixBlue','cuentixBlue2');
+document.getElementById('logoB').innerHTML = logoSvg('cuentixBlueHeader');
 
 const state = { session:null, profile:null, business:null, data:{}, tab:'resumen', dataLoaded:false, dataLoading:null, booting:false };
 const tabs = [
-  ['resumen','📊 Resumen'],['clientes','👥 Clientes'],['cobrar','📋 A Cobrar'],['proveedores','🏭 Proveedores'],['pagar','💸 A Pagar'],['presupuestos','🧾 Presupuestos'],['pagos','💳 Pagos'],['cc','📒 Cuenta corriente'],['recordatorios','🔔 Recordatorios']
+  ['resumen','📊 Resumen'],['clientes','👥 Clientes'],['cobrar','📋 A Cobrar'],['pagos','💳 Pagos'],['proveedores','🏭 Proveedores'],['pagar','💸 A Pagar'],['presupuestos','🧾 Presupuestos'],['cc','📒 Cuenta corriente'],['recordatorios','🔔 Recordatorios']
 ];
-const tables = ['clients','invoices','payments','suppliers','supplier_movements','supplier_payments','budgets','reminders'];
+const tables = ['clients','invoices','payments','suppliers','supplier_movements','supplier_payments','budgets','reminders','budget_item_templates'];
 
 function byId(id){return document.getElementById(id)}
 function msg(el,text,type='err'){el.innerHTML = text ? `<div class="msg ${type}">${text}</div>` : ''}
 function emailForUsername(username){return `${username.trim().toLowerCase()}@cuentix.local`}
-function money(v,c='ARS'){return new Intl.NumberFormat('es-AR',{style:'currency',currency:c||'ARS'}).format(Number(v||0))}
+function money(v,c='ARS'){
+  const n = Number(v||0);
+  if(c === 'USD') return `u$s ${new Intl.NumberFormat('es-AR',{maximumFractionDigits:2}).format(n)}`;
+  return new Intl.NumberFormat('es-AR',{style:'currency',currency:'ARS'}).format(n);
+}
 function esc(v){return String(v ?? '').replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]))}
 function today(){return new Date().toISOString().slice(0,10)}
 function badge(s){const cls = ['activo','al día','cobrada','pagada','hecho'].includes(s) ? 'b-ok' : ['moroso','vencida','inactivo'].includes(s) ? 'b-bad' : 'b-warn'; return `<span class="badge ${cls}">${esc(s||'pendiente')}</span>`}
+function groupBreakdown(rows){
+  const map = new Map();
+  rows.forEach(r => {
+    const key = `${r.method || 'Sin medio'}|${r.currency || 'ARS'}`;
+    map.set(key, (map.get(key)||0) + Number(r.amount||0));
+  });
+  return [...map.entries()].map(([key,val]) => {
+    const [method,currency] = key.split('|');
+    return `<div>${esc(method)}: ${money(val,currency)}</div>`;
+  }).join('') || '<div>Sin movimientos</div>';
+}
+function getSortKey(name){return sessionStorage.getItem(`cuentix_sort_${name}`)||''}
+function sortRows(rows, mode, type){
+  const arr = [...rows];
+  const text = v => String(v||'').toLowerCase();
+  const num = v => Number(v||0);
+  const cmp = (a,b) => a > b ? 1 : a < b ? -1 : 0;
+  return arr.sort((a,b) => {
+    if(type === 'invoices'){
+      if(mode === 'client') return cmp(text(clientName(a.client_id)), text(clientName(b.client_id)));
+      if(mode === 'pay_date') return cmp(text(a.issue_date), text(b.issue_date));
+      if(mode === 'due_date') return cmp(text(a.due_date), text(b.due_date));
+      if(mode === 'amount') return cmp(num(a.amount), num(b.amount));
+      if(mode === 'status') return cmp(text(a.status), text(b.status));
+      if(mode === 'reference') return cmp(text(a.reference), text(b.reference));
+    }
+    if(type === 'payments'){
+      if(mode === 'client') return cmp(text(clientName(a.client_id)), text(clientName(b.client_id)));
+      if(mode === 'date') return cmp(text(a.payment_date), text(b.payment_date));
+      if(mode === 'method') return cmp(text(a.method), text(b.method));
+      if(mode === 'currency') return cmp(text(a.currency), text(b.currency));
+      if(mode === 'amount') return cmp(num(a.amount), num(b.amount));
+      if(mode === 'reference') return cmp(text(a.reference), text(b.reference));
+    }
+    return 0;
+  });
+}
+function sortControl(name, options){
+  const current = getSortKey(name);
+  return `<select class="sort-select" data-sort="${name}"><option value="">Ordenar</option>${options.map(([v,l])=>`<option value="${v}" ${current===v?'selected':''}>${l}</option>`).join('')}</select>`;
+}
 function setBusy(button, busy, text){
   if(!button) return;
   button.disabled = busy;
@@ -83,6 +131,16 @@ function setBusy(button, busy, text){
 }
 function resetSessionState(){
   state.session = null; state.profile = null; state.business = null; state.data = {}; state.tab = 'resumen'; state.dataLoaded = false; state.dataLoading = null;
+}
+function clearSupabaseSessionStorage(){
+  try {
+    Object.keys(localStorage).forEach(k => {
+      if(k.startsWith('sb-') || k.includes('supabase.auth')) localStorage.removeItem(k);
+    });
+    Object.keys(sessionStorage).forEach(k => {
+      if(k.startsWith('sb-') || k.includes('supabase.auth')) sessionStorage.removeItem(k);
+    });
+  } catch {}
 }
 function showShellLoading(){
   byId('sections').innerHTML = `<section class="section active"><div class="card panel"><div class="skeleton big"></div><div class="skeleton"></div><div class="skeleton"></div><div class="view-loading">Cargando datos...</div></div></section>`;
@@ -142,9 +200,12 @@ supabase.auth.onAuthStateChange((event, session) => {
 });
 byId('btnLogin').onclick = login;
 byId('btnLogout').onclick = () => {
+  const oldProfile = state.profile;
+  if(oldProfile?.id) supabase.from('profiles').update({online_at:null}).eq('id',oldProfile.id);
   resetSessionState();
+  clearSupabaseSessionStorage();
   showAuth();
-  supabase.auth.signOut({ scope: 'local' }).catch(() => {});
+  supabase.auth.signOut().catch(() => {});
 };
 
 function showAuth(){state.booting=false;byId('auth').classList.remove('hidden');byId('app').classList.add('hidden');byId('loginPass').value='';msg(byId('loginMsg'),'')}
@@ -258,89 +319,305 @@ async function refreshBusinessData(){
 
 function resumen(){
   const fact = sum(state.data.invoices,'amount'), cob = sum(state.data.payments,'amount'), pag = sum(state.data.supplier_payments,'amount'), pend = fact - cob;
-  return `<div class="stats"><div class="card stat"><div class="t">Clientes</div><div class="v">${state.data.clients.length}</div></div><div class="card stat"><div class="t">Facturado</div><div class="v">${money(fact)}</div></div><div class="card stat"><div class="t">Cobrado</div><div class="v">${money(cob)}</div></div><div class="card stat"><div class="t">Pagado</div><div class="v">${money(pag)}</div></div><div class="card stat"><div class="t">Saldo pendiente</div><div class="v">${money(pend)}</div></div></div>`;
+  return `<div class="stats"><div class="card stat"><div class="t">Clientes</div><div class="v">${state.data.clients.length}</div></div><div class="card stat"><div class="t">Facturado</div><div class="v">${money(fact)}</div></div><div class="card stat"><div class="t">Cobrado</div><div class="v">${money(cob)}</div><div class="breakdown">${groupBreakdown(state.data.payments)}</div></div><div class="card stat"><div class="t">Pagado</div><div class="v">${money(pag)}</div><div class="breakdown">${groupBreakdown(state.data.supplier_payments)}</div></div><div class="card stat"><div class="t">Saldo pendiente</div><div class="v">${money(pend)}</div></div></div>`;
 }
 function clientes(){ return panel('Clientes', `<input id="searchClients" placeholder="🔍 Buscar por nombre o CUIT" style="width:260px"><button class="btn-primary" data-open="client">+ Nuevo cliente</button>`, tableHtml(['Nombre / razón social','CUIT','Teléfono','Email','Saldo inicial','Estado',''], state.data.clients.map(c=>[c.name,c.tax_id,c.phone,c.email,money(c.opening_balance),badge(c.status),actions('client',c.id)]))); }
 function proveedores(){ return panel('Proveedores', `<input id="searchSuppliers" placeholder="🔍 Buscar proveedor" style="width:260px"><button class="btn-primary" data-open="supplier">+ Nuevo proveedor</button>`, tableHtml(['Nombre / razón social','CUIT','Teléfono','Email',''], state.data.suppliers.map(s=>[s.name,s.tax_id,s.phone,s.email,actions('supplier',s.id)]))); }
-function cobrar(){ return panel('A Cobrar', `<button class="btn-primary" data-open="invoice">+ Nuevo movimiento</button><button class="btn-secondary" data-print>📄 PDF</button><button class="btn-secondary" data-csv="invoices">📊 CSV</button>`, tableHtml(['Número / Ref','Cliente','Fecha','Vencimiento','Tipo','Moneda','Importe','Archivo','Estado',''], state.data.invoices.map(i=>[i.reference,clientName(i.client_id),i.issue_date,i.due_date,i.type,i.currency,money(i.amount,i.currency),fileTag(i.document_path),badge(i.status),actions('invoice',i.id)]))); }
-function pagos(){ return panel('Pagos', `<button class="btn-primary" data-open="payment">+ Registrar pago</button><button class="btn-secondary" data-print>📄 PDF</button><button class="btn-secondary" data-csv="payments">📊 CSV</button>`, tableHtml(['Fecha','Cliente','Medio','Moneda','Importe','TC','Referencia'], state.data.payments.map(p=>[p.payment_date,clientName(p.client_id),p.method,p.currency,money(p.amount,p.currency),p.exchange_rate,p.reference]))); }
+function cobrar(){ const rows = sortRows(state.data.invoices, getSortKey('invoices'), 'invoices'); return panel('A Cobrar', `${sortControl('invoices',[['client','Cliente'],['pay_date','Fecha de pago'],['due_date','Vencimiento'],['amount','Monto'],['status','Estado'],['reference','Número / referencia']])}<button class="btn-primary" data-open="invoice">+ Nuevo movimiento</button><button class="btn-secondary" data-print>📄 PDF</button><button class="btn-secondary" data-csv="invoices">📊 CSV</button>`, tableHtml(['Número / Ref','Cliente','Fecha','Vencimiento','Tipo','Moneda','Importe','Archivo','Estado',''], rows.map(i=>[i.reference,clientName(i.client_id),i.issue_date,i.due_date,i.type,i.currency,money(i.amount,i.currency),fileTag(i.document_path),badge(i.status),actions('invoice',i.id)]))); }
+function pagos(){ const rows = sortRows(state.data.payments, getSortKey('payments'), 'payments'); return panel('Pagos', `${sortControl('payments',[['client','Cliente'],['date','Fecha'],['method','Medio de pago'],['currency','Moneda'],['amount','Monto'],['reference','Referencia']])}<button class="btn-primary" data-open="payment">+ Registrar pago</button><button class="btn-secondary" data-print>📄 PDF</button><button class="btn-secondary" data-csv="payments">📊 CSV</button>`, tableHtml(['Fecha','Cliente','Medio','Moneda','Importe','TC','Referencia'], rows.map(p=>[p.payment_date,clientName(p.client_id),p.method,p.currency,money(p.amount,p.currency),p.exchange_rate,p.reference]))); }
 function pagar(){ return panel('A Pagar', `<button class="btn-primary" data-open="supplier_movement">+ Nuevo movimiento</button><button class="btn-secondary" data-open="supplier_payment">+ Registrar pago</button><button class="btn-secondary" data-print>📄 PDF</button><button class="btn-secondary" data-csv="supplier_movements">📊 CSV</button>`, tableHtml(['Número / Ref','Proveedor','Fecha','Vencimiento','Tipo','Moneda','Importe','Archivo','Estado',''], state.data.supplier_movements.map(i=>[i.reference,supplierName(i.supplier_id),i.issue_date,i.due_date,i.type,i.currency,money(i.amount,i.currency),fileTag(i.document_path),badge(i.status),actions('supplier_movement',i.id)])) + `<h2 style="font-size:18px;margin-top:22px">Pagos a proveedores</h2>` + tableHtml(['Fecha','Proveedor','Medio','Moneda','Importe','TC','Referencia'], state.data.supplier_payments.map(p=>[p.payment_date,supplierName(p.supplier_id),p.method,p.currency,money(p.amount,p.currency),p.exchange_rate,p.reference]))); }
-function presupuestos(){ return panel('Presupuestos', `<button class="btn-primary" data-open="budget">+ Nuevo presupuesto</button><button class="btn-secondary" data-print>Imprimir / PDF</button>`, tableHtml(['N° Presupuesto','Fecha','Cliente','IVA','Total'], state.data.budgets.map(b=>[b.budget_number,b.issue_date,clientName(b.client_id),b.iva,money(b.total)]))); }
 function recordatorios(){ return panel('Recordatorios', `<button class="btn-primary" data-open="reminder">+ Nuevo recordatorio</button>`, tableHtml(['Título','Fecha límite','Estado',''], state.data.reminders.map(r=>[r.title,r.due_date,badge(r.done?'hecho':(r.due_date<today()?'vencido':r.due_date===today()?'hoy':'próximo')),`<div class="actions"><button class="btn-secondary" data-done="${r.id}">${r.done?'Pendiente':'Hecho'}</button><button class="btn-danger" data-delete="reminders:${r.id}">Eliminar</button></div>`]))); }
+function presupuestos(){
+  return panel('Presupuestos', `<button class="btn-primary" data-open="budget">+ NUEVO</button>`, tableHtml(['N° Presupuesto','Fecha','Cliente','Moneda','IVA','Total',''], state.data.budgets.map(b=>[b.budget_number,b.issue_date,b.client_data?.split('\n')[0] || '-',b.currency||'ARS',b.iva,money(b.total,b.currency||'ARS'),`<div class="actions"><button class="btn-secondary" data-print-budget="${b.id}">Imprimir</button>${actions('budget',b.id)}</div>`])));
+}
 function cc(){
-  const rows = [];
-  state.data.clients.forEach(c => {
-    let saldo = Number(c.opening_balance||0);
-    rows.push(['',c.name,'Saldo inicial','ARS',money(saldo),money(0),money(saldo)]);
-    [...state.data.invoices.filter(i=>i.client_id===c.id).map(i=>({d:i.issue_date,t:i.type,x:i.reference,debe:Number(i.amount),haber:0,c:i.currency})),...state.data.payments.filter(p=>p.client_id===c.id).map(p=>({d:p.payment_date,t:'Pago',x:p.reference||p.method,debe:0,haber:Number(p.amount)*Number(p.exchange_rate||1),c:p.currency}))].sort((a,b)=>String(a.d).localeCompare(String(b.d))).forEach(m=>{saldo += m.debe-m.haber; rows.push([m.d,c.name,`${m.t} ${m.x||''}`,m.c,money(m.debe,m.c),money(m.haber,m.c),money(saldo)]);});
+  const selected = sessionStorage.getItem('cuentix_cc_client') || '';
+  const options = `<select id="ccClientSelect" style="width:300px"><option value="">Seleccionar cliente</option>${state.data.clients.map(c=>`<option value="${c.id}" ${c.id===selected?'selected':''}>${esc(c.name)}</option>`).join('')}</select>`;
+  if(!selected) return panel('Cuenta corriente', `${options}<button class="btn-secondary" data-print>📄 PDF</button>`, `<div class="empty">Seleccioná un cliente para ver su cuenta corriente.</div>`);
+  const client = state.data.clients.find(c=>c.id===selected);
+  if(!client) return panel('Cuenta corriente', options, `<div class="empty">Cliente no encontrado.</div>`);
+  let saldo = Number(client.opening_balance||0);
+  const movements = [
+    ...state.data.invoices.filter(i=>i.client_id===client.id).map(i=>({d:i.issue_date,t:i.type,x:i.reference,debe:toArs(i.amount,i.currency),haber:0,c:i.currency})),
+    ...state.data.payments.filter(p=>p.client_id===client.id).map(p=>({d:p.payment_date,t:'Pago',x:p.reference||p.method,debe:0,haber:toArs(p.amount,p.currency,p.exchange_rate),c:p.currency}))
+  ].sort((a,b)=>String(a.d||'').localeCompare(String(b.d||'')));
+  const rows = movements.map(m => {
+    saldo += m.debe - m.haber;
+    return [m.d, m.t, m.x || '-', 'ARS', money(m.debe), money(m.haber), money(saldo)];
   });
-  return panel('Cuenta corriente', `<button class="btn-secondary" data-print>📄 PDF</button><button class="btn-secondary" data-csv-custom="cc">📊 CSV</button>`, tableHtml(['Fecha','Cliente','Detalle','Moneda','Debe','Haber','Saldo'], rows));
+  rows.push(['','','','', '', '<b>SALDO TOTAL</b>', `<b>${money(saldo)}</b>`]);
+  return panel('Cuenta corriente', `${options}<button class="btn-secondary" data-print>📄 PDF</button><button class="btn-secondary" data-csv-custom="cc">📊 CSV</button>`, `<div class="small" style="margin-bottom:12px">Cliente: <b>${esc(client.name)}</b></div>${tableHtml(['Fecha','Tipo','Detalle','Moneda','Debe','Haber','Saldo'], rows)}`);
+}
+function currentAccountRows(){
+  const selected = sessionStorage.getItem('cuentix_cc_client') || '';
+  const client = state.data.clients.find(c=>c.id===selected);
+  if(!client) return [];
+  let saldo = Number(client.opening_balance||0);
+  const rows = [];
+  [...state.data.invoices.filter(i=>i.client_id===client.id).map(i=>({d:i.issue_date,t:i.type,x:i.reference,debe:toArs(i.amount,i.currency),haber:0})),...state.data.payments.filter(p=>p.client_id===client.id).map(p=>({d:p.payment_date,t:'Pago',x:p.reference||p.method,debe:0,haber:toArs(p.amount,p.currency,p.exchange_rate)}))].sort((a,b)=>String(a.d||'').localeCompare(String(b.d||''))).forEach(m=>{saldo += m.debe-m.haber; rows.push({fecha:m.d,tipo:m.t,detalle:m.x,debe:m.debe,haber:m.haber,saldo});});
+  rows.push({fecha:'',tipo:'',detalle:'SALDO TOTAL',debe:'',haber:'',saldo});
+  return rows;
 }
 
 function panel(title, toolbar, content){ return `<div class="card panel"><div class="toolbar"><h2>${title}</h2><div class="row">${toolbar}</div></div>${content}</div>`}
 function tableHtml(headers, rows){ if(!rows.length) return '<div class="empty">Sin registros.</div>'; return `<div class="table-wrap"><table class="table"><thead><tr>${headers.map(h=>`<th>${h}</th>`).join('')}</tr></thead><tbody>${rows.map(r=>`<tr>${r.map(c=>`<td>${c??'-'}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`}
 function sum(rows,k){return rows.reduce((a,r)=>a+Number(r[k]||0),0)}
+function toArs(amount,currency,exchangeRate=1){return Number(amount||0) * (currency === 'USD' ? Number(exchangeRate||1) : 1)}
 function clientName(id){return state.data.clients.find(c=>c.id===id)?.name || '-'}
 function supplierName(id){return state.data.suppliers.find(s=>s.id===id)?.name || '-'}
 function fileTag(path){return path ? `<span class="file-chip">Adjunto</span>` : '-'}
 function actions(type,id){return `<div class="actions"><button class="btn-secondary" data-edit="${type}:${id}">Editar</button><button class="btn-danger" data-delete="${tableFor(type)}:${id}">Eliminar</button></div>`}
-function tableFor(type){return {client:'clients',supplier:'suppliers',invoice:'invoices',supplier_movement:'supplier_movements'}[type]||type}
+function tableFor(type){return {client:'clients',supplier:'suppliers',invoice:'invoices',supplier_movement:'supplier_movements',budget:'budgets'}[type]||type}
 
 function bindBusinessActions(){
   document.querySelectorAll('[data-open]').forEach(b=>b.onclick=()=>openForm(b.dataset.open));
   document.querySelectorAll('[data-edit]').forEach(b=>b.onclick=()=>openForm(...b.dataset.edit.split(':')));
+  document.querySelectorAll('[data-print-budget]').forEach(b=>b.onclick=()=>printBudget(b.dataset.printBudget));
+  document.querySelectorAll('[data-sort]').forEach(s=>s.onchange=()=>{sessionStorage.setItem(`cuentix_sort_${s.dataset.sort}`,s.value);renderBusiness();});
+  const ccSelect = byId('ccClientSelect');
+  if(ccSelect) ccSelect.onchange = () => { sessionStorage.setItem('cuentix_cc_client', ccSelect.value); renderBusiness(); };
   document.querySelectorAll('[data-delete]').forEach(b=>b.onclick=async()=>{const [table,id]=b.dataset.delete.split(':'); if(confirm('Eliminar registro?')){b.disabled=true;await supabase.from(table).delete().eq('id',id); await refreshBusinessData();}});
   document.querySelectorAll('[data-done]').forEach(b=>b.onclick=async()=>{const r=state.data.reminders.find(x=>x.id===b.dataset.done); b.disabled=true; await supabase.from('reminders').update({done:!r.done}).eq('id',r.id); await refreshBusinessData();});
   document.querySelectorAll('[data-print]').forEach(b=>b.onclick=()=>window.print());
   document.querySelectorAll('[data-csv]').forEach(b=>b.onclick=()=>downloadCsv(`${b.dataset.csv}.csv`, state.data[b.dataset.csv]));
+  document.querySelectorAll('[data-csv-custom="cc"]').forEach(b=>b.onclick=()=>downloadCsv('cuenta-corriente.csv', currentAccountRows()));
 }
 
 function openForm(type,id){
   const row = id ? state.data[tableFor(type)].find(x=>x.id===id) : {};
   const configs = {
-    client:['Cliente','clients',[['name','Nombre / razón social'],['tax_id','CUIT'],['phone','Teléfono'],['email','Email'],['address','Dirección'],['notes','Notas'],['opening_balance','Saldo inicial','number'],['status','Estado','select',['al día','pendiente','moroso']]]],
+    client:['Cliente','clients',[['name','Nombre / razón social'],['tax_id','CUIT'],['phone','Teléfono'],['email','Email'],['address','Dirección'],['notes','Notas'],['status','Estado','select',['al día','pendiente','moroso']]]],
     supplier:['Proveedor','suppliers',[['name','Nombre / razón social'],['tax_id','CUIT'],['phone','Teléfono'],['email','Email'],['address','Dirección'],['notes','Notas']]],
     invoice:['Movimiento A Cobrar','invoices',[['client_id','Cliente','selectRows','clients'],['reference','Número / referencia'],['issue_date','Fecha','date'],['due_date','Vencimiento','date'],['type','Tipo','select',['Factura A','Factura B','Factura C','Recibo','Presupuesto','Nota de débito']],['currency','Moneda','select',['ARS','USD']],['amount','Importe','number'],['detail','Detalle'],['status','Estado','select',['pendiente','cobrada','vencida']],['document','Adjunto','file']]],
     supplier_movement:['Movimiento A Pagar','supplier_movements',[['supplier_id','Proveedor','selectRows','suppliers'],['reference','Número / referencia'],['issue_date','Fecha','date'],['due_date','Vencimiento','date'],['type','Tipo'],['currency','Moneda','select',['ARS','USD']],['amount','Importe','number'],['detail','Detalle'],['status','Estado','select',['pendiente','pagada','vencida']],['document','Adjunto','file']]],
     payment:['Pago','payments',[['client_id','Cliente','selectRows','clients'],['payment_date','Fecha','date'],['method','Medio','select',['efectivo','transferencia','cheque','tarjeta','Mercado Pago']],['currency','Moneda','select',['ARS','USD']],['amount','Importe','number'],['exchange_rate','Tipo de cambio','number'],['reference','Referencia'],['notes','Notas']]],
     supplier_payment:['Pago a proveedor','supplier_payments',[['supplier_id','Proveedor','selectRows','suppliers'],['payment_date','Fecha','date'],['method','Medio','select',['efectivo','transferencia','cheque','tarjeta','Mercado Pago']],['currency','Moneda','select',['ARS','USD']],['amount','Importe','number'],['exchange_rate','Tipo de cambio','number'],['reference','Referencia'],['notes','Notas']]],
-    budget:['Presupuesto','budgets',[['client_id','Cliente','selectRows','clients'],['budget_number','Número'],['issue_date','Fecha','date'],['company_data','Datos empresa'],['client_data','Datos cliente'],['items_text','Ítems: código | descripción | unidad | cantidad | precio | descuento'],['iva','IVA %','number'],['color','Color','color'],['logo','Logo','file']]],
+    budget:['Presupuesto','budgets',[['budget_number','Número'],['issue_date','Fecha','date'],['currency','Moneda','select',['ARS','USD']],['company_data','Datos empresa'],['budget_client_name','Cliente'],['budget_client_tax','CUIT/NIF'],['budget_client_cif','CIF opcional'],['budget_client_address','Domicilio'],['budget_client_phone','Teléfono'],['budget_client_email','Email'],['payment_terms','Condición de venta / pago'],['discount_enabled','Agregar descuento','checkbox'],['items_text','Ítems: código | descripción | unidad | cantidad | precio | descuento'],['iva','IVA %','number'],['color','Color de barras','color'],['logo','Logo','file']]],
     reminder:['Recordatorio','reminders',[['title','Título'],['due_date','Fecha límite','date'],['notes','Notas']]]
   };
   const [title,table,fields] = configs[type];
   byId('modalTitle').textContent = `${id?'Editar':'Nuevo'} ${title}`;
   byId('modalBody').innerHTML = `<div class="grid2">${fields.map(f=>fieldHtml(f,row)).join('')}</div><div id="modalMsg"></div>`;
   byId('modal').classList.add('open');
+  if(type === 'budget') setupBudgetModal(row);
   byId('modalForm').onsubmit = async e => {
     e.preventDefault();
-    const fd = new FormData(e.target); const payload = { business_id: state.profile.business_id };
-    for(const f of fields){
-      if(f[2]==='file') continue;
-      if(f[0]==='items_text') payload.items = parseItems(fd.get(f[0]));
-      else payload[f[0]] = fd.get(f[0]) || null;
-    }
-    if(type==='budget'){ payload.total = totalItems(payload.items, Number(payload.iva||0)); if(!payload.budget_number) payload.budget_number = `P-${today().replaceAll('-','')}-${String(state.data.budgets.length+1).padStart(4,'0')}`; }
-    const fileInput = e.target.querySelector('input[type=file]');
-    if(fileInput?.files?.[0]) payload[type==='budget'?'logo_path':'document_path'] = await uploadFile(fileInput.files[0], table);
     const submitButton = byId('modalForm').querySelector('.btn-primary');
     submitButton.disabled = true;
-    const q = id ? supabase.from(table).update(payload).eq('id',id) : supabase.from(table).insert(payload);
-    const { error } = await q; if(error){ submitButton.disabled = false; return msg(byId('modalMsg'),error.message); }
-    closeModal(); await refreshBusinessData();
+    try {
+      if(type === 'budget') syncBudgetItemsToHidden();
+      const fd = new FormData(e.target); const payload = { business_id: state.profile.business_id };
+      for(const f of fields){
+        if(f[2]==='file') continue;
+        if(type === 'budget' && f[0].startsWith('budget_')) continue;
+        if(f[0]==='items_text') payload.items = parseItems(fd.get(f[0]));
+        else payload[f[0]] = fd.get(f[0]) || null;
+      }
+      if(type==='client' && !id) payload.opening_balance = 0;
+      if(type==='budget'){
+        payload.client_id = null;
+        if(row?.logo_path) payload.logo_path = row.logo_path;
+        if(!payload.logo_path && e.target.dataset.logoPath) payload.logo_path = e.target.dataset.logoPath;
+        payload.client_data = [
+          fd.get('budget_client_name') || '',
+          `CUIT: ${fd.get('budget_client_tax') || ''}`,
+          `CIF: ${fd.get('budget_client_cif') || ''}`,
+          `Dirección: ${fd.get('budget_client_address') || ''}`,
+          `Teléfono: ${fd.get('budget_client_phone') || ''}`,
+          `Email: ${fd.get('budget_client_email') || ''}`,
+          `Cond. Vta.: ${fd.get('payment_terms') || ''}`
+        ].join('\n');
+        payload.discount_enabled = fd.get('discount_enabled') === 'on';
+        payload.total = totalItems(payload.items, Number(payload.iva||0));
+        if(!payload.budget_number) payload.budget_number = `P-${today().replaceAll('-','')}-${String(state.data.budgets.length+1).padStart(4,'0')}`;
+        if(!payload.items.length) throw new Error('Agregá al menos un ítem al presupuesto.');
+      }
+      const fileInput = e.target.querySelector('input[type=file]');
+      if(fileInput?.files?.[0]) payload[type==='budget'?'logo_path':'document_path'] = await uploadFile(fileInput.files[0], table);
+      const q = id ? supabase.from(table).update(payload).eq('id',id) : supabase.from(table).insert(payload);
+      const { error } = await q;
+      if(error) throw error;
+      msg(byId('modalMsg'),'Guardado correctamente.','ok');
+      closeModal(); await refreshBusinessData();
+    } catch(error) {
+      msg(byId('modalMsg'),`Error al guardar: ${error.message || error}`);
+      submitButton.disabled = false;
+    }
   };
 }
 
 function fieldHtml(f,row){
   const [name,label,type,opt] = f; const val = row?.[name] ?? (name==='exchange_rate'?1:name==='iva'?21:name==='issue_date'||name==='payment_date'||name==='due_date'?today():'');
   if(type==='select') return `<div><label>${label}</label><select name="${name}">${opt.map(o=>`<option ${o===val?'selected':''}>${o}</option>`).join('')}</select></div>`;
+  if(type==='checkbox') return `<div><label>${label}</label><input name="${name}" type="checkbox" ${row?.[name]?'checked':''}></div>`;
   if(type==='selectRows') return `<div><label>${label}</label><select name="${name}" required><option value="">Seleccionar</option>${state.data[opt].map(r=>`<option value="${r.id}" ${r.id===val?'selected':''}>${esc(r.name)}</option>`).join('')}</select></div>`;
   if(type==='file') return `<div><label>${label}</label><input name="${name}" type="file" accept="image/*,.pdf"></div>`;
-  if(name==='items_text') return `<div style="grid-column:1/-1"><label>${label}</label><textarea name="${name}" rows="4">${(row.items||[]).map(i=>[i.code,i.description,i.unit,i.quantity,i.unit_price,i.discount].join(' | ')).join('\\n')}</textarea></div>`;
+  if(name==='items_text') return `<div style="grid-column:1/-1"><label>Ítems</label><input type="hidden" name="${name}" value="${esc((row.items||[]).map(i=>[i.code,i.description,i.unit,i.quantity,i.unit_price,i.discount].join(' | ')).join('\\n'))}"><div id="budgetItemsEditor"></div></div>`;
+  if(name.startsWith('budget_client_')) return `<div><label>${label}</label><input name="${name}" type="${type||'text'}" value="${esc(budgetClientField(row,name))}"></div>`;
   return `<div><label>${label}</label><input name="${name}" type="${type||'text'}" value="${esc(val)}"></div>`;
 }
 async function uploadFile(file, folder){ const path = `${state.profile.business_id}/${folder}/${Date.now()}-${file.name.replace(/[^\\w.\\-]+/g,'_')}`; const { error } = await supabase.storage.from('documents').upload(path,file); if(error) throw error; return path; }
 function parseItems(text){return String(text||'').split('\\n').filter(Boolean).map(line=>{const [code,description,unit,quantity,unit_price,discount]=line.split('|').map(x=>x.trim()); return {code,description,unit,quantity:Number(quantity||0),unit_price:Number(unit_price||0),discount:Number(discount||0)};});}
 function totalItems(items,iva){const base=items.reduce((s,i)=>s+i.quantity*i.unit_price*(1-i.discount/100),0);return base*(1+iva/100)}
+function budgetClientField(row,name){
+  const lines = String(row?.client_data||'').split('\n');
+  const first = lines[0] || '';
+  const find = key => (lines.find(l=>l.startsWith(key))||'').replace(key,'').trim();
+  return {budget_client_name:first,budget_client_tax:find('CUIT:'),budget_client_cif:find('CIF:'),budget_client_address:find('Dirección:'),budget_client_phone:find('Teléfono:'),budget_client_email:find('Email:')}[name] || '';
+}
+function setupBudgetModal(row){
+  const form = byId('modalForm');
+  if(!form.currency.value) form.currency.value = row?.currency || 'ARS';
+  if(!form.color.value) form.color.value = latestBudgetColor();
+  if(!row?.logo_path && latestBudgetLogo()) form.dataset.logoPath = latestBudgetLogo();
+  form.querySelector('input[name="logo"]')?.addEventListener('change', async e => {
+    const file = e.target.files?.[0];
+    if(!file) return;
+    const color = await detectImageColor(file).catch(()=>null);
+    if(color) form.color.value = color;
+  });
+  const box = document.createElement('div');
+  box.className = 'budget-preview';
+  box.innerHTML = '<b>Carga rápida</b><div class="small">Usá los botones para agregar productos, servicios, mano de obra o plantillas frecuentes. Los totales se recalculan automáticamente.</div>';
+  byId('modalBody').appendChild(box);
+  renderBudgetItems(row.items?.length ? row.items : [{code:'',description:'',unit:'Unidad',quantity:1,unit_price:0,discount:0}]);
+  form.querySelector('[name="discount_enabled"]')?.addEventListener('change',()=>renderBudgetItems(readBudgetItems()));
+  form.querySelector('[name="iva"]')?.addEventListener('input',updateBudgetTotals);
+  form.querySelector('[name="currency"]')?.addEventListener('change',updateBudgetTotals);
+}
+const unitOptions = ['Unidad','m²','m³','Metro','Centímetro','Litro','Kilo','Gramo','Tonelada','Hora','Día','Caja','Bolsa','Paquete','Servicio','Global','Otro'];
+function renderBudgetItems(items){
+  const editor = byId('budgetItemsEditor');
+  if(!editor) return;
+  const discount = byId('modalForm').discount_enabled?.checked;
+  const templates = state.data.budget_item_templates || [];
+  editor.innerHTML = `<div class="item-tools"><button type="button" class="btn-secondary mini-btn" data-add-item="Ítem">+ Agregar ítem</button><button type="button" class="btn-secondary mini-btn" data-add-item="Producto">+ Producto</button><button type="button" class="btn-secondary mini-btn" data-add-item="Servicio">+ Servicio</button><button type="button" class="btn-secondary mini-btn" data-add-item="Mano de obra">+ Mano de obra</button><button type="button" class="btn-secondary mini-btn" data-add-item="Material">+ Material</button><button type="button" class="btn-secondary mini-btn" data-add-item="Otro">+ Otro</button>${templates.length?`<select id="templatePick" style="width:auto"><option value="">Plantillas frecuentes</option>${templates.map(t=>`<option value="${t.id}">${esc(t.description)}</option>`).join('')}</select>`:''}</div>
+  <div id="budgetItemRows">${items.map((item,i)=>itemRowHtml(item,i,discount)).join('')}</div><div class="budget-total-line"><span>Subtotal: <b id="budgetSubtotal"></b></span><span>Total: <b id="budgetGrandTotal"></b></span></div>`;
+  editor.querySelectorAll('[data-add-item]').forEach(b=>b.onclick=()=>{const arr=readBudgetItems();arr.push({code:'',description:b.dataset.addItem,unit:b.dataset.addItem==='Servicio'?'Servicio':'Unidad',quantity:1,unit_price:0,discount:0});renderBudgetItems(arr);});
+  const pick = byId('templatePick');
+  if(pick) pick.onchange=()=>{const t=templates.find(x=>x.id===pick.value); if(t){const arr=readBudgetItems();arr.push({code:t.code||'',description:t.description,unit:t.unit,quantity:1,unit_price:Number(t.price||0),discount:0});renderBudgetItems(arr);}};
+  editor.querySelectorAll('input,select').forEach(el=>el.oninput=()=>{if(el.dataset.field==='unit' && el.value==='Otro') el.closest('.item-row').querySelector('[data-field="unit_custom"]').classList.remove('hidden'); syncBudgetItemsToHidden(); updateBudgetTotals();});
+  editor.querySelectorAll('[data-action]').forEach(b=>b.onclick=()=>budgetItemAction(b.dataset.action,Number(b.dataset.index)));
+  syncBudgetItemsToHidden(); updateBudgetTotals();
+}
+function itemRowHtml(item,i,discount){
+  const unit = unitOptions.includes(item.unit) ? item.unit : 'Otro';
+  const custom = unit === 'Otro' ? item.unit : '';
+  const totals = itemTotals(item);
+  return `<div class="item-row ${discount?'':'no-discount'}" data-row="${i}">
+    <input data-field="code" placeholder="Código" value="${esc(item.code||'')}">
+    <input data-field="description" placeholder="Descripción" value="${esc(item.description||'')}">
+    <div><select data-field="unit">${unitOptions.map(u=>`<option ${u===unit?'selected':''}>${u}</option>`).join('')}</select><input class="${unit==='Otro'?'':'hidden'}" data-field="unit_custom" placeholder="U.M." value="${esc(custom)}" style="margin-top:4px"></div>
+    <div class="qty-box"><button type="button" data-action="dec" data-index="${i}">-</button><input data-field="quantity" type="number" min="0" step="0.01" value="${Number(item.quantity||0)}"><button type="button" data-action="inc" data-index="${i}">+</button></div>
+    <input data-field="unit_price" type="number" min="0" step="0.01" placeholder="Precio" value="${Number(item.unit_price||0)}">
+    ${discount?`<input data-field="discount" type="number" min="0" max="100" step="0.01" placeholder="% desc." value="${Number(item.discount||0)}"><input readonly value="${money(totals.priceWithDiscount,byId('modalForm').currency?.value||'ARS')}">`:''}
+    <input readonly value="${money(totals.amount,byId('modalForm').currency?.value||'ARS')}">
+    <div class="item-actions"><button type="button" class="mini-btn btn-secondary" data-action="dup" data-index="${i}">Duplicar</button><button type="button" class="mini-btn btn-secondary" data-action="up" data-index="${i}">↑</button><button type="button" class="mini-btn btn-secondary" data-action="down" data-index="${i}">↓</button><button type="button" class="mini-btn btn-secondary" data-action="template" data-index="${i}">Plantilla</button><button type="button" class="mini-btn btn-danger" data-action="del" data-index="${i}">Eliminar</button></div>
+  </div>`;
+}
+function readBudgetItems(){
+  return [...document.querySelectorAll('#budgetItemRows .item-row')].map(row=>{
+    const get = f => row.querySelector(`[data-field="${f}"]`)?.value || '';
+    const unit = get('unit') === 'Otro' ? get('unit_custom') : get('unit');
+    return {code:get('code'),description:get('description'),unit:unit||'Unidad',quantity:Math.max(0,Number(get('quantity')||0)),unit_price:Math.max(0,Number(get('unit_price')||0)),discount:Math.max(0,Number(get('discount')||0))};
+  }).filter(i=>i.description || i.code || i.unit_price);
+}
+function syncBudgetItemsToHidden(){
+  const hidden = byId('modalForm')?.querySelector('[name="items_text"]');
+  if(hidden) hidden.value = readBudgetItems().map(i=>[i.code,i.description,i.unit,i.quantity,i.unit_price,i.discount].join(' | ')).join('\n');
+}
+function updateBudgetTotals(){
+  const items = readBudgetItems();
+  const subtotal = items.reduce((s,i)=>s+itemTotals(i).amount,0);
+  const total = totalItems(items,Number(byId('modalForm')?.iva?.value||0));
+  const currency = byId('modalForm')?.currency?.value || 'ARS';
+  const sub = byId('budgetSubtotal'), grand = byId('budgetGrandTotal');
+  if(sub) sub.textContent = money(subtotal,currency);
+  if(grand) grand.textContent = money(total,currency);
+}
+async function budgetItemAction(action,index){
+  const arr = readBudgetItems();
+  if(action==='inc') arr[index].quantity += 1;
+  if(action==='dec') arr[index].quantity = Math.max(0,arr[index].quantity-1);
+  if(action==='dup') arr.splice(index+1,0,{...arr[index]});
+  if(action==='del') arr.splice(index,1);
+  if(action==='up' && index>0) [arr[index-1],arr[index]]=[arr[index],arr[index-1]];
+  if(action==='down' && index<arr.length-1) [arr[index+1],arr[index]]=[arr[index],arr[index+1]];
+  if(action==='template'){
+    const item = arr[index];
+    if(item?.description){
+      const { data, error } = await supabase.from('budget_item_templates').insert({business_id:state.profile.business_id,code:item.code,description:item.description,unit:item.unit,price:item.unit_price,category:'Otro'}).select().single();
+      if(error) alert(error.message); else { state.data.budget_item_templates = [...(state.data.budget_item_templates||[]), data]; alert('Plantilla guardada.'); }
+    }
+  }
+  renderBudgetItems(arr.length?arr:[{code:'',description:'',unit:'Unidad',quantity:1,unit_price:0,discount:0}]);
+}
+function latestBudgetLogo(){return state.data.budgets.find(b=>b.logo_path)?.logo_path || ''}
+function latestBudgetColor(){return state.data.budgets.find(b=>b.color)?.color || '#0F4C81'}
+function detectImageColor(file){
+  return new Promise((resolve,reject)=>{
+    const img = new Image();
+    img.onload = () => {
+      const canvas = document.createElement('canvas');
+      canvas.width = canvas.height = 32;
+      const ctx = canvas.getContext('2d');
+      ctx.drawImage(img,0,0,32,32);
+      const data = ctx.getImageData(0,0,32,32).data;
+      let r=0,g=0,b=0,c=0;
+      for(let i=0;i<data.length;i+=16){ if(data[i+3] > 80){r+=data[i];g+=data[i+1];b+=data[i+2];c++;} }
+      if(!c) return resolve(null);
+      resolve('#' + [r/c,g/c,b/c].map(v=>Math.round(v).toString(16).padStart(2,'0')).join(''));
+    };
+    img.onerror = reject;
+    img.src = URL.createObjectURL(file);
+  });
+}
+async function signedUrl(path){
+  if(!path) return '';
+  const { data } = await supabase.storage.from('documents').createSignedUrl(path, 3600);
+  return data?.signedUrl || '';
+}
+function itemTotals(item){
+  const qty = Number(item.quantity||0);
+  const unit = Number(item.unit_price||0);
+  const discount = Number(item.discount||0);
+  const priceWithDiscount = unit * (1 - discount / 100);
+  return { qty, unit, discount, priceWithDiscount, amount: qty * priceWithDiscount };
+}
+async function printBudget(id){
+  const b = state.data.budgets.find(x=>x.id===id);
+  if(!b) return alert('Presupuesto no encontrado.');
+  const win = window.open('', '_blank');
+  if(!win) return alert('Permití ventanas emergentes para imprimir.');
+  const logoUrl = await signedUrl(b.logo_path);
+  const color = b.color || '#0F4C81';
+  const currency = b.currency || 'ARS';
+  const items = Array.isArray(b.items) ? b.items : [];
+  const showDiscount = !!b.discount_enabled;
+  const subtotal = items.reduce((s,i)=>s+itemTotals(i).amount,0);
+  const ivaAmount = subtotal * Number(b.iva||0) / 100;
+  const total = subtotal + ivaAmount;
+  const clientLines = String(b.client_data||'').split('\n').filter(Boolean);
+  const companyLines = String(b.company_data||'').split('\n').filter(Boolean);
+  const discountHeaders = showDiscount ? '<th>Desc. %</th><th>Precio c/desc.</th>' : '';
+  const rows = items.map(i => {
+    const t = itemTotals(i);
+    return `<tr><td>${esc(i.code)}</td><td>${esc(i.description)}</td><td>${esc(i.unit)}</td><td>${t.qty}</td><td>${money(t.unit,currency)}</td>${showDiscount?`<td>${t.discount}%</td><td>${money(t.priceWithDiscount,currency)}</td>`:''}<td>${money(t.amount,currency)}</td></tr>`;
+  }).join('');
+  win.document.write(`<!doctype html><html><head><meta charset="utf-8"><title>Presupuesto ${esc(b.budget_number||'')}</title><style>
+    body{font-family:Arial,sans-serif;color:#111827;margin:0;padding:24px;background:#fff}.page{max-width:900px;margin:auto}
+    .top{display:flex;justify-content:space-between;gap:24px;border-bottom:3px solid ${color};padding-bottom:16px}.logo{max-width:150px;max-height:80px;object-fit:contain}.doc{text-align:right}.doc h1{margin:0;color:${color};font-size:28px}.muted{color:#6b7280;font-size:12px}.no-valid{margin:14px 0;text-align:center;font-weight:700;border:1px solid #d1d5db;padding:8px}
+    .blocks{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:14px 0}.block{border:1px solid #d1d5db;padding:10px;min-height:90px}.block h3{margin:0 0 8px;color:${color};font-size:13px}
+    table{width:100%;border-collapse:collapse;margin-top:12px}th{background:${color};color:#fff;padding:8px;border:1px solid ${color};font-size:12px;text-align:left}td{padding:8px;border:1px solid #d1d5db;font-size:12px}.totals{margin-left:auto;width:310px}.totals td:first-child{font-weight:700}.total{font-size:16px;font-weight:800;color:${color}}.terms{border:1px solid #d1d5db;padding:10px;margin-top:16px}.sign{display:grid;grid-template-columns:1fr 1fr;gap:50px;margin-top:56px;text-align:center}.line{border-top:1px solid #111827;padding-top:8px}.actions{margin-bottom:16px}@media print{.actions{display:none}body{padding:0}.page{max-width:none}}
+  </style></head><body><div class="page"><div class="actions"><button onclick="window.print()">Imprimir / Guardar PDF</button></div>
+  <div class="top"><div>${logoUrl?`<img class="logo" src="${logoUrl}">`:''}<div>${companyLines.map(esc).join('<br>')}</div></div><div class="doc"><h1>PRESUPUESTO</h1><div>N° ${esc(b.budget_number||'')}</div><div>Fecha: ${esc(b.issue_date||today())}</div></div></div>
+  <div class="no-valid">DOCUMENTO NO VÁLIDO COMO FACTURA</div>
+  <div class="blocks"><div class="block"><h3>Datos del cliente</h3>${clientLines.map(esc).join('<br>')}</div><div class="block"><h3>Condición de venta</h3><b>Cond. Vta.:</b> ${esc(b.payment_terms||'')}</div></div>
+  <table><thead><tr><th>Código</th><th>Descripción</th><th>Unidad</th><th>Cantidad</th><th>Precio unitario</th>${discountHeaders}<th>Importe</th></tr></thead><tbody>${rows}</tbody></table>
+  <table class="totals"><tr><td>Subtotal</td><td>${money(subtotal,currency)}</td></tr><tr><td>IVA ${Number(b.iva||0)}%</td><td>${money(ivaAmount,currency)}</td></tr><tr><td class="total">Total</td><td class="total">${money(total,currency)}</td></tr></table>
+  <div class="terms">Condiciones de pago: ${esc(b.payment_terms||'')}</div><div class="sign"><div class="line">Firma de la Empresa</div><div class="line">Firma del Cliente</div></div></div></body></html>`);
+  win.document.close();
+}
 function closeModal(){byId('modal').classList.remove('open'); byId('modalForm').reset();}
 byId('modalClose').onclick=closeModal; byId('modalCancel').onclick=closeModal; byId('modal').onclick=e=>{if(e.target.id==='modal')closeModal();}
 
