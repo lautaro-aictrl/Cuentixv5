@@ -6,7 +6,7 @@
 <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, proxy-revalidate" />
 <meta http-equiv="Pragma" content="no-cache" />
 <meta http-equiv="Expires" content="0" />
-<meta name="cuentix-version" content="2026.05.11.10" />
+<meta name="cuentix-version" content="2026.05.12.1" />
 <title>Cuentix</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap');
@@ -20,7 +20,7 @@ input,select,textarea{width:100%;padding:10px 14px;border:1.5px solid var(--line
 .section{display:none;animation:fadeUp .22s ease}.section.active{display:block}@keyframes fadeUp{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}.panel{padding:22px}.panel h2{margin:0 0 4px;font-size:24px;color:var(--brand2);font-weight:800;letter-spacing:-.5px}.toolbar{display:flex;gap:10px;justify-content:space-between;align-items:center;flex-wrap:wrap;margin-bottom:18px}.stats{display:grid;grid-template-columns:repeat(5,minmax(160px,1fr));gap:14px;margin-bottom:22px}.stat{padding:20px 22px;position:relative;overflow:hidden}.stat::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--brand),#49C464);opacity:.4}.stat .t{font-size:12px;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.05em}.stat .v{font-size:26px;font-weight:800;margin-top:8px;color:var(--brand2);letter-spacing:-.5px}
 .table-wrap{overflow:auto;border-radius:12px;border:1px solid var(--line)}.table{width:100%;border-collapse:collapse}.table th{padding:11px 14px;border-bottom:1.5px solid var(--line);text-align:left;font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;font-weight:700;background:#fafcff}.table td{padding:12px 14px;border-bottom:1px solid #f0f4f9;font-size:14px;vertical-align:middle}.table tbody tr:hover{background:#f5f9ff}.actions{display:flex;gap:5px;flex-wrap:wrap}.badge{display:inline-flex;align-items:center;padding:3px 10px;border-radius:999px;font-size:11px;font-weight:700}.b-ok{background:#dcfce7;color:#166534}.b-bad{background:#fee2e2;color:#991b1b}.b-warn,.b-pend{background:#fef3c7;color:#92400e}.empty{padding:32px;text-align:center;color:var(--muted);font-size:14px}.modal{position:fixed;inset:0;background:rgba(15,23,42,.5);display:none;align-items:center;justify-content:center;padding:16px;z-index:60;backdrop-filter:blur(4px)}.modal.open{display:flex}.box{width:min(860px,100%);background:#fff;border-radius:20px;border:1px solid var(--line);box-shadow:0 24px 60px rgba(0,0,0,.2);overflow:hidden}.head{padding:18px 22px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;background:#fafcff}.body{padding:22px;max-height:72vh;overflow:auto}.foot{padding:14px 22px;border-top:1px solid var(--line);display:flex;justify-content:flex-end;gap:10px;background:#fafcff}.close{background:none;color:var(--muted);font-size:20px;padding:4px 8px}.file-chip{display:inline-flex;align-items:center;background:#fef3c7;color:#92400e;border-radius:6px;padding:4px 10px;font-size:12px;font-weight:600}.status-dot{width:9px;height:9px;border-radius:50%;display:inline-block;background:#d1d5db}.status-dot.online{background:#22c55e;box-shadow:0 0 0 3px rgba(34,197,94,.25)}
 @media(max-width:960px){.auth{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}.grid3,.grid4{grid-template-columns:1fr}.topbar{height:auto;padding:14px 16px}.tabs{width:100%}}@media(max-width:640px){.stats,.grid2{grid-template-columns:1fr}.brand h1,.topbar .brand h1{font-size:20px}.tab{font-size:13px;padding:8px 12px}}
-.item-editor-title{display:flex;justify-content:space-between;gap:10px;align-items:center;margin:8px 0}.item-grid-head{display:grid;grid-template-columns:1fr 2fr 1.15fr 1.1fr 1fr .9fr .9fr 1.3fr;gap:6px;font-size:11px;color:var(--muted);font-weight:800;text-transform:uppercase;letter-spacing:.04em;margin:12px 0 6px}.item-row,.item-row.no-discount{display:grid;grid-template-columns:1fr 2fr 1.15fr 1.1fr 1fr 1fr 1.3fr;gap:6px;align-items:end;margin-bottom:8px;padding:8px;border:1px solid var(--line);border-radius:12px;background:#fafcff}.item-row.has-discount{grid-template-columns:1fr 2fr 1.15fr 1.1fr 1fr .9fr .9fr 1.3fr}.code-btn,.unit-btn,.qty-label{background:#e8eff7;color:var(--brand2);border-radius:8px;padding:8px 9px;text-align:center;font-weight:800;font-size:12px}.qty-box{display:flex;gap:4px}.qty-box input{text-align:center}.item-row input,.item-row select{padding:8px 9px;font-size:13px}.item-actions{display:flex;gap:4px;flex-wrap:wrap}@media(max-width:900px){.item-grid-head{display:none}.item-row,.item-row.no-discount,.item-row.has-discount{grid-template-columns:1fr}}
+.item-editor-title{display:flex;justify-content:space-between;gap:10px;align-items:center;margin:8px 0}.item-grid-head{display:grid;grid-template-columns:1fr minmax(220px,2.8fr) 1.15fr minmax(170px,1.7fr) 1fr 1.1fr;gap:8px;font-size:11px;color:var(--muted);font-weight:800;text-transform:uppercase;letter-spacing:.04em;margin:12px 0 6px}.item-grid-head.has-discount{grid-template-columns:1fr minmax(220px,2.8fr) 1.15fr minmax(170px,1.7fr) 1fr .9fr 1fr 1.1fr}.item-row,.item-row.no-discount{display:grid;grid-template-columns:1fr minmax(220px,2.8fr) 1.15fr minmax(170px,1.7fr) 1fr 1.1fr;gap:8px;align-items:end;margin-bottom:8px;padding:8px;border:1px solid var(--line);border-radius:12px;background:#fafcff}.item-row.has-discount{grid-template-columns:1fr minmax(220px,2.8fr) 1.15fr minmax(170px,1.7fr) 1fr .9fr 1fr 1.1fr}.code-btn,.unit-btn,.qty-label{background:#e8eff7;color:var(--brand2);border-radius:8px;padding:8px 9px;text-align:center;font-weight:800;font-size:12px}.qty-box{display:grid;grid-template-columns:34px minmax(90px,1fr) 34px;gap:6px}.qty-box input{text-align:center;min-width:90px}.item-row input,.item-row select{padding:8px 9px;font-size:13px;min-width:0}@media(max-width:900px){.item-grid-head{display:none}.item-row,.item-row.no-discount,.item-row.has-discount{grid-template-columns:1fr}.qty-box{grid-template-columns:40px minmax(140px,1fr) 40px}}
 </style>
 </head>
 <body>
@@ -55,7 +55,7 @@ import { createClient } from 'https://esm.sh/@supabase/supabase-js@2.43.4';
 
 const PROJECT_URL = 'https://yedcpumndtmdnczalspg.supabase.co';
 const ANON_KEY = 'sb_publishable_gtYK6qmfLMku2oxgBtRPzQ_Jg_iVEL9';
-const APP_VERSION = '2026.05.11.10';
+const APP_VERSION = '2026.05.12.1';
 const supabase = createClient(PROJECT_URL, ANON_KEY, {
   auth: {
     persistSession: true,
@@ -71,7 +71,7 @@ const logo = logoSvg('cuentixBlueLogin');
 document.getElementById('logoA').innerHTML = logo;
 document.getElementById('logoB').innerHTML = logoSvg('cuentixBlueHeader');
 
-const state = { session:null, profile:null, business:null, data:{}, tab:'resumen', dataLoaded:false, dataLoading:null, booting:false };
+const state = { session:null, profile:null, business:null, data:{}, tab:'resumen', dataLoaded:false, dataLoading:null, booting:false, adminRefreshTimer:null };
 const tabs = [
   ['resumen','📊 Resumen'],['clientes','👥 Clientes'],['cobrar','📋 A Cobrar'],['pagos','💳 Pagos'],['proveedores','🏭 Proveedores'],['pagar','💸 A Pagar'],['presupuestos','🧾 Presupuestos'],['cc','📒 Cuenta corriente'],['recordatorios','🔔 Recordatorios']
 ];
@@ -135,6 +135,10 @@ function setBusy(button, busy, text){
   if(text) button.textContent = busy ? text : button.dataset.label || button.textContent;
 }
 function resetSessionState(){
+  if(state.adminRefreshTimer) {
+    clearInterval(state.adminRefreshTimer);
+    state.adminRefreshTimer = null;
+  }
   state.session = null; state.profile = null; state.business = null; state.data = {}; state.tab = 'resumen'; state.dataLoaded = false; state.dataLoading = null;
 }
 function clearSupabaseSessionStorage(){
@@ -195,7 +199,10 @@ async function init(existingSession){
   const { data:profile, error } = await supabase.from('profiles').select('*').eq('id',state.session.user.id).single();
   if(error || !profile?.active){ resetSessionState(); await supabase.auth.signOut(); state.booting = false; return showAuth(); }
   state.profile = profile;
-  supabase.from('profiles').update({last_seen_at:new Date().toISOString(),online_at:new Date().toISOString()}).eq('id',profile.id);
+  const loginSeenAt = new Date().toISOString();
+  await supabase.from('profiles').update({last_seen_at:loginSeenAt,online_at:loginSeenAt}).eq('id',profile.id);
+  state.profile.last_seen_at = loginSeenAt;
+  state.profile.online_at = loginSeenAt;
   showApp();
   state.booting = false;
 }
@@ -218,6 +225,18 @@ async function showApp(){
   byId('auth').classList.add('hidden');byId('app').classList.remove('hidden');
   byId('sessionLabel').textContent = `${state.profile.username} · ${state.profile.role}`;
   if(state.profile.role === 'admin') renderAdmin(); else renderBusiness();
+}
+function formatDateTime(value){
+  if(!value) return '-';
+  return new Date(value).toLocaleString('es-AR', {
+    day:'numeric',
+    month:'numeric',
+    year:'numeric',
+    hour:'2-digit',
+    minute:'2-digit',
+    second:'2-digit',
+    hour12:false
+  });
 }
 
 async function callFn(name, body){
@@ -245,6 +264,9 @@ async function callFn(name, body){
 
 async function renderAdmin(){
   byId('adminShell').classList.remove('hidden'); byId('bizShell').classList.add('hidden');
+  if(!state.adminRefreshTimer) state.adminRefreshTimer = setInterval(() => {
+    if(state.profile?.role === 'admin' && !byId('adminShell').classList.contains('hidden')) renderAdmin();
+  }, 5000);
   const { data:businesses } = await supabase.from('businesses').select('*, profiles(id,username,active,last_seen_at,online_at)').order('created_at',{ascending:false});
   byId('adminShell').innerHTML = `
     <div class="card panel">
@@ -262,7 +284,7 @@ async function renderAdmin(){
       <div class="toolbar"><h2>Negocios creados</h2></div>
       ${tableHtml(['Nombre comercial','Usuario','Estado','Última conexión','Online','Acciones'], (businesses||[]).map(b => {
         const p = b.profiles?.[0]; const online = p?.online_at && Date.now() - new Date(p.online_at).getTime() < 90000;
-        return [b.commercial_name,p?.username||'-',badge(b.active?'activo':'inactivo'),p?.last_seen_at?new Date(p.last_seen_at).toLocaleString('es-AR'):'-',`<span class="status-dot ${online?'online':''}"></span> ${online?'Sí':'No'}`,
+        return [b.commercial_name,p?.username||'-',badge(b.active?'activo':'inactivo'),formatDateTime(p?.last_seen_at),`<span class="status-dot ${online?'online':''}"></span> ${online?'Sí':'No'}`,
         `<div class="actions"><button class="btn-secondary" data-editbiz="${b.id}" data-name="${esc(b.commercial_name)}">Editar</button><button class="btn-secondary" data-reset="${p?.username||''}">Reset</button><button class="btn-secondary" data-toggle="${b.id}" data-profile="${p?.id||''}" data-active="${b.active}">${b.active?'Desactivar':'Activar'}</button><button class="btn-danger" data-del="${b.id}">Eliminar</button></div>`];
       }))}
     </div>`;
@@ -503,7 +525,7 @@ function renderBudgetItems(items){
   const discount = byId('modalForm').discount_enabled?.checked;
   const templates = state.data.budget_item_templates || [];
   editor.innerHTML = `<div class="item-editor-title"><b>Ítems del presupuesto</b><span class="small">Elegí código, U.M. y cantidad por ítem. Descripción y precio se escriben manualmente.</span></div><div class="item-tools"><button type="button" class="btn-secondary mini-btn" data-add-item="Ítem">+ Agregar ítem</button><button type="button" class="btn-secondary mini-btn" data-add-item="Producto">+ Producto</button><button type="button" class="btn-secondary mini-btn" data-add-item="Servicio">+ Servicio</button><button type="button" class="btn-secondary mini-btn" data-add-item="Mano de obra">+ Mano de obra</button><button type="button" class="btn-secondary mini-btn" data-add-item="Material">+ Material</button><button type="button" class="btn-secondary mini-btn" data-add-item="Otro">+ Otro</button>${templates.length?`<select id="templatePick" style="width:auto"><option value="">Plantillas frecuentes</option>${templates.map(t=>`<option value="${t.id}">${esc(t.description)}</option>`).join('')}</select>`:''}</div>
-  <div class="item-grid-head ${discount?'':'no-discount'}"><span>Código</span><span>Descripción</span><span>U.M.</span><span>Cantidad</span><span>Precio</span>${discount?'<span>Desc.</span><span>Precio desc.</span>':''}<span>Importe</span><span>Acciones</span></div><div id="budgetItemRows">${items.map((item,i)=>itemRowHtml(item,i,discount)).join('')}</div><div class="budget-total-line"><span>Subtotal: <b id="budgetSubtotal"></b></span><span>Total: <b id="budgetGrandTotal"></b></span></div>`;
+  <div class="item-grid-head ${discount?'has-discount':'no-discount'}"><span>Código</span><span>Descripción</span><span>U.M.</span><span>Cantidad</span><span>Precio</span>${discount?'<span>Desc.</span><span>Precio desc.</span>':''}<span>Importe</span></div><div id="budgetItemRows">${items.map((item,i)=>itemRowHtml(item,i,discount)).join('')}</div><div class="budget-total-line"><span>Subtotal: <b id="budgetSubtotal"></b></span><span>Total: <b id="budgetGrandTotal"></b></span></div>`;
   editor.querySelectorAll('[data-add-item]').forEach(b=>b.onclick=()=>{const arr=readBudgetItems();arr.push({code:'',description:b.dataset.addItem,unit:b.dataset.addItem==='Servicio'?'Servicio':'Unidad',quantity:1,unit_price:0,discount:0});renderBudgetItems(arr);});
   const pick = byId('templatePick');
   if(pick) pick.onchange=()=>{const t=templates.find(x=>x.id===pick.value); if(t){const arr=readBudgetItems();arr.push({code:t.code||'',description:t.description,unit:t.unit,quantity:1,unit_price:Number(t.price||0),discount:0});renderBudgetItems(arr);}};
@@ -523,7 +545,6 @@ function itemRowHtml(item,i,discount){
     <input data-field="unit_price" type="number" min="0" step="0.01" placeholder="Precio" value="${Number(item.unit_price||0)}">
     ${discount?`<input data-field="discount" type="number" min="0" max="100" step="0.01" placeholder="% desc." value="${Number(item.discount||0)}"><input readonly value="${money(totals.priceWithDiscount,byId('modalForm').currency?.value||'ARS')}">`:''}
     <input readonly value="${money(totals.amount,byId('modalForm').currency?.value||'ARS')}">
-    <div class="item-actions"><button type="button" class="mini-btn btn-secondary" data-action="dup" data-index="${i}">Duplicar</button><button type="button" class="mini-btn btn-secondary" data-action="up" data-index="${i}">↑</button><button type="button" class="mini-btn btn-secondary" data-action="down" data-index="${i}">↓</button><button type="button" class="mini-btn btn-secondary" data-action="template" data-index="${i}">Plantilla</button><button type="button" class="mini-btn btn-danger" data-action="del" data-index="${i}">Eliminar</button></div>
   </div>`;
 }
 function readBudgetItems(){
@@ -643,7 +664,7 @@ function closeModal(){
 byId('modalClose').onclick=closeModal; byId('modalCancel').onclick=closeModal; byId('modal').onclick=e=>{if(e.target.id==='modal')closeModal();}
 
 function downloadCsv(filename, rows){ if(!rows?.length) return alert('Sin datos para exportar.'); const keys=Object.keys(rows[0]); const csv=[keys.join(','),...rows.map(r=>keys.map(k=>`"${String(r[k]??'').replaceAll('"','""')}"`).join(','))].join('\\n'); const a=document.createElement('a'); a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8'})); a.download=filename; a.click(); URL.revokeObjectURL(a.href); }
-setInterval(()=>{ if(state.profile) supabase.from('profiles').update({online_at:new Date().toISOString(),last_seen_at:new Date().toISOString()}).eq('id',state.profile.id); },30000);
+setInterval(()=>{ if(state.profile) supabase.from('profiles').update({online_at:new Date().toISOString()}).eq('id',state.profile.id); },30000);
 installVersionGuard();
 init();
 </script>
