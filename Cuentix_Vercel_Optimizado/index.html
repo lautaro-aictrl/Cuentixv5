@@ -27,12 +27,14 @@ input,select,textarea{width:100%;padding:10px 14px;border:1.5px solid var(--line
 <div id="auth" class="auth">
   <div class="card">
     <div class="brand"><div id="logoA"></div><div><h1>Cuentix</h1><p>Cuentas corrientes para mini pymes y comercios.</p></div></div>
-    <div class="grid2" style="margin-top:22px">
-      <div><label>Usuario</label><input id="loginUser" autocomplete="username" placeholder="Ej: miempresa" /></div>
-      <div><label>Contraseña</label><input id="loginPass" autocomplete="current-password" type="password" placeholder="••••••••" /></div>
-    </div>
-    <div class="row" style="margin-top:16px"><button class="btn-primary" id="btnLogin">Ingresar</button></div>
-    <div id="loginMsg"></div>
+    <form id="loginForm">
+      <div class="grid2" style="margin-top:22px">
+        <div><label>Usuario</label><input id="loginUser" autocomplete="username" placeholder="Ej: miempresa" /></div>
+        <div><label>Contraseña</label><input id="loginPass" autocomplete="current-password" type="password" placeholder="••••••••" /></div>
+      </div>
+      <div class="row" style="margin-top:16px"><button class="btn-primary" id="btnLogin" type="submit">Ingresar</button></div>
+      <div id="loginMsg"></div>
+    </form>
   </div>
 </div>
 
@@ -55,7 +57,7 @@ import { createClient } from 'https://esm.sh/@supabase/supabase-js@2.43.4';
 
 const PROJECT_URL = 'https://yedcpumndtmdnczalspg.supabase.co';
 const ANON_KEY = 'sb_publishable_gtYK6qmfLMku2oxgBtRPzQ_Jg_iVEL9';
-const APP_VERSION = '2026.05.12.1';
+const APP_VERSION = '2026.05.12.2';
 const supabase = createClient(PROJECT_URL, ANON_KEY, {
   auth: {
     persistSession: true,
@@ -179,6 +181,7 @@ async function login(){
   const password = byId('loginPass').value;
   if(!username || !password) return msg(byId('loginMsg'),'Ingresá usuario y contraseña.');
   const btn = byId('btnLogin');
+  if(btn.disabled) return;
   btn.dataset.label = btn.dataset.label || btn.textContent;
   setBusy(btn, true, 'Ingresando...');
   try {
@@ -210,7 +213,7 @@ supabase.auth.onAuthStateChange((event, session) => {
   if(event === 'SIGNED_OUT') { resetSessionState(); showAuth(); }
   if(event === 'TOKEN_REFRESHED') state.session = session;
 });
-byId('btnLogin').onclick = login;
+byId('loginForm').onsubmit = e => { e.preventDefault(); login(); };
 byId('btnLogout').onclick = () => {
   const oldProfile = state.profile;
   if(oldProfile?.id) supabase.from('profiles').update({online_at:null}).eq('id',oldProfile.id);
