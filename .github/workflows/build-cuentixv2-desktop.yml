@@ -43,14 +43,14 @@ jobs:
       - name: Build installer artifact
         if: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.publish_release == 'false' }}
         working-directory: desktop
-        run: npx electron-builder --win nsis x64 --publish never
+        run: npx electron-builder --win nsis --x64 --publish never
 
       - name: Build and publish GitHub release
         if: ${{ github.event_name == 'push' || github.event.inputs.publish_release == 'true' }}
         working-directory: desktop
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: npx electron-builder --win nsis x64 --publish always
+        run: npx electron-builder --win nsis --x64 --publish always
 
       - name: Upload installer
         uses: actions/upload-artifact@v4
