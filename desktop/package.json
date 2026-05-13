@@ -1,0 +1,68 @@
+{
+  "name": "cuentix-desktop",
+  "version": "1.0.0",
+  "description": "Aplicacion de escritorio CUENTIX para Windows",
+  "main": "src/main.js",
+  "private": true,
+  "author": "CUENTIX",
+  "scripts": {
+    "dev": "electron .",
+    "start": "electron .",
+    "icons": "node scripts/create-icons.js",
+    "dist": "npm run icons && electron-builder --win nsis x64",
+    "dist:portable": "npm run icons && electron-builder --win portable x64"
+  },
+  "dependencies": {
+    "electron-updater": "^6.3.9"
+  },
+  "devDependencies": {
+    "electron": "^30.5.1",
+    "electron-builder": "^24.13.3",
+    "png-to-ico": "^2.1.8",
+    "sharp": "^0.33.5"
+  },
+  "build": {
+    "appId": "com.cuentix.desktop",
+    "productName": "CUENTIX",
+    "copyright": "Copyright © 2026 CUENTIX",
+    "artifactName": "CUENTIX-Setup-${version}.${ext}",
+    "directories": {
+      "output": "dist",
+      "buildResources": "build"
+    },
+    "files": [
+      "src/**/*",
+      "build/**/*",
+      "assets/**/*",
+      "package.json"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "build/icon.ico",
+      "publisherName": "CUENTIX"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": "always",
+      "createStartMenuShortcut": true,
+      "shortcutName": "CUENTIX",
+      "deleteAppDataOnUninstall": false
+    },
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "lautaro-aictrl",
+        "repo": "Cuentixv5"
+      }
+    ]
+  }
+}
