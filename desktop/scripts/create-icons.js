@@ -6,13 +6,13 @@ const pngToIco = require('png-to-ico');
 const root = path.join(__dirname, '..');
 const svg = path.join(root, 'assets', 'icon.svg');
 const build = path.join(root, 'build');
-const sizes = [16, 24, 32, 48, 64, 128, 256, 512];
+const icoSizes = [16, 24, 32, 48, 64, 128, 256];
 
 async function run() {
   await fs.mkdir(build, { recursive: true });
 
   const pngs = [];
-  for (const size of sizes) {
+  for (const size of icoSizes) {
     const out = path.join(build, `icon-${size}.png`);
     await sharp(svg).resize(size, size).png().toFile(out);
     pngs.push(out);
