@@ -1,0 +1,63 @@
+name: Build CUENTIX Desktop
+
+on:
+  workflow_dispatch:
+    inputs:
+      publish_release:
+        description: "Publicar tambien una release para auto-update"
+        required: true
+        default: "false"
+        type: choice
+        options:
+          - "false"
+          - "true"
+  push:
+    tags:
+      - "desktop-v*"
+
+permissions:
+  contents: write
+
+jobs:
+  build-windows:
+    name: Windows installer
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install dependencies
+        working-directory: desktop
+        run: npm install
+
+      - name: Generate CUENTIX icons
+        working-directory: desktop
+        run: npm run icons
+
+      - name: Build installer artifact
+        if: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.publish_release == 'false' }}
+        working-directory: desktop
+        run: npx electron-builder --win nsis x64 --publish never
+
+      - name: Build and publish GitHub release
+        if: ${{ github.event_name == 'push' || github.event.inputs.publish_release == 'true' }}
+        working-directory: desktop
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: npx electron-builder --win nsis x64 --publish always
+
+      - name: Upload installer
+        uses: actions/upload-artifact@v4
+        with:
+          name: CUENTIX-Windows-Installer
+          path: |
+            desktop/dist/*.exe
+            desktop/dist/*.blockmap
+            desktop/dist/latest.yml
+          if-no-files-found: error
