@@ -39,8 +39,13 @@ body.theme-dark .table th{background:#102b42}body.theme-dark .table td{border-bo
 .admin-command{display:grid;gap:18px}.admin-summary{display:grid;grid-template-columns:repeat(4,minmax(180px,1fr));gap:16px;margin-bottom:4px}.admin-actions{display:flex;gap:8px;flex-wrap:wrap}.admin-actions button{padding:8px 11px;border-radius:10px}.admin-actions .btn-danger{background:#fee2e2;color:#991b1b}.admin-form-card .grid4{align-items:end}.admin-form-card input,.admin-form-card select{background:rgba(255,255,255,.92)}.theme-dark .admin-form-card input,.theme-dark .admin-form-card select{background:#0b2033}.admin-status-note{display:inline-flex;align-items:center;gap:8px;color:var(--muted);font-size:13px}
 .stat{display:flex;flex-direction:column;min-width:0}.stat .v{font-size:clamp(20px,2.1vw,28px);line-height:1.12;white-space:normal;overflow-wrap:anywhere;word-break:normal;max-width:100%;letter-spacing:-.04em}.stat .breakdown{overflow-wrap:anywhere}.stat .t{padding-right:54px}.stats{grid-template-columns:repeat(auto-fit,minmax(210px,1fr))}.money-chip{display:inline-flex;align-items:center;gap:6px;padding:2px 8px;border-radius:999px;background:rgba(73,196,100,.12);color:#0f7b40;font-size:11px;font-weight:900}.theme-dark .money-chip{color:#7ef0ab}
 .chart-visual{border-style:solid;background:linear-gradient(180deg,rgba(15,76,129,.03),rgba(73,196,100,.08));}.chart-visual svg{width:100%;height:100%;display:block}.chart-tooltip{position:absolute;right:18px;top:16px;padding:8px 10px;border-radius:12px;background:var(--panel);box-shadow:var(--shadow);font-size:12px;color:var(--brand2);border:1px solid var(--line)}.media-preview{display:grid;grid-template-columns:120px 1fr;gap:12px;align-items:center;border:1px dashed var(--line);border-radius:14px;padding:12px;margin-top:10px;background:rgba(73,196,100,.05)}.media-preview img{width:120px;height:80px;object-fit:cover;border-radius:10px}.budget-media{margin:16px 0;border:1px solid #d1d5db;border-radius:12px;padding:10px}.budget-media img{width:100%;max-height:360px;object-fit:contain;border-radius:10px;display:block}
+.app-shell,#app.admin-mode .app-shell{grid-template-columns:240px minmax(0,1fr)}.command-header{padding:26px 32px}.page-heading h2{font-size:28px;text-transform:uppercase}.page-heading p{font-size:16px;text-transform:uppercase;letter-spacing:.03em}.shell{padding:22px 28px 90px}.stats{grid-template-columns:repeat(5,minmax(190px,1fr));gap:18px;margin-bottom:22px}.stat{min-height:142px;padding:24px;border-radius:18px}.stat .v{font-size:clamp(24px,1.65vw,30px)}.stat-icon{width:56px;height:56px;font-size:24px}.dashboard-grid{grid-template-columns:minmax(410px,1.35fr) minmax(305px,1.02fr) 285px;gap:20px;align-items:stretch}.chart-card,.activity-card{padding:24px;border-radius:22px;box-shadow:0 18px 50px rgba(11,49,84,.08)}.chart-card.finance-card{min-height:395px}.chart-card.finance-card .toolbar{align-items:center}.chart-visual{height:300px;border:0;border-radius:18px;background:linear-gradient(180deg,rgba(255,255,255,.56),rgba(246,251,248,.72));box-shadow:inset 0 0 0 1px rgba(217,227,238,.72);cursor:pointer}.theme-dark .chart-visual{background:linear-gradient(180deg,rgba(13,36,56,.92),rgba(9,28,44,.88));box-shadow:inset 0 0 0 1px rgba(31,58,82,.9)}.date-filter{width:auto;min-width:154px;background:var(--panel);border:1px solid var(--line);border-radius:12px;font-weight:800;color:var(--brand2);box-shadow:0 8px 24px rgba(14,32,61,.05)}.chart-action{font-size:13px;padding:9px 12px}.legend-premium{justify-content:center;margin-top:14px;gap:24px}.legend-dot{display:inline-flex;align-items:center;gap:7px;color:var(--muted);font-weight:800}.legend-dot::before{content:'';width:10px;height:10px;border-radius:50%;background:var(--dot)}.finance-detail-modal{position:fixed;inset:0;background:rgba(7,24,39,.62);backdrop-filter:blur(8px);display:grid;place-items:center;padding:24px;z-index:90}.finance-detail-box{width:min(1180px,96vw);max-height:90vh;overflow:auto;background:var(--panel);border:1px solid var(--line);border-radius:28px;box-shadow:0 30px 90px rgba(0,0,0,.3);padding:26px}.finance-detail-head{display:flex;justify-content:space-between;gap:16px;align-items:center;margin-bottom:18px}.finance-detail-head h2{margin:0;color:var(--brand2);font-size:26px}.finance-detail-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:18px}.finance-mini{padding:16px;border:1px solid var(--line);border-radius:18px;background:var(--glass)}.finance-detail-chart .chart-visual{height:440px;cursor:default}.axis-label{fill:#64748b;font-size:12px;font-weight:700}.theme-dark .axis-label{fill:#9db0c2}.grid-line{stroke:rgba(100,116,139,.18);stroke-dasharray:5 8}.smooth-path{fill:none;stroke-linecap:round;stroke-linejoin:round;filter:url(#softGlow);stroke-width:4}.smooth-area{opacity:.9}.chart-point{filter:drop-shadow(0 3px 8px rgba(11,49,84,.18))}@media(max-width:1450px){.app-shell,#app.admin-mode .app-shell{grid-template-columns:230px minmax(0,1fr)}.shell{padding:20px 24px 90px}.dashboard-grid{grid-template-columns:minmax(405px,1.26fr) minmax(300px,.98fr) 280px;gap:18px}.stats{gap:16px}.stat{padding:22px}.chart-visual{height:285px}}@media(max-width:1180px){.dashboard-grid{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}.finance-detail-grid{grid-template-columns:1fr}.finance-detail-chart .chart-visual{height:340px}}
 .auth{min-height:100vh;max-width:none;margin:0;padding:24px;place-items:center;background:radial-gradient(circle at 52% 34%,rgba(25,184,95,.13),transparent 28%),radial-gradient(circle at 80% 12%,rgba(15,76,129,.11),transparent 26%),linear-gradient(135deg,#f7fbff,#edf4f8)}.auth .card{width:min(660px,calc(100vw - 32px));padding:34px;border-radius:28px;background:rgba(255,255,255,.92);box-shadow:0 28px 80px rgba(11,49,84,.17);border:1px solid rgba(15,76,129,.13);backdrop-filter:blur(12px)}.auth .brand{justify-content:flex-start}.auth .brand h1{text-transform:uppercase;color:#071827;letter-spacing:.02em}.auth .brand p{color:#5d7083}.auth label{color:#526274}.auth input{background:#fff;border-color:#d7e4ef}.auth input:focus{border-color:#19b85f;box-shadow:0 0 0 4px rgba(25,184,95,.11)}.auth .btn-primary{background:linear-gradient(135deg,#0B3154,#0F4C81);box-shadow:0 12px 24px rgba(11,49,84,.22)}.auth .btn-primary:hover{background:linear-gradient(135deg,#0F4C81,#0b3154)}
+.mobile-menu-btn{display:none;width:44px;height:44px;border-radius:14px;background:var(--panel);border:1px solid var(--line);color:var(--brand2);font-size:20px;padding:0}.empty-state{padding:42px 24px;text-align:center;color:var(--muted);border:1px dashed var(--line);border-radius:20px;background:linear-gradient(180deg,rgba(255,255,255,.48),rgba(73,196,100,.04))}.empty-icon{width:58px;height:58px;border-radius:18px;display:grid;place-items:center;margin:0 auto 14px;background:rgba(73,196,100,.14);color:#139a4f;font-size:26px}.empty-state h3{margin:0 0 6px;color:var(--brand2);font-size:18px}.empty-state p{margin:0 auto;max-width:420px}.section-action-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px}.section-action{padding:18px;text-align:left;border:1px solid var(--line);border-radius:18px;background:var(--glass);box-shadow:0 10px 26px rgba(11,49,84,.06)}.section-action b{display:block;color:var(--brand2);margin-bottom:4px}.mobile-backdrop{display:none}
+@media(max-width:820px){body{overflow-x:hidden}.app-shell,#app.admin-mode .app-shell{display:block}.mobile-menu-btn{display:grid;place-items:center;flex:0 0 auto}.sidebar{position:fixed;top:0;left:0;width:min(86vw,320px);height:100dvh;transform:translateX(-104%);transition:transform .24s ease;box-shadow:24px 0 60px rgba(0,0,0,.28);z-index:80}.sidebar.open{transform:translateX(0)}body.mobile-nav-open::after{content:'';position:fixed;inset:0;background:rgba(7,24,39,.48);backdrop-filter:blur(3px);z-index:70}.command-header{position:sticky;top:0;display:grid;grid-template-columns:44px 1fr auto;align-items:center;gap:10px;padding:14px 14px}.page-heading h2{font-size:21px}.page-heading p{font-size:12px}.header-tools{grid-column:1/-1;display:grid;grid-template-columns:1fr 44px auto;gap:10px;width:100%}.profile-pill{padding:6px 9px}.profile-pill b,.profile-pill span{display:none}.searchbox{min-width:0;width:100%;height:44px}.theme-toggle{width:44px;height:44px}.shell{padding:16px 14px 96px}.stats{grid-template-columns:1fr;gap:14px}.stat{min-height:128px}.dashboard-grid{grid-template-columns:1fr;gap:14px}.chart-card,.activity-card,.panel{padding:18px;border-radius:20px}.chart-visual{height:240px}.quick-grid{grid-template-columns:1fr}.toolbar{align-items:flex-start}.toolbar .row{width:100%}.toolbar .row button,.toolbar .row select{min-height:44px}.table-wrap{border-radius:16px}.table{min-width:720px}.finance-detail-modal{padding:12px}.finance-detail-box{border-radius:22px;padding:18px}.finance-detail-head{align-items:flex-start}.finance-detail-chart .chart-visual{height:280px}.auth{padding:16px}.auth .card{padding:24px}.auth .grid2{grid-template-columns:1fr}}
 @media(max-width:1180px){.app-shell,#app.admin-mode .app-shell{grid-template-columns:240px 1fr}.dashboard-grid{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}.admin-summary{grid-template-columns:repeat(2,1fr)}.searchbox{min-width:220px}}@media(max-width:820px){.app-shell,#app.admin-mode .app-shell{grid-template-columns:1fr}.sidebar{position:relative;height:auto}.command-header{position:relative;align-items:flex-start;flex-direction:column;padding:18px}.shell{padding:18px}.header-tools,.searchbox{width:100%;min-width:0}.stats,.quick-grid,.admin-summary{grid-template-columns:1fr}}
+.stat{text-align:left;color:inherit}.activity-item{width:100%;text-align:left;color:inherit}.section-action{color:inherit}.stat:hover,.activity-item:hover,.section-action:hover{transform:translateY(-2px);box-shadow:0 16px 42px rgba(11,49,84,.12)}
+@media(max-width:820px){.app-shell,#app.admin-mode .app-shell{display:block!important}.sidebar{position:fixed!important;top:0!important;left:0!important;width:min(86vw,320px)!important;height:100dvh!important;transform:translateX(-104%);transition:transform .24s ease;z-index:80}.sidebar.open{transform:translateX(0)}.command-header{position:sticky!important;top:0!important;display:grid!important;grid-template-columns:44px 1fr auto!important;align-items:center!important;flex-direction:initial!important;padding:14px!important}.header-tools{grid-column:1/-1}.mobile-menu-btn{display:grid}.page-heading{min-width:0}.page-heading h2{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.side-logout{min-height:48px}.nav-main{min-height:48px}.nav-child{min-height:42px}.box{width:calc(100vw - 18px);border-radius:18px}.body{max-height:75dvh}.foot{position:sticky;bottom:0}.empty-state{padding:34px 18px}.date-filter{width:100%;min-width:0}.chart-action{width:100%}}
 </style>
 </head>
 <body>
@@ -69,6 +74,7 @@ body.theme-dark .table th{background:#102b42}body.theme-dark .table td{border-bo
     </aside>
     <main class="main-area">
       <header class="command-header">
+        <button class="mobile-menu-btn" id="mobileMenu" type="button">☰</button>
         <div class="page-heading"><h2 id="pageTitle">Command Center</h2><p id="sessionLabel">Sesión</p></div>
         <div class="header-tools">
           <label class="searchbox"><span>⌕</span><input id="globalSearch" placeholder="Buscar..." /></label>
@@ -91,7 +97,7 @@ import { createClient } from 'https://esm.sh/@supabase/supabase-js@2.43.4';
 
 const PROJECT_URL = 'https://yedcpumndtmdnczalspg.supabase.co';
 const ANON_KEY = 'sb_publishable_gtYK6qmfLMku2oxgBtRPzQ_Jg_iVEL9';
-const APP_VERSION = '2026.05.14.4';
+const APP_VERSION = '2026.05.15.3';
 const supabase = createClient(PROJECT_URL, ANON_KEY, {
   auth: {
     persistSession: true,
@@ -110,7 +116,7 @@ const logo = logoSvg('cuentixBlueLogin');
 document.getElementById('logoA').innerHTML = logo;
 document.getElementById('logoB').innerHTML = logoSvgWhite();
 
-const state = { session:null, profile:null, business:null, data:{}, tab:'resumen', expanded:{resumen:true}, dataLoaded:false, dataLoading:null, booting:false, adminRefreshTimer:null, search:'' };
+const state = { session:null, profile:null, business:null, data:{}, tab:'resumen', expanded:{resumen:true}, subnav:{}, dataLoaded:false, dataLoading:null, booting:false, adminRefreshTimer:null, search:'', chartRange:'30d' };
 const navSections = [
   {id:'resumen',label:'Resumen',icon:'⌂',items:['Resumen financiero','Métricas','Actividad reciente','Gráficos','KPIs']},
   {id:'clientes',label:'Clientes',icon:'◎',items:['Listado de clientes','Nuevo cliente','Clientes activos','Clientes inactivos','Historial']},
@@ -132,6 +138,12 @@ function money(v,c='ARS'){
   const n = Number(v||0);
   if(c === 'USD') return `u$s ${new Intl.NumberFormat('es-AR',{maximumFractionDigits:2}).format(n)}`;
   return new Intl.NumberFormat('es-AR',{style:'currency',currency:'ARS'}).format(n);
+}
+function compactMoney(v){
+  const n = Number(v||0);
+  if(n >= 1000000) return `$ ${(n/1000000).toLocaleString('es-AR',{maximumFractionDigits:1})}M`;
+  if(n >= 1000) return `$ ${(n/1000).toLocaleString('es-AR',{maximumFractionDigits:0})}K`;
+  return `$ ${n.toLocaleString('es-AR',{maximumFractionDigits:0})}`;
 }
 function esc(v){return String(v ?? '').replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]))}
 function today(){return new Date().toISOString().slice(0,10)}
@@ -187,7 +199,7 @@ function resetSessionState(){
     clearInterval(state.adminRefreshTimer);
     state.adminRefreshTimer = null;
   }
-  state.session = null; state.profile = null; state.business = null; state.data = {}; state.tab = 'resumen'; state.expanded = {resumen:true}; state.dataLoaded = false; state.dataLoading = null; state.search = '';
+  state.session = null; state.profile = null; state.business = null; state.data = {}; state.tab = 'resumen'; state.expanded = {resumen:true}; state.subnav = {}; state.dataLoaded = false; state.dataLoading = null; state.search = ''; state.chartRange = '30d';
 }
 function clearSupabaseSessionStorage(){
   try {
@@ -290,13 +302,23 @@ byId('btnLogout').onclick = () => {
   supabase.auth.signOut().catch(() => {});
 };
 byId('themeToggle').onclick = toggleTheme;
+byId('mobileMenu').onclick = () => toggleMobileMenu(true);
 byId('globalSearch').oninput = e => {
   state.search = e.target.value || '';
   if(state.profile?.role === 'admin') renderAdmin();
   else if(state.dataLoaded) renderBusiness();
 };
+function toggleMobileMenu(open){
+  const shouldOpen = open ?? !byId('sidebar').classList.contains('open');
+  byId('sidebar').classList.toggle('open', shouldOpen);
+  document.body.classList.toggle('mobile-nav-open', shouldOpen);
+}
+function closeMobileMenu(){ toggleMobileMenu(false); }
+document.addEventListener('click', e => {
+  if(document.body.classList.contains('mobile-nav-open') && !byId('sidebar').contains(e.target) && e.target !== byId('mobileMenu')) closeMobileMenu();
+});
 
-function showAuth(){state.booting=false;byId('auth').classList.remove('hidden');byId('app').classList.add('hidden');byId('sidebar').classList.add('hidden');byId('loginPass').value='';msg(byId('loginMsg'),'')}
+function showAuth(){state.booting=false;closeMobileMenu();byId('auth').classList.remove('hidden');byId('app').classList.add('hidden');byId('sidebar').classList.add('hidden');byId('loginPass').value='';msg(byId('loginMsg'),'')}
 async function showApp(){
   byId('auth').classList.add('hidden');byId('app').classList.remove('hidden');
   byId('globalSearch').value = state.search || '';
@@ -393,19 +415,24 @@ async function renderAdmin(){
 }
 
 function sectionTitle(id){ return navSections.find(s=>s.id===id)?.label || 'Command Center'; }
+function defaultSubnav(id){ return navSections.find(s=>s.id===id)?.items?.[0] || ''; }
+function activeSubnav(id){ return state.subnav[id] || defaultSubnav(id); }
 function renderSideNav(){
   byId('sideNav').innerHTML = navSections.map(section => {
     const open = state.expanded[section.id];
     const active = state.tab === section.id;
+    const selectedChild = activeSubnav(section.id);
     return `<div class="nav-section ${open?'open':''} ${active?'active':''}" data-nav-section="${section.id}">
       <button class="nav-main" data-nav-main="${section.id}"><span class="nav-icon">${section.icon}</span><span>${section.label}</span><span class="chev">›</span></button>
-      <div class="nav-children">${section.items.map((item,i)=>`<button class="nav-child ${active && i===0?'active':''}" data-nav-child="${section.id}" data-nav-label="${esc(item)}">${item}</button>`).join('')}</div>
+      <div class="nav-children">${section.items.map(item=>`<button class="nav-child ${active && item===selectedChild?'active':''}" data-nav-child="${section.id}" data-nav-label="${esc(item)}">${item}</button>`).join('')}</div>
     </div>`;
   }).join('');
   byId('sideNav').querySelectorAll('[data-nav-main]').forEach(btn => btn.onclick = () => {
     const id = btn.dataset.navMain;
     state.expanded[id] = !state.expanded[id];
     state.tab = id;
+    state.subnav[id] = activeSubnav(id);
+    closeMobileMenu();
     renderBusiness();
   });
   byId('sideNav').querySelectorAll('[data-nav-child]').forEach(btn => btn.onclick = () => {
@@ -413,12 +440,16 @@ function renderSideNav(){
     state.tab = id;
     state.expanded[id] = true;
     const label = btn.dataset.navLabel || '';
+    state.subnav[id] = label;
+    if(label.includes('Nueva Cuenta Corriente')) sessionStorage.removeItem('cuentix_cc_client');
+    closeMobileMenu();
+    renderBusiness();
     if(label.includes('Nuevo cliente')) return openForm('client');
     if(label.includes('Nuevo proveedor')) return openForm('supplier');
     if(label.includes('Registrar cobro')) return openForm('payment');
+    if(label.includes('Registrar pago') && id === 'pagos') return openForm('payment');
     if(label.includes('Registrar pago proveedor')) return openForm('supplier_payment');
     if(label.includes('Crear presupuesto')) return openForm('budget');
-    renderBusiness();
   });
 }
 
@@ -440,7 +471,8 @@ function renderBusiness(){
     return;
   }
   const renderers = {resumen,clientes,cobrar,proveedores,pagar,presupuestos,pagos,cc,recordatorios,reportes,configuracion};
-  byId('sections').innerHTML = `<section class="section active">${renderers[state.tab]()}</section>`;
+  const view = renderers[state.tab] || resumen;
+  byId('sections').innerHTML = `<section class="section active">${view()}</section>`;
   bindBusinessActions();
 }
 
@@ -469,9 +501,60 @@ async function refreshBusinessData(){
   renderBusiness();
 }
 
+const rangeOptions = [
+  ['today','Hoy'],['yesterday','Ayer'],['15d','Últimos 15 días'],['30d','Últimos 30 días'],['3m','Últimos 3 meses'],['6m','Últimos 6 meses'],['1y','Último año']
+];
+function rangeDays(value){
+  return ({today:1,yesterday:1,'15d':15,'30d':30,'3m':92,'6m':184,'1y':365})[value] || 30;
+}
+function dateOnly(value){
+  if(!value) return '';
+  const d = new Date(value);
+  if(Number.isNaN(d.getTime())) return String(value).slice(0,10);
+  return d.toISOString().slice(0,10);
+}
+function labelDate(date){
+  return date.toLocaleDateString('es-AR',{day:'numeric',month:'short'}).replace('.','');
+}
+function dateRangeWindow(range){
+  const todayDate = new Date();
+  todayDate.setHours(0,0,0,0);
+  let end = new Date(todayDate);
+  if(range === 'yesterday') end.setDate(end.getDate()-1);
+  const start = new Date(end);
+  start.setDate(start.getDate() - rangeDays(range) + 1);
+  return {start,end};
+}
+function rowsByDate(rows, field){
+  const map = new Map();
+  (rows || []).forEach(row => {
+    const key = dateOnly(row[field]);
+    map.set(key,(map.get(key)||0)+toArs(row.amount,row.currency,row.exchange_rate));
+  });
+  return map;
+}
+function financialSeries(range = state.chartRange){
+  const {start,end} = dateRangeWindow(range);
+  const inv = rowsByDate(state.data.invoices,'issue_date');
+  const pay = rowsByDate(state.data.payments,'payment_date');
+  const supp = rowsByDate(state.data.supplier_payments,'payment_date');
+  const days = [];
+  for(let d = new Date(start); d <= end; d.setDate(d.getDate()+1)) days.push(new Date(d));
+  let fact = 0, cob = 0, pag = 0;
+  const points = days.map(d => {
+    const key = d.toISOString().slice(0,10);
+    fact += inv.get(key) || 0;
+    cob += pay.get(key) || 0;
+    pag += supp.get(key) || 0;
+    return {date:d,label:labelDate(d),fact,cob,pag};
+  });
+  return points.length ? points : [{date:new Date(),label:'Hoy',fact:0,cob:0,pag:0}];
+}
 function resumen(){
   const fact = sumArs(state.data.invoices), cob = sumArs(state.data.payments), pag = sumArs(state.data.supplier_payments), pend = fact - cob;
   const activeClients = state.data.clients.filter(c=>c.status !== 'moroso').length;
+  const series = financialSeries();
+  const options = rangeOptions.map(([v,l])=>`<option value="${v}" ${state.chartRange===v?'selected':''}>${l}</option>`).join('');
   const activity = [
     ['▤','Facturas registradas',`${state.data.invoices.length} movimientos`],
     ['▣','Pagos recibidos',`${state.data.payments.length} cobros`],
@@ -480,16 +563,16 @@ function resumen(){
     ['⚑','Recordatorios',`${state.data.reminders.filter(r=>!r.done).length} pendientes`]
   ];
   return `<div class="stats">
-    ${statCard('Clientes',state.data.clients.length,'Total registrados','◎')}
-    ${statCard('Facturado',money(fact),'Sin movimientos','▤')}
-    ${statCard('Cobrado',money(cob),groupBreakdown(state.data.payments)||'Sin movimientos','▣')}
-    ${statCard('Pagado',money(pag),groupBreakdown(state.data.supplier_payments)||'Sin movimientos','▥')}
-    ${statCard('Saldo pendiente',money(pend),'Total pendiente','$')}
+    ${statCard('Clientes',state.data.clients.length,'Total registrados','◎','clientes')}
+    ${statCard('Facturado',money(fact),'Sin movimientos','▤','cobrar')}
+    ${statCard('Cobrado',money(cob),groupBreakdown(state.data.payments)||'Sin movimientos','▣','pagos')}
+    ${statCard('Pagado',money(pag),groupBreakdown(state.data.supplier_payments)||'Sin movimientos','▥','pagar')}
+    ${statCard('Saldo pendiente',money(pend),'Total pendiente','$','cc')}
   </div>
   <div class="dashboard-grid">
-    <div class="card chart-card"><div class="toolbar"><h2>Resumen financiero</h2><select style="width:auto"><option>Últimos 30 días</option></select></div>${financeChart(fact,cob,pag,pend)}<div class="row small" style="justify-content:center;margin-top:12px"><span>● Facturado</span><span style="color:#49C464">● Cobrado</span><span style="color:#8b5cf6">● Pagado</span><span style="color:#0B3154">● Saldo pendiente</span></div></div>
+    <div class="card chart-card finance-card"><div class="toolbar"><h2>Resumen financiero</h2><div class="row"><select id="financeRange" class="date-filter">${options}</select><button class="btn-secondary chart-action" type="button" data-finance-detail>Ver detalle</button></div></div>${financeChart(series,'compact')}<div class="row small legend-premium"><span class="legend-dot" style="--dot:#19b85f">Facturado</span><span class="legend-dot" style="--dot:#2f80ed">Cobrado</span><span class="legend-dot" style="--dot:#8b5cf6">Pagado</span></div></div>
     <div class="card chart-card"><h2>Distribución general</h2><div class="donut"></div><div class="breakdown"><b>Facturado</b> ${money(fact)}<br><b>Cobrado</b> ${money(cob)}<br><b>Pagado</b> ${money(pag)}<br><b>Saldo pendiente</b> ${money(pend)}</div></div>
-    <div class="card activity-card"><h2>Actividad reciente</h2><div class="activity-list">${activity.map(a=>`<div class="activity-item"><div class="nav-icon">${a[0]}</div><div><b>${a[1]}</b><div class="small">${a[2]}</div></div></div>`).join('')}</div></div>
+    <div class="card activity-card"><h2>Actividad reciente</h2><div class="activity-list">${activity.map((a,i)=>`<button class="activity-item" data-tab="${['cobrar','pagos','clientes','presupuestos','recordatorios'][i]}"><div class="nav-icon">${a[0]}</div><div><b>${a[1]}</b><div class="small">${a[2]}</div></div></button>`).join('')}</div></div>
   </div>
   <div class="quick-grid">
     <button class="quick-card" data-open="invoice"><b>Nuevo movimiento</b><div class="small">Registrar A Cobrar</div></button>
@@ -497,37 +580,124 @@ function resumen(){
     <button class="quick-card" data-open="budget"><b>Crear presupuesto</b><div class="small">Documento imprimible</div></button>
   </div>`;
 }
-function statCard(title,value,subtitle,icon){return `<div class="card stat"><div class="stat-icon">${icon}</div><div class="t">${title}</div><div class="v">${value}</div><div class="breakdown">${subtitle}</div></div>`}
-function financeChart(fact,cob,pag,pend){
-  const values = [fact,cob,pag,Math.max(pend,0)].map(Number);
-  const max = Math.max(...values,1);
-  const pts = values.map((v,i)=>`${28+i*92},${205-(v/max)*135}`).join(' ');
-  const area = `28,205 ${pts} 304,205`;
-  return `<div class="chart-visual"><svg viewBox="0 0 332 230" preserveAspectRatio="none" aria-hidden="true">
-    <defs><linearGradient id="cg" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#49C464" stop-opacity=".34"/><stop offset="1" stop-color="#49C464" stop-opacity="0"/></linearGradient><filter id="glow"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
-    ${[70,115,160,205].map(y=>`<line x1="18" x2="314" y1="${y}" y2="${y}" stroke="rgba(15,76,129,.12)" stroke-dasharray="4 6"/>`).join('')}
-    <path d="M${area}" fill="url(#cg)"/><polyline points="${pts}" fill="none" stroke="#49C464" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"/>
-    ${pts.split(' ').map(p=>{const [x,y]=p.split(',');return `<circle cx="${x}" cy="${y}" r="4" fill="#0B3154" stroke="#fff" stroke-width="2"/>`}).join('')}
-  </svg><div class="chart-tooltip"><b>${money(cob)}</b><br><span class="small">Cobrado convertido a ARS</span></div></div>`;
+function statCard(title,value,subtitle,icon,tab){
+  const inner = `<div class="stat-icon">${icon}</div><div class="t">${title}</div><div class="v">${value}</div><div class="breakdown">${subtitle}</div>`;
+  return tab ? `<button class="card stat" data-tab="${tab}">${inner}</button>` : `<div class="card stat">${inner}</div>`;
 }
-function clientes(){ const rows = filterRows(state.data.clients); return panel('Clientes', `<button class="btn-primary" data-open="client">+ Nuevo cliente</button>`, tableHtml(['Nombre / razón social','CUIT','Teléfono','Email','Saldo inicial','Estado',''], rows.map(c=>[c.name,c.tax_id,c.phone,c.email,money(c.opening_balance),badge(c.status),actions('client',c.id)]))); }
-function proveedores(){ const rows = filterRows(state.data.suppliers); return panel('Proveedores', `<button class="btn-primary" data-open="supplier">+ Nuevo proveedor</button>`, tableHtml(['Nombre / razón social','CUIT','Teléfono','Email',''], rows.map(s=>[s.name,s.tax_id,s.phone,s.email,actions('supplier',s.id)]))); }
-function cobrar(){ const rows = sortRows(filterRows(state.data.invoices, i=>clientName(i.client_id)), getSortKey('invoices'), 'invoices'); return panel('A Cobrar', `${sortControl('invoices',[['client','Cliente'],['pay_date','Fecha de pago'],['due_date','Vencimiento'],['amount','Monto'],['status','Estado'],['reference','Número / referencia']])}<button class="btn-primary" data-open="invoice">+ Nuevo movimiento</button><button class="btn-secondary" data-print>📄 PDF</button><button class="btn-secondary" data-csv="invoices">📊 CSV</button>`, tableHtml(['Número / Ref','Cliente','Fecha','Vencimiento','Tipo','Moneda','Importe','Archivo','Estado',''], rows.map(i=>[i.reference,clientName(i.client_id),i.issue_date,i.due_date,i.type,i.currency,money(i.amount,i.currency),fileTag(i.document_path),badge(i.status),actions('invoice',i.id)]))); }
-function pagos(){ const rows = sortRows(filterRows(state.data.payments, p=>clientName(p.client_id)), getSortKey('payments'), 'payments'); return panel('Pagos', `${sortControl('payments',[['client','Cliente'],['date','Fecha'],['method','Medio de pago'],['currency','Moneda'],['amount','Monto'],['reference','Referencia']])}<button class="btn-primary" data-open="payment">+ Registrar pago</button><button class="btn-secondary" data-print>PDF</button><button class="btn-secondary" data-csv="payments">CSV</button>`, tableHtml(['Fecha','Cliente','Medio','Moneda','Importe','TC','ARS','Referencia',''], rows.map(p=>[p.payment_date,clientName(p.client_id),p.method,p.currency,money(p.amount,p.currency),p.exchange_rate,money(toArs(p.amount,p.currency,p.exchange_rate)),p.reference,actions('payment',p.id)]))); }
-function pagar(){ const movs = filterRows(state.data.supplier_movements, i=>supplierName(i.supplier_id)); const pays = filterRows(state.data.supplier_payments, p=>supplierName(p.supplier_id)); return panel('A Pagar', `<button class="btn-primary" data-open="supplier_movement">+ Nuevo movimiento</button><button class="btn-secondary" data-open="supplier_payment">+ Registrar pago</button><button class="btn-secondary" data-print>PDF</button><button class="btn-secondary" data-csv="supplier_movements">CSV</button>`, tableHtml(['Número / Ref','Proveedor','Fecha','Vencimiento','Tipo','Moneda','Importe','Archivo','Estado',''], movs.map(i=>[i.reference,supplierName(i.supplier_id),i.issue_date,i.due_date,i.type,i.currency,money(i.amount,i.currency),fileTag(i.document_path),badge(i.status),actions('supplier_movement',i.id)])) + `<h2 style="font-size:18px;margin-top:22px">Pagos a proveedores</h2>` + tableHtml(['Fecha','Proveedor','Medio','Moneda','Importe','TC','ARS','Referencia',''], pays.map(p=>[p.payment_date,supplierName(p.supplier_id),p.method,p.currency,money(p.amount,p.currency),p.exchange_rate,money(toArs(p.amount,p.currency,p.exchange_rate)),p.reference,actions('supplier_payment',p.id)]))); }
+function smoothPath(points){
+  if(points.length < 2) return '';
+  return points.reduce((d,p,i,arr)=>{
+    if(i===0) return `M ${p.x} ${p.y}`;
+    const prev = arr[i-1];
+    const cx = (prev.x + p.x) / 2;
+    return `${d} C ${cx} ${prev.y}, ${cx} ${p.y}, ${p.x} ${p.y}`;
+  },'');
+}
+function chartCoords(series,key,w,h,pad,max){
+  return series.map((p,i)=>({
+    x: pad.l + (series.length === 1 ? w/2 : i * (w - pad.l - pad.r) / (series.length - 1)),
+    y: pad.t + (h - pad.t - pad.b) - (Number(p[key]||0) / max) * (h - pad.t - pad.b),
+    raw:p
+  }));
+}
+function financeChart(series,mode='compact'){
+  const w = 720, h = mode === 'detail' ? 360 : 300;
+  const pad = {l:64,r:24,t:26,b:42};
+  const max = Math.max(1,...series.flatMap(p=>[p.fact,p.cob,p.pag]));
+  const lines = [
+    ['fact','#19b85f','url(#areaGreen)',mode === 'compact' ? 4.5 : 4],
+    ['cob','#2f80ed','url(#areaBlue)',mode === 'compact' ? 2.4 : 3.5],
+    ['pag','#8b5cf6','url(#areaPurple)',mode === 'compact' ? 2.2 : 3.5]
+  ];
+  const yMarks = [0,.5,1].map(v => ({y: pad.t + (1-v)*(h-pad.t-pad.b), value:max*v}));
+  const step = Math.max(1,Math.floor(series.length / 6));
+  const xMarks = series.filter((_,i)=>i % step === 0 || i === series.length-1);
+  const paths = lines.map(([key,color,fill,width],idx) => {
+    const pts = chartCoords(series,key,w,h,pad,max);
+    const d = smoothPath(pts);
+    const area = `${d} L ${pts.at(-1).x} ${h-pad.b} L ${pts[0].x} ${h-pad.b} Z`;
+    const showArea = key === 'fact' || mode === 'detail';
+    const circles = mode === 'detail' ? pts.filter((_,i)=>i%Math.max(1,Math.floor(series.length/12))===0 || i===pts.length-1).map(p=>`<circle class="chart-point" cx="${p.x}" cy="${p.y}" r="4" fill="${color}" stroke="#fff" stroke-width="2"/>`).join('') : '';
+    return `${showArea?`<path class="smooth-area" d="${area}" fill="${fill}"/>`:''}<path class="smooth-path" d="${d}" stroke="${color}" stroke-width="${width}" opacity="${idx && mode==='compact'?'.42':'1'}"/>${circles}`;
+  }).join('');
+  const last = series.at(-1) || {fact:0,cob:0,pag:0};
+  return `<div class="chart-visual" data-finance-detail><svg viewBox="0 0 ${w} ${h}" preserveAspectRatio="none" aria-hidden="true">
+    <defs>
+      <linearGradient id="areaGreen" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#19b85f" stop-opacity=".30"/><stop offset=".62" stop-color="#19b85f" stop-opacity=".10"/><stop offset="1" stop-color="#19b85f" stop-opacity="0"/></linearGradient>
+      <linearGradient id="areaBlue" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#2f80ed" stop-opacity=".18"/><stop offset="1" stop-color="#2f80ed" stop-opacity="0"/></linearGradient>
+      <linearGradient id="areaPurple" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#8b5cf6" stop-opacity=".16"/><stop offset="1" stop-color="#8b5cf6" stop-opacity="0"/></linearGradient>
+      <filter id="softGlow"><feGaussianBlur stdDeviation="2.2" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    </defs>
+    ${yMarks.map(m=>`<line class="grid-line" x1="${pad.l}" x2="${w-pad.r}" y1="${m.y}" y2="${m.y}"/><text class="axis-label" x="18" y="${m.y+4}">${compactMoney(m.value)}</text>`).join('')}
+    ${paths}
+    ${xMarks.map(p=>{const i=series.indexOf(p); const x = pad.l + (series.length === 1 ? (w-pad.l-pad.r)/2 : i * (w-pad.l-pad.r)/(series.length-1)); return `<text class="axis-label" x="${x-18}" y="${h-14}">${p.label}</text>`}).join('')}
+  </svg><div class="chart-tooltip"><b>${money(last.fact)}</b><br><span class="small">Facturado acumulado</span></div></div>`;
+}
+function openFinanceDetail(){
+  const existing = byId('financeDetailModal');
+  if(existing) existing.remove();
+  const series = financialSeries(state.chartRange);
+  const last = series.at(-1) || {fact:0,cob:0,pag:0};
+  const rangeLabel = rangeOptions.find(([v])=>v===state.chartRange)?.[1] || 'Últimos 30 días';
+  const el = document.createElement('div');
+  el.id = 'financeDetailModal';
+  el.className = 'finance-detail-modal';
+  el.innerHTML = `<div class="finance-detail-box">
+    <div class="finance-detail-head"><div><h2>Detalle financiero</h2><div class="small">${rangeLabel} · curvas acumuladas de facturado, cobrado y pagado</div></div><button class="btn-secondary" type="button" data-close-finance>× Cerrar</button></div>
+    <div class="finance-detail-grid">
+      <div class="finance-mini"><div class="t">Facturado</div><div class="v">${money(last.fact)}</div><div class="small">Movimientos a cobrar</div></div>
+      <div class="finance-mini"><div class="t">Cobrado</div><div class="v">${money(last.cob)}</div><div class="small">Pagos recibidos convertidos a ARS</div></div>
+      <div class="finance-mini"><div class="t">Pagado</div><div class="v">${money(last.pag)}</div><div class="small">Pagos a proveedores convertidos a ARS</div></div>
+    </div>
+    <div class="finance-detail-chart">${financeChart(series,'detail')}</div>
+    <div class="row small legend-premium"><span class="legend-dot" style="--dot:#19b85f">Facturado</span><span class="legend-dot" style="--dot:#2f80ed">Cobrado</span><span class="legend-dot" style="--dot:#8b5cf6">Pagado</span></div>
+  </div>`;
+  document.body.appendChild(el);
+  el.querySelector('[data-close-finance]').onclick = () => el.remove();
+  el.onclick = e => { if(e.target === el) el.remove(); };
+}
+function clientes(){ const sub = activeSubnav('clientes'); let rows = filterRows(state.data.clients); if(sub.includes('activos')) rows = rows.filter(c=>c.status !== 'moroso'); if(sub.includes('inactivos')) rows = rows.filter(c=>c.status === 'moroso'); return panel(`Clientes · ${sub}`, `<button class="btn-primary" data-open="client">+ Nuevo cliente</button>`, tableHtml(['Nombre / razón social','CUIT','Teléfono','Email','Saldo inicial','Estado',''], rows.map(c=>[c.name,c.tax_id,c.phone,c.email,money(c.opening_balance),badge(c.status),actions('client',c.id)]))); }
+function proveedores(){ const sub = activeSubnav('proveedores'); const rows = filterRows(state.data.suppliers); return panel(`Proveedores · ${sub}`, `<button class="btn-primary" data-open="supplier">+ Nuevo proveedor</button>`, tableHtml(['Nombre / razón social','CUIT','Teléfono','Email',''], rows.map(s=>[s.name,s.tax_id,s.phone,s.email,actions('supplier',s.id)]))); }
+function cobrar(){
+  const sub = activeSubnav('cobrar');
+  let base = filterRows(state.data.invoices, i=>clientName(i.client_id));
+  if(sub.includes('pendientes')) base = base.filter(i=>String(i.status||'').toLowerCase()==='pendiente');
+  if(sub.includes('vencidos')) base = base.filter(i=>String(i.status||'').toLowerCase()==='vencida' || (i.due_date && i.due_date < today() && String(i.status||'').toLowerCase()!=='cobrada'));
+  const rows = sortRows(base, getSortKey('invoices'), 'invoices');
+  return panel(`A Cobrar · ${sub}`, `${sortControl('invoices',[['client','Cliente'],['pay_date','Fecha de pago'],['due_date','Vencimiento'],['amount','Monto'],['status','Estado'],['reference','Número / referencia']])}<button class="btn-primary" data-open="invoice">+ Nuevo movimiento</button><button class="btn-secondary" data-print>📄 PDF</button><button class="btn-secondary" data-csv="invoices">📊 CSV</button>`, tableHtml(['Número / Ref','Cliente','Fecha','Vencimiento','Tipo','Moneda','Importe','Archivo','Estado',''], rows.map(i=>[i.reference,clientName(i.client_id),i.issue_date,i.due_date,i.type,i.currency,money(i.amount,i.currency),fileTag(i.document_path),badge(i.status),actions('invoice',i.id)])));
+}
+function pagos(){
+  const sub = activeSubnav('pagos');
+  if(sub.includes('programados')) return panel(`Pagos · ${sub}`, `<button class="btn-primary" data-open="payment">+ Registrar pago</button>`, emptyState('Pagos programados', 'Todavía no hay pagos programados. Podés registrar pagos desde esta misma sección.', '▣'));
+  const rows = sortRows(filterRows(state.data.payments, p=>clientName(p.client_id)), getSortKey('payments'), 'payments');
+  return panel(`Pagos · ${sub}`, `${sortControl('payments',[['client','Cliente'],['date','Fecha'],['method','Medio de pago'],['currency','Moneda'],['amount','Monto'],['reference','Referencia']])}<button class="btn-primary" data-open="payment">+ Registrar pago</button><button class="btn-secondary" data-print>PDF</button><button class="btn-secondary" data-csv="payments">CSV</button>`, tableHtml(['Fecha','Cliente','Medio','Moneda','Importe','TC','ARS','Referencia',''], rows.map(p=>[p.payment_date,clientName(p.client_id),p.method,p.currency,money(p.amount,p.currency),p.exchange_rate,money(toArs(p.amount,p.currency,p.exchange_rate)),p.reference,actions('payment',p.id)])));
+}
+function pagar(){
+  const sub = activeSubnav('pagar');
+  let movs = filterRows(state.data.supplier_movements, i=>supplierName(i.supplier_id));
+  if(sub.includes('pendientes')) movs = movs.filter(i=>String(i.status||'').toLowerCase()==='pendiente');
+  const pays = filterRows(state.data.supplier_payments, p=>supplierName(p.supplier_id));
+  const movementTable = tableHtml(['Número / Ref','Proveedor','Fecha','Vencimiento','Tipo','Moneda','Importe','Archivo','Estado',''], movs.map(i=>[i.reference,supplierName(i.supplier_id),i.issue_date,i.due_date,i.type,i.currency,money(i.amount,i.currency),fileTag(i.document_path),badge(i.status),actions('supplier_movement',i.id)]));
+  const paymentsTable = `<h2 style="font-size:18px;margin-top:22px">Pagos a proveedores</h2>` + tableHtml(['Fecha','Proveedor','Medio','Moneda','Importe','TC','ARS','Referencia',''], pays.map(p=>[p.payment_date,supplierName(p.supplier_id),p.method,p.currency,money(p.amount,p.currency),p.exchange_rate,money(toArs(p.amount,p.currency,p.exchange_rate)),p.reference,actions('supplier_payment',p.id)]));
+  return panel(`A Pagar · ${sub}`, `<button class="btn-primary" data-open="supplier_movement">+ Nuevo movimiento</button><button class="btn-secondary" data-open="supplier_payment">+ Registrar pago</button><button class="btn-secondary" data-print>PDF</button><button class="btn-secondary" data-csv="supplier_movements">CSV</button>`, sub.includes('Historial') ? movementTable + paymentsTable : movementTable);
+}
 function recordatorios(){ const rows = filterRows(state.data.reminders); return panel('Recordatorios', `<button class="btn-primary" data-open="reminder">+ Nuevo recordatorio</button>`, tableHtml(['Título','Fecha límite','Estado',''], rows.map(r=>[r.title,r.due_date,badge(r.done?'hecho':(r.due_date<today()?'vencido':r.due_date===today()?'hoy':'próximo')),`<div class="actions"><button class="btn-secondary" data-done="${r.id}">${r.done?'Pendiente':'Hecho'}</button><button class="btn-danger" data-delete="reminders:${r.id}">Eliminar</button></div>`]))); }
-function reportes(){ return panel('Reportes', `<button class="btn-secondary" data-print>Imprimir reporte</button>`, `<div class="placeholder-view"><h3>Reportes ejecutivos</h3><p>Resumen financiero, clientes, proveedores y exportaciones estarán agrupados en esta vista premium.</p></div>`); }
-function configuracion(){ return panel('Configuración', `<button class="btn-secondary" id="themeInline">Cambiar tema</button>`, `<div class="placeholder-view"><h3>Preferencias de CUENTIX</h3><p>Empresa, tema visual y configuración general del sistema.</p></div>`); }
+function reportes(){ const sub = activeSubnav('reportes'); return panel(`Reportes · ${sub}`, `<button class="btn-secondary" data-print>Imprimir reporte</button><button class="btn-secondary" data-tab="resumen">Ver resumen</button>`, `<div class="section-action-grid"><button class="section-action" data-tab="cobrar"><b>A Cobrar</b><span class="small">Facturación y movimientos pendientes.</span></button><button class="section-action" data-tab="pagos"><b>Pagos</b><span class="small">Cobros recibidos y medios de pago.</span></button><button class="section-action" data-tab="pagar"><b>A Pagar</b><span class="small">Proveedores y pagos registrados.</span></button></div><div style="margin-top:16px">${emptyState(`Reporte de ${sub}`, 'Esta vista ya abre correctamente y queda preparada para gráficos y exportaciones específicas.', '▥')}</div>`); }
+function configuracion(){ const sub = activeSubnav('configuracion'); return panel(`Configuración · ${sub}`, `<button class="btn-secondary" id="themeInline">Cambiar tema</button><button class="btn-secondary" data-tab="resumen">Volver al resumen</button>`, `<div class="section-action-grid"><button class="section-action" id="themeInlineCard"><b>Modo claro / oscuro</b><span class="small">Alterná el tema visual de CUENTIX.</span></button><button class="section-action" data-tab="clientes"><b>Datos de trabajo</b><span class="small">Clientes, proveedores y cuenta corriente.</span></button><button class="section-action" data-tab="presupuestos"><b>Presupuestos</b><span class="small">Logo, colores e impresión.</span></button></div><div style="margin-top:16px">${emptyState(sub, 'La opción queda seleccionada y disponible para configurar.', '⚙')}</div>`); }
 function presupuestos(){
+  const sub = activeSubnav('presupuestos');
+  if(sub.includes('Plantillas')) return panel(`Presupuestos · ${sub}`, `<button class="btn-primary" data-open="budget">+ Crear presupuesto</button>`, tableHtml(['Código','Descripción','U.M.','Precio','Categoría'], (state.data.budget_item_templates||[]).map(t=>[t.code,t.description,t.unit,money(t.price),t.category||'-'])));
   const rows = filterRows(state.data.budgets, b=>b.client_data || '');
-  return panel('Presupuestos', `<button class="btn-primary" data-open="budget">+ NUEVO</button>`, tableHtml(['N° Presupuesto','Fecha','Cliente','Moneda','IVA','Total',''], rows.map(b=>[b.budget_number,b.issue_date,b.client_data?.split('\n')[0] || '-',b.currency||'ARS',b.iva,money(b.total,b.currency||'ARS'),`<div class="actions"><button class="btn-secondary" data-print-budget="${b.id}">Imprimir</button>${actions('budget',b.id)}</div>`])));
+  return panel(`Presupuestos · ${sub}`, `<button class="btn-primary" data-open="budget">+ NUEVO</button>`, tableHtml(['N° Presupuesto','Fecha','Cliente','Moneda','IVA','Total',''], rows.map(b=>[b.budget_number,b.issue_date,b.client_data?.split('\n')[0] || '-',b.currency||'ARS',b.iva,money(b.total,b.currency||'ARS'),`<div class="actions"><button class="btn-secondary" data-print-budget="${b.id}">Imprimir</button>${actions('budget',b.id)}</div>`])));
 }
 function cc(){
+  const sub = activeSubnav('cc');
   const selected = sessionStorage.getItem('cuentix_cc_client') || '';
   const options = `<select id="ccClientSelect" style="width:300px"><option value="">Seleccionar cliente</option>${state.data.clients.map(c=>`<option value="${c.id}" ${c.id===selected?'selected':''}>${esc(c.name)}</option>`).join('')}</select>`;
-  if(!selected) return panel('Cuenta corriente', `${options}<button class="btn-secondary" data-print>📄 PDF</button>`, `<div class="empty">Seleccioná un cliente para ver su cuenta corriente.</div>`);
+  if(sub.includes('Clientes asociados')) return panel(`Cuenta corriente · ${sub}`, `<button class="btn-primary" data-tab="clientes">Ver clientes</button>`, tableHtml(['Cliente','CUIT','Estado','Saldo inicial'], state.data.clients.map(c=>[c.name,c.tax_id,badge(c.status),money(c.opening_balance)])));
+  if(!selected) return panel(`Cuenta corriente · ${sub}`, `${options}<button class="btn-secondary" data-print>📄 PDF</button>`, emptyState('Seleccioná un cliente', 'Elegí un cliente del desplegable para ver debe, haber y saldo acumulado.', '◫'));
   const client = state.data.clients.find(c=>c.id===selected);
-  if(!client) return panel('Cuenta corriente', options, `<div class="empty">Cliente no encontrado.</div>`);
+  if(!client) return panel(`Cuenta corriente · ${sub}`, options, emptyState('Cliente no encontrado', 'El cliente seleccionado ya no está disponible.', '!'));
   let saldo = Number(client.opening_balance||0);
   const movements = [
     ...state.data.invoices.filter(i=>i.client_id===client.id).map(i=>({d:i.issue_date,t:i.type,x:i.reference,debe:toArs(i.amount,i.currency),haber:0,c:i.currency})),
@@ -538,7 +708,7 @@ function cc(){
     return [m.d, m.t, m.x || '-', 'ARS', money(m.debe), money(m.haber), money(saldo)];
   });
   rows.push(['','','','', '', '<b>SALDO TOTAL</b>', `<b>${money(saldo)}</b>`]);
-  return panel('Cuenta corriente', `${options}<button class="btn-secondary" data-print>📄 PDF</button><button class="btn-secondary" data-csv-custom="cc">📊 CSV</button>`, `<div class="small" style="margin-bottom:12px">Cliente: <b>${esc(client.name)}</b></div>${tableHtml(['Fecha','Tipo','Detalle','Moneda','Debe','Haber','Saldo'], rows)}`);
+  return panel(`Cuenta corriente · ${sub}`, `${options}<button class="btn-secondary" data-print>📄 PDF</button><button class="btn-secondary" data-csv-custom="cc">📊 CSV</button>`, `<div class="small" style="margin-bottom:12px">Cliente: <b>${esc(client.name)}</b></div>${tableHtml(['Fecha','Tipo','Detalle','Moneda','Debe','Haber','Saldo'], rows)}`);
 }
 function currentAccountRows(){
   const selected = sessionStorage.getItem('cuentix_cc_client') || '';
@@ -552,7 +722,10 @@ function currentAccountRows(){
 }
 
 function panel(title, toolbar, content){ return `<div class="card panel"><div class="toolbar"><h2>${title}</h2><div class="row">${toolbar}</div></div>${content}</div>`}
-function tableHtml(headers, rows){ if(!rows.length) return '<div class="empty">Sin registros.</div>'; return `<div class="table-wrap"><table class="table"><thead><tr>${headers.map(h=>`<th>${h}</th>`).join('')}</tr></thead><tbody>${rows.map(r=>`<tr>${r.map(c=>`<td>${c??'-'}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`}
+function emptyState(title='Sin registros todavía', text='La sección está lista. Podés comenzar usando los botones superiores.', icon='＋'){
+  return `<div class="empty-state"><div class="empty-icon">${icon}</div><h3>${title}</h3><p>${text}</p></div>`;
+}
+function tableHtml(headers, rows){ if(!rows.length) return emptyState(); return `<div class="table-wrap"><table class="table"><thead><tr>${headers.map(h=>`<th>${h}</th>`).join('')}</tr></thead><tbody>${rows.map(r=>`<tr>${r.map(c=>`<td>${c??'-'}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`}
 function sum(rows,k){return rows.reduce((a,r)=>a+Number(r[k]||0),0)}
 function sumArs(rows){return rows.reduce((a,r)=>a+toArs(r.amount,r.currency,r.exchange_rate),0)}
 function toArs(amount,currency,exchangeRate=1){return Number(amount||0) * (currency === 'USD' ? Number(exchangeRate||1) : 1)}
@@ -588,9 +761,13 @@ async function saveRecord(table,payload,id){
 
 function bindBusinessActions(){
   document.querySelectorAll('[data-open]').forEach(b=>b.onclick=()=>openForm(b.dataset.open));
+  document.querySelectorAll('[data-tab]').forEach(b=>b.onclick=()=>{ state.tab = b.dataset.tab; state.expanded[state.tab] = true; state.subnav[state.tab] = activeSubnav(state.tab); closeMobileMenu(); renderBusiness(); });
   document.querySelectorAll('[data-edit]').forEach(b=>b.onclick=()=>openForm(...b.dataset.edit.split(':')));
   document.querySelectorAll('[data-print-budget]').forEach(b=>b.onclick=()=>printBudget(b.dataset.printBudget));
   document.querySelectorAll('[data-sort]').forEach(s=>s.onchange=()=>{sessionStorage.setItem(`cuentix_sort_${s.dataset.sort}`,s.value);renderBusiness();});
+  const financeRange = byId('financeRange');
+  if(financeRange) financeRange.onchange = () => { state.chartRange = financeRange.value; renderBusiness(); };
+  document.querySelectorAll('[data-finance-detail]').forEach(el=>el.onclick=e=>{ if(e.target?.id === 'financeRange') return; openFinanceDetail(); });
   const ccSelect = byId('ccClientSelect');
   if(ccSelect) ccSelect.onchange = () => { sessionStorage.setItem('cuentix_cc_client', ccSelect.value); renderBusiness(); };
   document.querySelectorAll('[data-delete]').forEach(b=>b.onclick=async()=>{const [table,id]=b.dataset.delete.split(':'); if(confirm('Eliminar registro?')){b.disabled=true;await supabase.from(table).delete().eq('id',id); await refreshBusinessData();}});
@@ -600,6 +777,8 @@ function bindBusinessActions(){
   document.querySelectorAll('[data-csv-custom="cc"]').forEach(b=>b.onclick=()=>downloadCsv('cuenta-corriente.csv', currentAccountRows()));
   const themeInline = byId('themeInline');
   if(themeInline) themeInline.onclick = toggleTheme;
+  const themeInlineCard = byId('themeInlineCard');
+  if(themeInlineCard) themeInlineCard.onclick = toggleTheme;
 }
 
 function openForm(type,id){
