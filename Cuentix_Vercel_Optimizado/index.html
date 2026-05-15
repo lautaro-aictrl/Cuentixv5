@@ -45,7 +45,10 @@ body.theme-dark .table th{background:#102b42}body.theme-dark .table td{border-bo
 @media(max-width:820px){body{overflow-x:hidden}.app-shell,#app.admin-mode .app-shell{display:block}.mobile-menu-btn{display:grid;place-items:center;flex:0 0 auto}.sidebar{position:fixed;top:0;left:0;width:min(86vw,320px);height:100dvh;transform:translateX(-104%);transition:transform .24s ease;box-shadow:24px 0 60px rgba(0,0,0,.28);z-index:80}.sidebar.open{transform:translateX(0)}body.mobile-nav-open::after{content:'';position:fixed;inset:0;background:rgba(7,24,39,.48);backdrop-filter:blur(3px);z-index:70}.command-header{position:sticky;top:0;display:grid;grid-template-columns:44px 1fr auto;align-items:center;gap:10px;padding:14px 14px}.page-heading h2{font-size:21px}.page-heading p{font-size:12px}.header-tools{grid-column:1/-1;display:grid;grid-template-columns:1fr 44px auto;gap:10px;width:100%}.profile-pill{padding:6px 9px}.profile-pill b,.profile-pill span{display:none}.searchbox{min-width:0;width:100%;height:44px}.theme-toggle{width:44px;height:44px}.shell{padding:16px 14px 96px}.stats{grid-template-columns:1fr;gap:14px}.stat{min-height:128px}.dashboard-grid{grid-template-columns:1fr;gap:14px}.chart-card,.activity-card,.panel{padding:18px;border-radius:20px}.chart-visual{height:240px}.quick-grid{grid-template-columns:1fr}.toolbar{align-items:flex-start}.toolbar .row{width:100%}.toolbar .row button,.toolbar .row select{min-height:44px}.table-wrap{border-radius:16px}.table{min-width:720px}.finance-detail-modal{padding:12px}.finance-detail-box{border-radius:22px;padding:18px}.finance-detail-head{align-items:flex-start}.finance-detail-chart .chart-visual{height:280px}.auth{padding:16px}.auth .card{padding:24px}.auth .grid2{grid-template-columns:1fr}}
 @media(max-width:1180px){.app-shell,#app.admin-mode .app-shell{grid-template-columns:240px 1fr}.dashboard-grid{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}.admin-summary{grid-template-columns:repeat(2,1fr)}.searchbox{min-width:220px}}@media(max-width:820px){.app-shell,#app.admin-mode .app-shell{grid-template-columns:1fr}.sidebar{position:relative;height:auto}.command-header{position:relative;align-items:flex-start;flex-direction:column;padding:18px}.shell{padding:18px}.header-tools,.searchbox{width:100%;min-width:0}.stats,.quick-grid,.admin-summary{grid-template-columns:1fr}}
 .stat{text-align:left;color:inherit}.activity-item{width:100%;text-align:left;color:inherit}.section-action{color:inherit}.stat:hover,.activity-item:hover,.section-action:hover{transform:translateY(-2px);box-shadow:0 16px 42px rgba(11,49,84,.12)}
+.mobile-brand,.mobile-bottom-nav{display:none}
 @media(max-width:820px){.app-shell,#app.admin-mode .app-shell{display:block!important}.sidebar{position:fixed!important;top:0!important;left:0!important;width:min(86vw,320px)!important;height:100dvh!important;transform:translateX(-104%);transition:transform .24s ease;z-index:80}.sidebar.open{transform:translateX(0)}.command-header{position:sticky!important;top:0!important;display:grid!important;grid-template-columns:44px 1fr auto!important;align-items:center!important;flex-direction:initial!important;padding:14px!important}.header-tools{grid-column:1/-1}.mobile-menu-btn{display:grid}.page-heading{min-width:0}.page-heading h2{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.side-logout{min-height:48px}.nav-main{min-height:48px}.nav-child{min-height:42px}.box{width:calc(100vw - 18px);border-radius:18px}.body{max-height:75dvh}.foot{position:sticky;bottom:0}.empty-state{padding:34px 18px}.date-filter{width:100%;min-width:0}.chart-action{width:100%}}
+body.device-mobile .command-header,body.device-tablet .command-header{background:linear-gradient(135deg,#061727,#0B3154);border-bottom:0;box-shadow:0 18px 40px rgba(6,23,39,.22);color:#fff}body.device-mobile .mobile-brand,body.device-tablet .mobile-brand{display:block;min-width:0}body.device-mobile .mobile-brand b,body.device-tablet .mobile-brand b{display:block;color:#fff;font-size:18px;line-height:1;font-weight:900;letter-spacing:.02em}body.device-mobile .mobile-brand span,body.device-tablet .mobile-brand span{display:block;color:#49C464;font-size:10px;text-transform:uppercase;font-weight:900;letter-spacing:.08em;margin-top:3px}body.device-mobile .page-heading,body.device-tablet .page-heading{display:none}body.device-mobile .header-tools,body.device-tablet .header-tools{grid-column:auto;display:flex;width:auto;gap:8px;justify-content:flex-end}body.device-mobile .searchbox,body.device-tablet .searchbox{display:none}body.device-mobile .theme-toggle,body.device-tablet .theme-toggle{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.18);color:#fff}body.device-mobile .profile-pill,body.device-tablet .profile-pill{background:transparent;border:0;padding:0}body.device-mobile .avatar,body.device-tablet .avatar{background:#08233d;color:#fff;border:1px solid rgba(255,255,255,.18)}body.device-mobile .mobile-menu-btn,body.device-tablet .mobile-menu-btn{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.18);color:#fff}body.device-mobile .shell{padding-bottom:112px}body.device-mobile .mobile-bottom-nav{position:fixed;left:12px;right:12px;bottom:12px;z-index:65;display:grid;grid-template-columns:repeat(5,1fr);gap:4px;padding:8px;border-radius:24px;background:rgba(255,255,255,.92);border:1px solid rgba(217,227,238,.9);box-shadow:0 18px 48px rgba(7,24,39,.18);backdrop-filter:blur(18px)}body.device-mobile.theme-dark .mobile-bottom-nav{background:rgba(8,29,47,.92);border-color:#1f3a52}body.device-mobile .mobile-bottom-nav button{display:grid;place-items:center;gap:3px;background:transparent;color:var(--muted);padding:8px 4px;border-radius:17px;font-size:11px;font-weight:900}body.device-mobile .mobile-bottom-nav button span{font-size:18px}body.device-mobile .mobile-bottom-nav button.active{background:linear-gradient(135deg,#0F4C81,#0B3154);color:#fff;box-shadow:0 10px 22px rgba(11,49,84,.24)}body.device-mobile .stats{grid-template-columns:1fr}body.device-mobile .stat{border-radius:24px;min-height:132px}body.device-mobile .chart-card,body.device-mobile .activity-card,body.device-mobile .panel{border-radius:24px}body.device-mobile .chart-visual{height:260px}
+#app.admin-mode .mobile-bottom-nav{display:none!important}
 </style>
 </head>
 <body>
@@ -75,6 +78,7 @@ body.theme-dark .table th{background:#102b42}body.theme-dark .table td{border-bo
     <main class="main-area">
       <header class="command-header">
         <button class="mobile-menu-btn" id="mobileMenu" type="button">☰</button>
+        <div class="mobile-brand"><b>CUENTIX</b><span>Business made simple</span></div>
         <div class="page-heading"><h2 id="pageTitle">Command Center</h2><p id="sessionLabel">Sesión</p></div>
         <div class="header-tools">
           <label class="searchbox"><span>⌕</span><input id="globalSearch" placeholder="Buscar..." /></label>
@@ -86,6 +90,13 @@ body.theme-dark .table th{background:#102b42}body.theme-dark .table td{border-bo
       <div class="shell hidden" id="bizShell">
         <div id="sections"></div>
       </div>
+      <nav class="mobile-bottom-nav" id="mobileBottomNav">
+        <button data-mobile-tab="resumen"><span>⌂</span><b>Resumen</b></button>
+        <button data-mobile-tab="clientes"><span>◎</span><b>Clientes</b></button>
+        <button data-mobile-tab="cobrar"><span>▤</span><b>Cobros</b></button>
+        <button data-mobile-tab="pagos"><span>▣</span><b>Pagos</b></button>
+        <button data-mobile-tab="mas"><span>☰</span><b>Más</b></button>
+      </nav>
     </main>
   </div>
 </div>
@@ -97,7 +108,7 @@ import { createClient } from 'https://esm.sh/@supabase/supabase-js@2.43.4';
 
 const PROJECT_URL = 'https://yedcpumndtmdnczalspg.supabase.co';
 const ANON_KEY = 'sb_publishable_gtYK6qmfLMku2oxgBtRPzQ_Jg_iVEL9';
-const APP_VERSION = '2026.05.15.3';
+const APP_VERSION = '2026.05.15.4';
 const supabase = createClient(PROJECT_URL, ANON_KEY, {
   auth: {
     persistSession: true,
@@ -146,6 +157,22 @@ function compactMoney(v){
   return `$ ${n.toLocaleString('es-AR',{maximumFractionDigits:0})}`;
 }
 function esc(v){return String(v ?? '').replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]))}
+function detectDevice(){
+  const ua = navigator.userAgent || '';
+  const width = Math.min(window.innerWidth || 9999, screen.width || 9999);
+  const coarse = navigator.maxTouchPoints > 0 || matchMedia('(pointer: coarse)').matches;
+  const mobileUA = /Android|iPhone|iPod|Mobile|IEMobile|Opera Mini/i.test(ua);
+  const tabletUA = /iPad|Tablet|PlayBook|Silk/i.test(ua) || (coarse && width >= 700 && width <= 1180);
+  const type = mobileUA && width < 760 ? 'mobile' : tabletUA ? 'tablet' : (coarse && width <= 820 ? 'mobile' : 'desktop');
+  document.body.classList.toggle('device-mobile', type === 'mobile');
+  document.body.classList.toggle('device-tablet', type === 'tablet');
+  document.body.classList.toggle('device-desktop', type === 'desktop');
+  document.body.dataset.device = type;
+  document.body.dataset.orientation = window.innerWidth > window.innerHeight ? 'landscape' : 'portrait';
+}
+detectDevice();
+addEventListener('resize', detectDevice, {passive:true});
+addEventListener('orientationchange', () => setTimeout(detectDevice, 120), {passive:true});
 function today(){return new Date().toISOString().slice(0,10)}
 function badge(s){const cls = ['activo','al día','cobrada','pagada','hecho'].includes(s) ? 'b-ok' : ['moroso','vencida','inactivo'].includes(s) ? 'b-bad' : 'b-warn'; return `<span class="badge ${cls}">${esc(s||'pendiente')}</span>`}
 function groupBreakdown(rows){
@@ -302,7 +329,18 @@ byId('btnLogout').onclick = () => {
   supabase.auth.signOut().catch(() => {});
 };
 byId('themeToggle').onclick = toggleTheme;
-byId('mobileMenu').onclick = () => toggleMobileMenu(true);
+byId('mobileMenu').onclick = () => toggleMobileMenu();
+byId('mobileBottomNav').onclick = e => {
+  const btn = e.target.closest('[data-mobile-tab]');
+  if(!btn) return;
+  const tab = btn.dataset.mobileTab;
+  if(tab === 'mas') return toggleMobileMenu(true);
+  state.tab = tab;
+  state.expanded[tab] = true;
+  state.subnav[tab] = activeSubnav(tab);
+  closeMobileMenu();
+  renderBusiness();
+};
 byId('globalSearch').oninput = e => {
   state.search = e.target.value || '';
   if(state.profile?.role === 'admin') renderAdmin();
@@ -314,6 +352,9 @@ function toggleMobileMenu(open){
   document.body.classList.toggle('mobile-nav-open', shouldOpen);
 }
 function closeMobileMenu(){ toggleMobileMenu(false); }
+function shouldKeepMobileMenuOpen(){
+  return document.body.classList.contains('device-mobile') || document.body.classList.contains('device-tablet');
+}
 document.addEventListener('click', e => {
   if(document.body.classList.contains('mobile-nav-open') && !byId('sidebar').contains(e.target) && e.target !== byId('mobileMenu')) closeMobileMenu();
 });
@@ -432,7 +473,7 @@ function renderSideNav(){
     state.expanded[id] = !state.expanded[id];
     state.tab = id;
     state.subnav[id] = activeSubnav(id);
-    closeMobileMenu();
+    if(!shouldKeepMobileMenuOpen()) closeMobileMenu();
     renderBusiness();
   });
   byId('sideNav').querySelectorAll('[data-nav-child]').forEach(btn => btn.onclick = () => {
@@ -442,7 +483,7 @@ function renderSideNav(){
     const label = btn.dataset.navLabel || '';
     state.subnav[id] = label;
     if(label.includes('Nueva Cuenta Corriente')) sessionStorage.removeItem('cuentix_cc_client');
-    closeMobileMenu();
+    if(!shouldKeepMobileMenuOpen()) closeMobileMenu();
     renderBusiness();
     if(label.includes('Nuevo cliente')) return openForm('client');
     if(label.includes('Nuevo proveedor')) return openForm('supplier');
@@ -474,6 +515,16 @@ function renderBusiness(){
   const view = renderers[state.tab] || resumen;
   byId('sections').innerHTML = `<section class="section active">${view()}</section>`;
   bindBusinessActions();
+  updateMobileBottomNav();
+}
+function updateMobileBottomNav(){
+  const nav = byId('mobileBottomNav');
+  if(!nav) return;
+  nav.querySelectorAll('[data-mobile-tab]').forEach(btn => {
+    const tab = btn.dataset.mobileTab;
+    const active = tab === state.tab || (tab === 'mas' && !['resumen','clientes','cobrar','pagos'].includes(state.tab));
+    btn.classList.toggle('active', active);
+  });
 }
 
 async function loadData(){
