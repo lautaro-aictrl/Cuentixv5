@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8" />
@@ -6,7 +6,7 @@
 <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, proxy-revalidate" />
 <meta http-equiv="Pragma" content="no-cache" />
 <meta http-equiv="Expires" content="0" />
-<meta name="cuentix-version" content="2026.05.12.1" />
+<meta name="cuentix-version" content="2026.05.25.1" />
 <title>Cuentix</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap');
@@ -42,10 +42,14 @@ body.theme-dark .table th{background:#102b42}body.theme-dark .table td{border-bo
 .app-shell,#app.admin-mode .app-shell{grid-template-columns:240px minmax(0,1fr)}.command-header{padding:26px 32px}.page-heading h2{font-size:28px;text-transform:uppercase}.page-heading p{font-size:16px;text-transform:uppercase;letter-spacing:.03em}.shell{padding:22px 28px 90px}.stats{grid-template-columns:repeat(5,minmax(190px,1fr));gap:18px;margin-bottom:22px}.stat{min-height:142px;padding:24px;border-radius:18px}.stat .v{font-size:clamp(24px,1.65vw,30px)}.stat-icon{width:56px;height:56px;font-size:24px}.dashboard-grid{grid-template-columns:minmax(410px,1.35fr) minmax(305px,1.02fr) 285px;gap:20px;align-items:stretch}.chart-card,.activity-card{padding:24px;border-radius:22px;box-shadow:0 18px 50px rgba(11,49,84,.08)}.chart-card.finance-card{min-height:395px}.chart-card.finance-card .toolbar{align-items:center}.chart-visual{height:300px;border:0;border-radius:18px;background:linear-gradient(180deg,rgba(255,255,255,.56),rgba(246,251,248,.72));box-shadow:inset 0 0 0 1px rgba(217,227,238,.72);cursor:pointer}.theme-dark .chart-visual{background:linear-gradient(180deg,rgba(13,36,56,.92),rgba(9,28,44,.88));box-shadow:inset 0 0 0 1px rgba(31,58,82,.9)}.date-filter{width:auto;min-width:154px;background:var(--panel);border:1px solid var(--line);border-radius:12px;font-weight:800;color:var(--brand2);box-shadow:0 8px 24px rgba(14,32,61,.05)}.chart-action{font-size:13px;padding:9px 12px}.legend-premium{justify-content:center;margin-top:14px;gap:24px}.legend-dot{display:inline-flex;align-items:center;gap:7px;color:var(--muted);font-weight:800}.legend-dot::before{content:'';width:10px;height:10px;border-radius:50%;background:var(--dot)}.finance-detail-modal{position:fixed;inset:0;background:rgba(7,24,39,.62);backdrop-filter:blur(8px);display:grid;place-items:center;padding:24px;z-index:90}.finance-detail-box{width:min(1180px,96vw);max-height:90vh;overflow:auto;background:var(--panel);border:1px solid var(--line);border-radius:28px;box-shadow:0 30px 90px rgba(0,0,0,.3);padding:26px}.finance-detail-head{display:flex;justify-content:space-between;gap:16px;align-items:center;margin-bottom:18px}.finance-detail-head h2{margin:0;color:var(--brand2);font-size:26px}.finance-detail-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:18px}.finance-mini{padding:16px;border:1px solid var(--line);border-radius:18px;background:var(--glass)}.finance-detail-chart .chart-visual{height:440px;cursor:default}.axis-label{fill:#64748b;font-size:12px;font-weight:700}.theme-dark .axis-label{fill:#9db0c2}.grid-line{stroke:rgba(100,116,139,.18);stroke-dasharray:5 8}.smooth-path{fill:none;stroke-linecap:round;stroke-linejoin:round;filter:url(#softGlow);stroke-width:4}.smooth-area{opacity:.9}.chart-point{filter:drop-shadow(0 3px 8px rgba(11,49,84,.18))}@media(max-width:1450px){.app-shell,#app.admin-mode .app-shell{grid-template-columns:230px minmax(0,1fr)}.shell{padding:20px 24px 90px}.dashboard-grid{grid-template-columns:minmax(405px,1.26fr) minmax(300px,.98fr) 280px;gap:18px}.stats{gap:16px}.stat{padding:22px}.chart-visual{height:285px}}@media(max-width:1180px){.dashboard-grid{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}.finance-detail-grid{grid-template-columns:1fr}.finance-detail-chart .chart-visual{height:340px}}
 .auth{min-height:100vh;max-width:none;margin:0;padding:24px;place-items:center;background:radial-gradient(circle at 52% 34%,rgba(25,184,95,.13),transparent 28%),radial-gradient(circle at 80% 12%,rgba(15,76,129,.11),transparent 26%),linear-gradient(135deg,#f7fbff,#edf4f8)}.auth .card{width:min(660px,calc(100vw - 32px));padding:34px;border-radius:28px;background:rgba(255,255,255,.92);box-shadow:0 28px 80px rgba(11,49,84,.17);border:1px solid rgba(15,76,129,.13);backdrop-filter:blur(12px)}.auth .brand{justify-content:flex-start}.auth .brand h1{text-transform:uppercase;color:#071827;letter-spacing:.02em}.auth .brand p{color:#5d7083}.auth label{color:#526274}.auth input{background:#fff;border-color:#d7e4ef}.auth input:focus{border-color:#19b85f;box-shadow:0 0 0 4px rgba(25,184,95,.11)}.auth .btn-primary{background:linear-gradient(135deg,#0B3154,#0F4C81);box-shadow:0 12px 24px rgba(11,49,84,.22)}.auth .btn-primary:hover{background:linear-gradient(135deg,#0F4C81,#0b3154)}
 .mobile-menu-btn{display:none;width:44px;height:44px;border-radius:14px;background:var(--panel);border:1px solid var(--line);color:var(--brand2);font-size:20px;padding:0}.empty-state{padding:42px 24px;text-align:center;color:var(--muted);border:1px dashed var(--line);border-radius:20px;background:linear-gradient(180deg,rgba(255,255,255,.48),rgba(73,196,100,.04))}.empty-icon{width:58px;height:58px;border-radius:18px;display:grid;place-items:center;margin:0 auto 14px;background:rgba(73,196,100,.14);color:#139a4f;font-size:26px}.empty-state h3{margin:0 0 6px;color:var(--brand2);font-size:18px}.empty-state p{margin:0 auto;max-width:420px}.section-action-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px}.section-action{padding:18px;text-align:left;border:1px solid var(--line);border-radius:18px;background:var(--glass);box-shadow:0 10px 26px rgba(11,49,84,.06)}.section-action b{display:block;color:var(--brand2);margin-bottom:4px}.mobile-backdrop{display:none}
+.employee-hero{display:grid;grid-template-columns:1.25fr .75fr;gap:18px;margin-bottom:18px}.employee-hero-main{padding:24px;border-radius:24px;background:linear-gradient(135deg,#061727,#0F4C81);color:#fff;box-shadow:var(--shadow-lg);position:relative;overflow:hidden}.employee-hero-main::after{content:'';position:absolute;right:-70px;top:-70px;width:220px;height:220px;border-radius:50%;background:rgba(73,196,100,.16)}.employee-hero-main h2{margin:0 0 8px;color:#fff;font-size:26px}.employee-hero-main p{margin:0;color:#d7e6f5;max-width:640px}.employee-hero-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}.employee-hero-actions .btn-secondary{background:rgba(255,255,255,.14);color:#fff;border:1px solid rgba(255,255,255,.18)}.employee-kpi{display:grid;gap:12px}.employee-mini{padding:18px;border-radius:20px;border:1px solid var(--line);background:var(--glass);box-shadow:var(--shadow)}.employee-mini .t{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:900}.employee-mini .v{font-size:24px;font-weight:900;color:var(--brand2);margin-top:6px}.employee-dashboard{display:grid;grid-template-columns:1.2fr .8fr;gap:16px;margin:18px 0}.employee-chart{height:230px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(180deg,rgba(15,76,129,.04),rgba(73,196,100,.08));padding:18px;display:flex;align-items:end;gap:10px}.employee-bar{flex:1;min-width:18px;border-radius:12px 12px 6px 6px;background:linear-gradient(180deg,#49C464,#0F4C81);position:relative;box-shadow:0 10px 22px rgba(15,76,129,.16)}.employee-bar span{position:absolute;left:50%;bottom:-24px;transform:translateX(-50%);font-size:11px;color:var(--muted);font-weight:800}.employee-list{display:grid;gap:12px}.employee-row{display:grid;grid-template-columns:44px 1fr auto;gap:12px;align-items:center;padding:12px;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.48)}.theme-dark .employee-row{background:rgba(255,255,255,.04)}.employee-avatar{width:44px;height:44px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(135deg,#dff8e8,#eaf3fb);color:#0B3154;font-weight:900}.employee-status{display:inline-flex;align-items:center;padding:4px 10px;border-radius:999px;font-size:11px;font-weight:900;background:#dcfce7;color:#166534}.employee-status.pending{background:#fef3c7;color:#92400e}.employee-status.partial{background:#dbeafe;color:#1d4ed8}.employee-status.absent{background:#fee2e2;color:#991b1b}.employee-status.half{background:#ede9fe;color:#6d28d9}.employee-form-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.employee-form-grid .wide{grid-column:1/-1}.employee-file-note{font-size:12px;color:var(--muted);margin-top:6px}@media(max-width:900px){.employee-hero,.employee-dashboard{grid-template-columns:1fr}.employee-form-grid{grid-template-columns:1fr}.employee-row{grid-template-columns:40px 1fr}.employee-row .actions{grid-column:1/-1}.employee-chart{height:210px;overflow:auto}.employee-hero-main{border-radius:22px;padding:20px}}
 @media(max-width:820px){body{overflow-x:hidden}.app-shell,#app.admin-mode .app-shell{display:block}.mobile-menu-btn{display:grid;place-items:center;flex:0 0 auto}.sidebar{position:fixed;top:0;left:0;width:min(86vw,320px);height:100dvh;transform:translateX(-104%);transition:transform .24s ease;box-shadow:24px 0 60px rgba(0,0,0,.28);z-index:80}.sidebar.open{transform:translateX(0)}body.mobile-nav-open::after{content:'';position:fixed;inset:0;background:rgba(7,24,39,.48);backdrop-filter:blur(3px);z-index:70}.command-header{position:sticky;top:0;display:grid;grid-template-columns:44px 1fr auto;align-items:center;gap:10px;padding:14px 14px}.page-heading h2{font-size:21px}.page-heading p{font-size:12px}.header-tools{grid-column:1/-1;display:grid;grid-template-columns:1fr 44px auto;gap:10px;width:100%}.profile-pill{padding:6px 9px}.profile-pill b,.profile-pill span{display:none}.searchbox{min-width:0;width:100%;height:44px}.theme-toggle{width:44px;height:44px}.shell{padding:16px 14px 96px}.stats{grid-template-columns:1fr;gap:14px}.stat{min-height:128px}.dashboard-grid{grid-template-columns:1fr;gap:14px}.chart-card,.activity-card,.panel{padding:18px;border-radius:20px}.chart-visual{height:240px}.quick-grid{grid-template-columns:1fr}.toolbar{align-items:flex-start}.toolbar .row{width:100%}.toolbar .row button,.toolbar .row select{min-height:44px}.table-wrap{border-radius:16px}.table{min-width:720px}.finance-detail-modal{padding:12px}.finance-detail-box{border-radius:22px;padding:18px}.finance-detail-head{align-items:flex-start}.finance-detail-chart .chart-visual{height:280px}.auth{padding:16px}.auth .card{padding:24px}.auth .grid2{grid-template-columns:1fr}}
 @media(max-width:1180px){.app-shell,#app.admin-mode .app-shell{grid-template-columns:240px 1fr}.dashboard-grid{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}.admin-summary{grid-template-columns:repeat(2,1fr)}.searchbox{min-width:220px}}@media(max-width:820px){.app-shell,#app.admin-mode .app-shell{grid-template-columns:1fr}.sidebar{position:relative;height:auto}.command-header{position:relative;align-items:flex-start;flex-direction:column;padding:18px}.shell{padding:18px}.header-tools,.searchbox{width:100%;min-width:0}.stats,.quick-grid,.admin-summary{grid-template-columns:1fr}}
 .stat{text-align:left;color:inherit}.activity-item{width:100%;text-align:left;color:inherit}.section-action{color:inherit}.stat:hover,.activity-item:hover,.section-action:hover{transform:translateY(-2px);box-shadow:0 16px 42px rgba(11,49,84,.12)}
+.mobile-brand,.mobile-bottom-nav{display:none}
 @media(max-width:820px){.app-shell,#app.admin-mode .app-shell{display:block!important}.sidebar{position:fixed!important;top:0!important;left:0!important;width:min(86vw,320px)!important;height:100dvh!important;transform:translateX(-104%);transition:transform .24s ease;z-index:80}.sidebar.open{transform:translateX(0)}.command-header{position:sticky!important;top:0!important;display:grid!important;grid-template-columns:44px 1fr auto!important;align-items:center!important;flex-direction:initial!important;padding:14px!important}.header-tools{grid-column:1/-1}.mobile-menu-btn{display:grid}.page-heading{min-width:0}.page-heading h2{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.side-logout{min-height:48px}.nav-main{min-height:48px}.nav-child{min-height:42px}.box{width:calc(100vw - 18px);border-radius:18px}.body{max-height:75dvh}.foot{position:sticky;bottom:0}.empty-state{padding:34px 18px}.date-filter{width:100%;min-width:0}.chart-action{width:100%}}
+body.device-mobile .command-header,body.device-tablet .command-header{background:linear-gradient(135deg,#061727,#0B3154);border-bottom:0;box-shadow:0 18px 40px rgba(6,23,39,.22);color:#fff}body.device-mobile .mobile-brand,body.device-tablet .mobile-brand{display:block;min-width:0}body.device-mobile .mobile-brand b,body.device-tablet .mobile-brand b{display:block;color:#fff;font-size:18px;line-height:1;font-weight:900;letter-spacing:.02em}body.device-mobile .mobile-brand span,body.device-tablet .mobile-brand span{display:block;color:#49C464;font-size:10px;text-transform:uppercase;font-weight:900;letter-spacing:.08em;margin-top:3px}body.device-mobile .page-heading,body.device-tablet .page-heading{display:none}body.device-mobile .header-tools,body.device-tablet .header-tools{grid-column:auto;display:flex;width:auto;gap:8px;justify-content:flex-end}body.device-mobile .searchbox,body.device-tablet .searchbox{display:none}body.device-mobile .theme-toggle,body.device-tablet .theme-toggle{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.18);color:#fff}body.device-mobile .profile-pill,body.device-tablet .profile-pill{background:transparent;border:0;padding:0}body.device-mobile .avatar,body.device-tablet .avatar{background:#08233d;color:#fff;border:1px solid rgba(255,255,255,.18)}body.device-mobile .mobile-menu-btn,body.device-tablet .mobile-menu-btn{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.18);color:#fff}body.device-mobile .shell{padding-bottom:112px}body.device-mobile .mobile-bottom-nav{position:fixed;left:12px;right:12px;bottom:12px;z-index:65;display:grid;grid-template-columns:repeat(5,1fr);gap:4px;padding:8px;border-radius:24px;background:rgba(255,255,255,.92);border:1px solid rgba(217,227,238,.9);box-shadow:0 18px 48px rgba(7,24,39,.18);backdrop-filter:blur(18px)}body.device-mobile.theme-dark .mobile-bottom-nav{background:rgba(8,29,47,.92);border-color:#1f3a52}body.device-mobile .mobile-bottom-nav button{display:grid;place-items:center;gap:3px;background:transparent;color:var(--muted);padding:8px 4px;border-radius:17px;font-size:11px;font-weight:900}body.device-mobile .mobile-bottom-nav button span{font-size:18px}body.device-mobile .mobile-bottom-nav button.active{background:linear-gradient(135deg,#0F4C81,#0B3154);color:#fff;box-shadow:0 10px 22px rgba(11,49,84,.24)}body.device-mobile .stats{grid-template-columns:1fr}body.device-mobile .stat{border-radius:24px;min-height:132px}body.device-mobile .chart-card,body.device-mobile .activity-card,body.device-mobile .panel{border-radius:24px}body.device-mobile .chart-visual{height:260px}
+#app.admin-mode .mobile-bottom-nav{display:none!important}
 </style>
 </head>
 <body>
@@ -75,6 +79,7 @@ body.theme-dark .table th{background:#102b42}body.theme-dark .table td{border-bo
     <main class="main-area">
       <header class="command-header">
         <button class="mobile-menu-btn" id="mobileMenu" type="button">☰</button>
+        <div class="mobile-brand"><b>CUENTIX</b><span>Business made simple</span></div>
         <div class="page-heading"><h2 id="pageTitle">Command Center</h2><p id="sessionLabel">Sesión</p></div>
         <div class="header-tools">
           <label class="searchbox"><span>⌕</span><input id="globalSearch" placeholder="Buscar..." /></label>
@@ -86,6 +91,13 @@ body.theme-dark .table th{background:#102b42}body.theme-dark .table td{border-bo
       <div class="shell hidden" id="bizShell">
         <div id="sections"></div>
       </div>
+      <nav class="mobile-bottom-nav" id="mobileBottomNav">
+        <button data-mobile-tab="resumen"><span>⌂</span><b>Resumen</b></button>
+        <button data-mobile-tab="clientes"><span>◎</span><b>Clientes</b></button>
+        <button data-mobile-tab="cobrar"><span>▤</span><b>Cobros</b></button>
+        <button data-mobile-tab="pagos"><span>▣</span><b>Pagos</b></button>
+        <button data-mobile-tab="mas"><span>☰</span><b>Más</b></button>
+      </nav>
     </main>
   </div>
 </div>
@@ -97,7 +109,7 @@ import { createClient } from 'https://esm.sh/@supabase/supabase-js@2.43.4';
 
 const PROJECT_URL = 'https://yedcpumndtmdnczalspg.supabase.co';
 const ANON_KEY = 'sb_publishable_gtYK6qmfLMku2oxgBtRPzQ_Jg_iVEL9';
-const APP_VERSION = '2026.05.15.3';
+const APP_VERSION = '2026.05.25.1';
 const supabase = createClient(PROJECT_URL, ANON_KEY, {
   auth: {
     persistSession: true,
@@ -126,10 +138,11 @@ const navSections = [
   {id:'proveedores',label:'Proveedores',icon:'◇',items:['Listado proveedores','Nuevo proveedor','Estado de cuentas']},
   {id:'pagar',label:'A Pagar',icon:'▥',items:['Facturas pendientes','Registrar pago proveedor','Historial']},
   {id:'presupuestos',label:'Presupuestos',icon:'□',items:['Crear presupuesto','Historial','Plantillas']},
-  {id:'reportes',label:'Reportes',icon:'△',items:['Finanzas','Clientes','Proveedores','Exportaciones']},
+  {id:'empleados',label:'Empleados',icon:'<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>',items:['Listado de empleados','Nuevo empleado','Sueldos','Adelantos','Historial de pagos','Asistencia','Bonificaciones','Descuentos','Documentacion','Reportes','Configuracion laboral']},  {id:'reportes',label:'Reportes',icon:'△',items:['Finanzas','Clientes','Proveedores','Exportaciones']},
   {id:'configuracion',label:'Configuración',icon:'⚙',items:['Empresa','Preferencias','Tema','Sesión']}
 ];
 const tables = ['clients','invoices','payments','suppliers','supplier_movements','supplier_payments','budgets','reminders','budget_item_templates'];
+const employeeStoreKeys = ['employees','employee_salaries','employee_advances','employee_attendance','employee_bonuses','employee_discounts','employee_documents'];
 
 function byId(id){return document.getElementById(id)}
 function msg(el,text,type='err'){el.innerHTML = text ? `<div class="msg ${type}">${text}</div>` : ''}
@@ -146,6 +159,22 @@ function compactMoney(v){
   return `$ ${n.toLocaleString('es-AR',{maximumFractionDigits:0})}`;
 }
 function esc(v){return String(v ?? '').replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]))}
+function detectDevice(){
+  const ua = navigator.userAgent || '';
+  const width = Math.min(window.innerWidth || 9999, screen.width || 9999);
+  const coarse = navigator.maxTouchPoints > 0 || matchMedia('(pointer: coarse)').matches;
+  const mobileUA = /Android|iPhone|iPod|Mobile|IEMobile|Opera Mini/i.test(ua);
+  const tabletUA = /iPad|Tablet|PlayBook|Silk/i.test(ua) || (coarse && width >= 700 && width <= 1180);
+  const type = mobileUA && width < 760 ? 'mobile' : tabletUA ? 'tablet' : (coarse && width <= 820 ? 'mobile' : 'desktop');
+  document.body.classList.toggle('device-mobile', type === 'mobile');
+  document.body.classList.toggle('device-tablet', type === 'tablet');
+  document.body.classList.toggle('device-desktop', type === 'desktop');
+  document.body.dataset.device = type;
+  document.body.dataset.orientation = window.innerWidth > window.innerHeight ? 'landscape' : 'portrait';
+}
+detectDevice();
+addEventListener('resize', detectDevice, {passive:true});
+addEventListener('orientationchange', () => setTimeout(detectDevice, 120), {passive:true});
 function today(){return new Date().toISOString().slice(0,10)}
 function badge(s){const cls = ['activo','al día','cobrada','pagada','hecho'].includes(s) ? 'b-ok' : ['moroso','vencida','inactivo'].includes(s) ? 'b-bad' : 'b-warn'; return `<span class="badge ${cls}">${esc(s||'pendiente')}</span>`}
 function groupBreakdown(rows){
@@ -302,7 +331,18 @@ byId('btnLogout').onclick = () => {
   supabase.auth.signOut().catch(() => {});
 };
 byId('themeToggle').onclick = toggleTheme;
-byId('mobileMenu').onclick = () => toggleMobileMenu(true);
+byId('mobileMenu').onclick = () => toggleMobileMenu();
+byId('mobileBottomNav').onclick = e => {
+  const btn = e.target.closest('[data-mobile-tab]');
+  if(!btn) return;
+  const tab = btn.dataset.mobileTab;
+  if(tab === 'mas') return toggleMobileMenu(true);
+  state.tab = tab;
+  state.expanded[tab] = true;
+  state.subnav[tab] = activeSubnav(tab);
+  closeMobileMenu();
+  renderBusiness();
+};
 byId('globalSearch').oninput = e => {
   state.search = e.target.value || '';
   if(state.profile?.role === 'admin') renderAdmin();
@@ -314,6 +354,9 @@ function toggleMobileMenu(open){
   document.body.classList.toggle('mobile-nav-open', shouldOpen);
 }
 function closeMobileMenu(){ toggleMobileMenu(false); }
+function shouldKeepMobileMenuOpen(){
+  return document.body.classList.contains('device-mobile') || document.body.classList.contains('device-tablet');
+}
 document.addEventListener('click', e => {
   if(document.body.classList.contains('mobile-nav-open') && !byId('sidebar').contains(e.target) && e.target !== byId('mobileMenu')) closeMobileMenu();
 });
@@ -432,7 +475,7 @@ function renderSideNav(){
     state.expanded[id] = !state.expanded[id];
     state.tab = id;
     state.subnav[id] = activeSubnav(id);
-    closeMobileMenu();
+    if(!shouldKeepMobileMenuOpen()) closeMobileMenu();
     renderBusiness();
   });
   byId('sideNav').querySelectorAll('[data-nav-child]').forEach(btn => btn.onclick = () => {
@@ -442,7 +485,7 @@ function renderSideNav(){
     const label = btn.dataset.navLabel || '';
     state.subnav[id] = label;
     if(label.includes('Nueva Cuenta Corriente')) sessionStorage.removeItem('cuentix_cc_client');
-    closeMobileMenu();
+    if(!shouldKeepMobileMenuOpen()) closeMobileMenu();
     renderBusiness();
     if(label.includes('Nuevo cliente')) return openForm('client');
     if(label.includes('Nuevo proveedor')) return openForm('supplier');
@@ -450,6 +493,9 @@ function renderSideNav(){
     if(label.includes('Registrar pago') && id === 'pagos') return openForm('payment');
     if(label.includes('Registrar pago proveedor')) return openForm('supplier_payment');
     if(label.includes('Crear presupuesto')) return openForm('budget');
+    if(label.includes('Nuevo empleado')) return openEmployeeForm('employee');
+    if(label.includes('Sueldos')) return openEmployeeForm('salary');
+    if(label.includes('Adelantos')) return openEmployeeForm('advance');
   });
 }
 
@@ -470,10 +516,20 @@ function renderBusiness(){
     });
     return;
   }
-  const renderers = {resumen,clientes,cobrar,proveedores,pagar,presupuestos,pagos,cc,recordatorios,reportes,configuracion};
+  const renderers = {resumen,clientes,cobrar,proveedores,pagar,presupuestos,pagos,cc,empleados,recordatorios,reportes,configuracion};
   const view = renderers[state.tab] || resumen;
   byId('sections').innerHTML = `<section class="section active">${view()}</section>`;
   bindBusinessActions();
+  updateMobileBottomNav();
+}
+function updateMobileBottomNav(){
+  const nav = byId('mobileBottomNav');
+  if(!nav) return;
+  nav.querySelectorAll('[data-mobile-tab]').forEach(btn => {
+    const tab = btn.dataset.mobileTab;
+    const active = tab === state.tab || (tab === 'mas' && !['resumen','clientes','cobrar','pagos'].includes(state.tab));
+    btn.classList.toggle('active', active);
+  });
 }
 
 async function loadData(){
@@ -487,6 +543,7 @@ async function loadData(){
   updateIdentity();
   state.data = {};
   tables.forEach((t,i)=>state.data[t]=results[i].data||[]);
+  loadEmployeeData();
   state.dataLoading = null;
   return state.data;
   })();
@@ -721,6 +778,132 @@ function currentAccountRows(){
   return rows;
 }
 
+function employeeStorageKey(){ return `cuentix_empleados_${state.profile?.business_id || 'local'}`; }
+function emptyEmployeeState(){ return {employees:[],employee_salaries:[],employee_advances:[],employee_attendance:[],employee_bonuses:[],employee_discounts:[],employee_documents:[]}; }
+function loadEmployeeData(){
+  const fallback = emptyEmployeeState();
+  let saved = {};
+  try { saved = JSON.parse(localStorage.getItem(employeeStorageKey()) || '{}') || {}; } catch {}
+  employeeStoreKeys.forEach(k => state.data[k] = Array.isArray(saved[k]) ? saved[k] : fallback[k]);
+}
+function persistEmployeeData(){
+  const payload = {};
+  employeeStoreKeys.forEach(k => payload[k] = state.data[k] || []);
+  localStorage.setItem(employeeStorageKey(), JSON.stringify(payload));
+}
+function employeeTotals(){
+  const salaries = state.data.employee_salaries || [];
+  const paid = salaries.filter(s=>s.status==='Pagado').reduce((a,s)=>a+Number(s.amount||0),0) + salaries.filter(s=>s.status==='Parcial').reduce((a,s)=>a+Number(s.paid_amount||0),0);
+  const pending = salaries.reduce((a,s)=>a + Math.max(0,Number(s.amount||0)-Number(s.paid_amount||0)-(s.status==='Pagado'?Number(s.amount||0):0)),0);
+  const next = salaries.filter(s=>s.status!=='Pagado').sort((a,b)=>String(a.period||'').localeCompare(String(b.period||'')))[0];
+  return {paid,pending,next,active:(state.data.employees||[]).filter(e=>e.status!=='Inactivo').length};
+}
+function employeeMonthlySeries(){
+  const months = [];
+  const now = new Date();
+  for(let i=5;i>=0;i--){ const d = new Date(now.getFullYear(), now.getMonth()-i, 1); months.push(d.toISOString().slice(0,7)); }
+  const max = Math.max(1,...months.map(m => (state.data.employee_salaries||[]).filter(s=>String(s.period||'').startsWith(m)).reduce((a,s)=>a+Number(s.paid_amount||s.amount||0),0)));
+  return months.map(m => { const total = (state.data.employee_salaries||[]).filter(s=>String(s.period||'').startsWith(m)).reduce((a,s)=>a+Number(s.paid_amount||s.amount||0),0); return {month:m,total,height:Math.max(8,Math.round(total/max*100))}; });
+}
+function employeeStatusBadge(status){
+  const key = String(status||'Pendiente').toLowerCase();
+  const cls = key.includes('inactivo') || key.includes('ausente') ? 'absent' : key.includes('pagado') || key.includes('presente') || key.includes('activo') ? '' : key.includes('parcial') ? 'partial' : key.includes('media') ? 'half' : 'pending';
+  return `<span class="employee-status ${cls}">${esc(status||'Pendiente')}</span>`;
+}
+function employeeOptions(selected=''){
+  return `<option value="">Seleccionar empleado</option>${(state.data.employees||[]).map(e=>`<option value="${e.id}" ${e.id===selected?'selected':''}>${esc(e.name)}</option>`).join('')}`;
+}
+function empleados(){
+  const sub = activeSubnav('empleados');
+  const totals = employeeTotals();
+  if(sub.includes('Nuevo empleado')) return employeeNewView();
+  if(sub.includes('Sueldos')) return employeeSalaryView();
+  if(sub.includes('Adelantos')) return employeeSimpleLedger('Adelantos', 'advance', state.data.employee_advances, ['Fecha','Empleado','Monto','Motivo','Descuenta en'], r=>[r.date,employeeName(r.employee_id),money(r.amount),r.reason||'-',r.period||'-']);
+  if(sub.includes('Historial de pagos')) return employeeSalaryView(true);
+  if(sub.includes('Asistencia')) return employeeAttendanceView();
+  if(sub.includes('Bonificaciones')) return employeeSimpleLedger('Bonificaciones', 'bonus', state.data.employee_bonuses, ['Fecha','Empleado','Monto','Motivo'], r=>[r.date,employeeName(r.employee_id),money(r.amount),r.reason||'-']);
+  if(sub.includes('Descuentos')) return employeeSimpleLedger('Descuentos', 'discount', state.data.employee_discounts, ['Fecha','Empleado','Monto','Motivo'], r=>[r.date,employeeName(r.employee_id),money(r.amount),r.reason||'-']);
+  if(sub.includes('Documentacion')) return employeeDocumentsView();
+  if(sub.includes('Reportes')) return employeeReportsView();
+  if(sub.includes('Configuracion')) return panel('Empleados · Configuracion laboral', `<button class="btn-primary" data-employee-form="employee">+ Nuevo empleado</button>`, `<div class="section-action-grid"><button class="section-action" data-employee-form="salary"><b>Tipos de pago</b><span class="small">Mensual, semanal, quincenal y diario por empleado.</span></button><button class="section-action" data-employee-form="attendance"><b>Asistencia</b><span class="small">Presente, ausente o media jornada con historial mensual.</span></button><button class="section-action" data-tab="empleados"><b>Control financiero</b><span class="small">Sueldos, adelantos, descuentos y bonificaciones integrados.</span></button></div>`);
+  return employeeDashboardView(totals);
+}
+function employeeDashboardView(totals){
+  const rows = filterRows(state.data.employees||[]);
+  const series = employeeMonthlySeries();
+  return `<div class="employee-hero"><div class="employee-hero-main"><h2>Empleados</h2><p>Gestion laboral y financiera para mini pymes: personal, sueldos, adelantos, asistencia, documentacion y reportes internos.</p><div class="employee-hero-actions"><button class="btn-primary" data-employee-form="employee">+ Nuevo empleado</button><button class="btn-secondary" data-employee-form="salary">Registrar sueldo</button><button class="btn-secondary" data-employee-form="advance">Adelanto</button></div></div><div class="employee-kpi"><div class="employee-mini"><div class="t">Total pagado</div><div class="v">${money(totals.paid)}</div></div><div class="employee-mini"><div class="t">Total pendiente</div><div class="v">${money(totals.pending)}</div></div></div></div>
+  <div class="stats">${statCard('Empleados activos',totals.active,'Personal vigente','',null)}${statCard('Proximos pagos',totals.next ? money(totals.next.amount) : '$ 0', totals.next ? `${employeeName(totals.next.employee_id)} · ${esc(totals.next.period)}` : 'Sin pagos pendientes','',null)}${statCard('Adelantos',money(sum(state.data.employee_advances||[],'amount')),'Anticipos registrados','',null)}${statCard('Bonificaciones',money(sum(state.data.employee_bonuses||[],'amount')),'Incentivos del periodo','',null)}${statCard('Descuentos',money(sum(state.data.employee_discounts||[],'amount')),'A descontar','',null)}</div>
+  <div class="employee-dashboard"><div class="card chart-card"><div class="toolbar"><h2>Historial mensual</h2><div class="row"><button class="btn-secondary" data-hr-print>PDF</button><button class="btn-secondary" data-hr-csv="employee_salaries">Excel</button></div></div><div class="employee-chart">${series.map(p=>`<div class="employee-bar" style="height:${p.height}%"><span>${p.month.slice(5)}</span></div>`).join('')}</div></div><div class="card activity-card"><h2>Control interno</h2><div class="activity-list"><button class="activity-item" data-employee-form="attendance"><div class="nav-icon">✓</div><div><b>Asistencia</b><div class="small">Presente, ausente o media jornada.</div></div></button><button class="activity-item" data-employee-form="document"><div class="nav-icon">▣</div><div><b>Documentacion</b><div class="small">Contratos, recibos, imagenes y PDFs.</div></div></button><button class="activity-item" data-employee-form="discount"><div class="nav-icon">−</div><div><b>Descuentos</b><div class="small">Se consideran en el sueldo final.</div></div></button></div></div></div>
+  ${panel('Listado de empleados', `<button class="btn-primary" data-employee-form="employee">+ Nuevo empleado</button><button class="btn-secondary" data-hr-csv="employees">Excel</button>`, tableHtml(['Empleado','DNI','Telefono','Cargo','Tipo de pago','Ingreso','Estado',''], rows.map(e=>[e.name,e.dni,e.phone,e.position,e.payment_type,e.start_date,employeeStatusBadge(e.status||'Activo'),employeeActions('employee',e.id)])))}`;
+}
+function employeeNewView(){ return panel('Empleados · Nuevo empleado', `<button class="btn-primary" data-employee-form="employee">Cargar empleado</button>`, emptyState('Alta de empleado', 'Carga nombre, DNI, telefono, direccion, fecha de ingreso, cargo, observaciones y tipo de pago.', '+')); }
+function employeeSalaryView(history=false){
+  let rows = filterRows(state.data.employee_salaries||[], r=>employeeName(r.employee_id));
+  if(!history) rows = rows.filter(r=>r.status!=='Pagado');
+  return panel(`Empleados · ${history?'Historial de pagos':'Sueldos'}`, `<button class="btn-primary" data-employee-form="salary">+ Registrar sueldo</button><button class="btn-secondary" data-employee-form="advance">Adelanto</button><button class="btn-secondary" data-hr-print>PDF</button><button class="btn-secondary" data-hr-csv="employee_salaries">Excel</button>`, tableHtml(['Periodo','Empleado','Monto','Pagado','Neto estimado','Estado','Observaciones',''], rows.map(s=>[s.period,employeeName(s.employee_id),money(s.amount),money(s.paid_amount||0),money(employeeNetForSalary(s)),employeeStatusBadge(s.status),s.notes||'-',employeeActions('salary',s.id)])));
+}
+function employeeSimpleLedger(title,type,rows,headers,mapRow){ return panel(`Empleados · ${title}`, `<button class="btn-primary" data-employee-form="${type}">+ Registrar</button><button class="btn-secondary" data-hr-csv="employee_${type==='advance'?'advances':type+'s'}">Excel</button>`, tableHtml([...headers,''], filterRows(rows||[], r=>employeeName(r.employee_id)).map(r=>[...mapRow(r),employeeActions(type,r.id)]))); }
+function employeeAttendanceView(){ const rows = filterRows(state.data.employee_attendance||[], r=>employeeName(r.employee_id)); return panel('Empleados · Asistencia', `<button class="btn-primary" data-employee-form="attendance">+ Registrar asistencia</button><button class="btn-secondary" data-hr-csv="employee_attendance">Excel</button>`, tableHtml(['Fecha','Periodo','Empleado','Estado','Observaciones',''], rows.map(r=>[r.date,r.period||String(r.date||'').slice(0,7),employeeName(r.employee_id),employeeStatusBadge(r.status),r.notes||'-',employeeActions('attendance',r.id)]))); }
+function employeeDocumentsView(){ const rows = filterRows(state.data.employee_documents||[], r=>employeeName(r.employee_id)); return panel('Empleados · Documentacion', `<button class="btn-primary" data-employee-form="document">+ Adjuntar documento</button>`, tableHtml(['Fecha','Empleado','Tipo','Archivo','Observaciones',''], rows.map(r=>[r.date,employeeName(r.employee_id),r.doc_type,r.file_name||'Adjunto',r.notes||'-',employeeActions('document',r.id)]))); }
+function employeeReportsView(){ const totals = employeeTotals(); return panel('Empleados · Reportes', `<button class="btn-secondary" data-hr-print>Exportar PDF</button><button class="btn-secondary" data-hr-print>Imprimir</button><button class="btn-secondary" data-hr-csv="employee_salaries">Exportar Excel</button>`, `<div class="stats">${statCard('Pagos mensuales',money(totals.paid),'Sueldos abonados','',null)}${statCard('Pendiente',money(totals.pending),'Compromisos abiertos','',null)}${statCard('Empleados activos',totals.active,'Dotacion vigente','',null)}${statCard('Costos laborales',money(totals.paid+totals.pending),'Pagado + pendiente','',null)}</div><div class="section-action-grid"><button class="section-action" data-hr-csv="employee_salaries"><b>Historial salarial</b><span class="small">Exportacion completa de sueldos.</span></button><button class="section-action" data-hr-csv="employees"><b>Empleados activos</b><span class="small">Nomina y datos laborales basicos.</span></button><button class="section-action" data-hr-csv="employee_advances"><b>Adelantos y anticipos</b><span class="small">Control de descuentos al sueldo final.</span></button></div>`); }
+function employeeNetForSalary(s){ const period = s.period || ''; const id = s.employee_id; const adv = (state.data.employee_advances||[]).filter(a=>a.employee_id===id && (!a.period || a.period===period)).reduce((a,r)=>a+Number(r.amount||0),0); const disc = (state.data.employee_discounts||[]).filter(d=>d.employee_id===id && (!d.period || d.period===period)).reduce((a,r)=>a+Number(r.amount||0),0); const bonus = (state.data.employee_bonuses||[]).filter(b=>b.employee_id===id && (!b.period || b.period===period)).reduce((a,r)=>a+Number(r.amount||0),0); return Number(s.amount||0) + bonus - adv - disc; }
+function employeeActions(type,id){ return `<div class="actions"><button class="btn-secondary" data-employee-edit="${type}:${id}">Editar</button><button class="btn-danger" data-employee-delete="${type}:${id}">Eliminar</button></div>`; }
+function employeeTableFor(type){ return {employee:'employees',salary:'employee_salaries',advance:'employee_advances',attendance:'employee_attendance',bonus:'employee_bonuses',discount:'employee_discounts',document:'employee_documents'}[type]; }
+function employeeFields(type){
+  return {
+    employee:[['name','Nombre y apellido','text','wide'],['dni','DNI'],['phone','Telefono'],['address','Direccion','text','wide'],['start_date','Fecha de ingreso','date'],['position','Cargo'],['payment_type','Tipo de pago','select',['Mensual','Semanal','Quincenal','Diario']],['status','Estado','select',['Activo','Inactivo']],['notes','Observaciones','textarea','wide']],
+    salary:[['employee_id','Empleado','employee'],['period','Periodo','month'],['amount','Monto','number'],['paid_amount','Pago parcial / abonado','number'],['status','Estado','select',['Pendiente','Pagado','Parcial']],['notes','Observaciones','textarea','wide']],
+    advance:[['employee_id','Empleado','employee'],['date','Fecha','date'],['period','Periodo a descontar','month'],['amount','Monto','number'],['reason','Motivo','textarea','wide']],
+    attendance:[['employee_id','Empleado','employee'],['date','Fecha','date'],['period','Mes','month'],['status','Estado','select',['Presente','Ausente','Media jornada']],['notes','Observaciones','textarea','wide']],
+    bonus:[['employee_id','Empleado','employee'],['date','Fecha','date'],['period','Periodo','month'],['amount','Monto','number'],['reason','Motivo','textarea','wide']],
+    discount:[['employee_id','Empleado','employee'],['date','Fecha','date'],['period','Periodo','month'],['amount','Monto','number'],['reason','Motivo','textarea','wide']],
+    document:[['employee_id','Empleado','employee'],['date','Fecha','date'],['doc_type','Tipo','select',['Contrato','Recibo','DNI','Certificado','Imagen','PDF','Otro']],['file','Archivo','file','wide'],['notes','Observaciones','textarea','wide']]
+  }[type];
+}
+function openEmployeeForm(type,id){
+  const table = employeeTableFor(type);
+  const row = id ? (state.data[table]||[]).find(x=>x.id===id) : {};
+  const titles = {employee:'Empleado',salary:'Sueldo',advance:'Adelanto',attendance:'Asistencia',bonus:'Bonificacion',discount:'Descuento',document:'Documentacion'};
+  const fields = employeeFields(type);
+  byId('modalTitle').textContent = `${id?'Editar':'Nuevo'} ${titles[type]}`;
+  byId('modalBody').innerHTML = `<div class="employee-form-grid">${fields.map(f=>employeeFieldHtml(f,row)).join('')}</div><div id="modalMsg"></div>`;
+  byId('modal').classList.add('open');
+  const saveButton = byId('modalForm').querySelector('.btn-primary');
+  saveButton.disabled = false; saveButton.textContent = 'Guardar';
+  byId('modalForm').onsubmit = e => {
+    e.preventDefault();
+    const fd = new FormData(e.target);
+    const payload = {...row, id: row?.id || `${Date.now()}-${Math.random().toString(16).slice(2)}`, updated_at:new Date().toISOString()};
+    fields.forEach(f => { if(f[2] !== 'file') payload[f[0]] = fd.get(f[0]) || ''; });
+    if(type === 'document'){ const file = e.target.querySelector('input[type=file]')?.files?.[0]; if(file){ payload.file_name = file.name; payload.file_type = file.type; payload.file_size = file.size; } }
+    if(type === 'salary' && payload.status === 'Pagado' && !payload.paid_amount) payload.paid_amount = payload.amount;
+    const list = state.data[table] || [];
+    const idx = list.findIndex(x=>x.id===payload.id);
+    if(idx >= 0) list[idx] = payload; else list.unshift(payload);
+    state.data[table] = list;
+    persistEmployeeData();
+    closeModal();
+    renderBusiness();
+  };
+}
+function employeeFieldHtml(f,row){
+  const [name,label,type,opt] = f;
+  const val = row?.[name] ?? (type==='date'?today():type==='month'?today().slice(0,7):'');
+  const wide = opt === 'wide' || f[3] === 'wide' ? ' wide' : '';
+  if(type==='select') return `<div class="${wide.trim()}"><label>${label}</label><select name="${name}">${opt.map(o=>`<option ${o===val?'selected':''}>${o}</option>`).join('')}</select></div>`;
+  if(type==='employee') return `<div><label>${label}</label><select name="${name}" required>${employeeOptions(val)}</select></div>`;
+  if(type==='textarea') return `<div class="${wide.trim()}"><label>${label}</label><textarea name="${name}" rows="3">${esc(val)}</textarea></div>`;
+  if(type==='file') return `<div class="${wide.trim()}"><label>${label}</label><input name="${name}" type="file" accept="image/*,.pdf,.doc,.docx"><div class="employee-file-note">Se registra el nombre del archivo para control interno.</div></div>`;
+  return `<div class="${wide.trim()}"><label>${label}</label><input name="${name}" type="${type||'text'}" value="${esc(val)}"></div>`;
+}
+function deleteEmployeeRecord(type,id){ const table = employeeTableFor(type); state.data[table] = (state.data[table]||[]).filter(x=>x.id!==id); persistEmployeeData(); renderBusiness(); }
+function bindEmployeeActions(){
+  document.querySelectorAll('[data-employee-form]').forEach(b=>b.onclick=()=>openEmployeeForm(b.dataset.employeeForm));
+  document.querySelectorAll('[data-employee-edit]').forEach(b=>b.onclick=()=>openEmployeeForm(...b.dataset.employeeEdit.split(':')));
+  document.querySelectorAll('[data-employee-delete]').forEach(b=>b.onclick=()=>{ const [type,id]=b.dataset.employeeDelete.split(':'); if(confirm('Eliminar registro laboral?')) deleteEmployeeRecord(type,id); });
+  document.querySelectorAll('[data-hr-print]').forEach(b=>b.onclick=()=>window.print());
+  document.querySelectorAll('[data-hr-csv]').forEach(b=>b.onclick=()=>downloadCsv(`${b.dataset.hrCsv}.csv`, state.data[b.dataset.hrCsv] || []));
+}
 function panel(title, toolbar, content){ return `<div class="card panel"><div class="toolbar"><h2>${title}</h2><div class="row">${toolbar}</div></div>${content}</div>`}
 function emptyState(title='Sin registros todavía', text='La sección está lista. Podés comenzar usando los botones superiores.', icon='＋'){
   return `<div class="empty-state"><div class="empty-icon">${icon}</div><h3>${title}</h3><p>${text}</p></div>`;
@@ -731,6 +914,7 @@ function sumArs(rows){return rows.reduce((a,r)=>a+toArs(r.amount,r.currency,r.ex
 function toArs(amount,currency,exchangeRate=1){return Number(amount||0) * (currency === 'USD' ? Number(exchangeRate||1) : 1)}
 function clientName(id){return state.data.clients.find(c=>c.id===id)?.name || '-'}
 function supplierName(id){return state.data.suppliers.find(s=>s.id===id)?.name || '-'}
+function employeeName(id){return (state.data.employees||[]).find(e=>e.id===id)?.name || '-'}
 function rowSearchText(row){
   return Object.values(row || {}).map(v => {
     if(v == null) return '';
@@ -779,6 +963,7 @@ function bindBusinessActions(){
   if(themeInline) themeInline.onclick = toggleTheme;
   const themeInlineCard = byId('themeInlineCard');
   if(themeInlineCard) themeInlineCard.onclick = toggleTheme;
+  bindEmployeeActions();
 }
 
 function openForm(type,id){
@@ -1078,3 +1263,6 @@ init();
 </script>
 </body>
 </html>
+
+
+
