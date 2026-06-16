@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8" />
@@ -6,7 +6,7 @@
 <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, proxy-revalidate" />
 <meta http-equiv="Pragma" content="no-cache" />
 <meta http-equiv="Expires" content="0" />
-<meta name="cuentix-version" content="2026.05.25.1" />
+<meta name="cuentix-version" content="2026.06.15.1" />
 <title>Cuentix</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap');
@@ -42,6 +42,7 @@ body.theme-dark .table th{background:#102b42}body.theme-dark .table td{border-bo
 .app-shell,#app.admin-mode .app-shell{grid-template-columns:240px minmax(0,1fr)}.command-header{padding:26px 32px}.page-heading h2{font-size:28px;text-transform:uppercase}.page-heading p{font-size:16px;text-transform:uppercase;letter-spacing:.03em}.shell{padding:22px 28px 90px}.stats{grid-template-columns:repeat(5,minmax(190px,1fr));gap:18px;margin-bottom:22px}.stat{min-height:142px;padding:24px;border-radius:18px}.stat .v{font-size:clamp(24px,1.65vw,30px)}.stat-icon{width:56px;height:56px;font-size:24px}.dashboard-grid{grid-template-columns:minmax(410px,1.35fr) minmax(305px,1.02fr) 285px;gap:20px;align-items:stretch}.chart-card,.activity-card{padding:24px;border-radius:22px;box-shadow:0 18px 50px rgba(11,49,84,.08)}.chart-card.finance-card{min-height:395px}.chart-card.finance-card .toolbar{align-items:center}.chart-visual{height:300px;border:0;border-radius:18px;background:linear-gradient(180deg,rgba(255,255,255,.56),rgba(246,251,248,.72));box-shadow:inset 0 0 0 1px rgba(217,227,238,.72);cursor:pointer}.theme-dark .chart-visual{background:linear-gradient(180deg,rgba(13,36,56,.92),rgba(9,28,44,.88));box-shadow:inset 0 0 0 1px rgba(31,58,82,.9)}.date-filter{width:auto;min-width:154px;background:var(--panel);border:1px solid var(--line);border-radius:12px;font-weight:800;color:var(--brand2);box-shadow:0 8px 24px rgba(14,32,61,.05)}.chart-action{font-size:13px;padding:9px 12px}.legend-premium{justify-content:center;margin-top:14px;gap:24px}.legend-dot{display:inline-flex;align-items:center;gap:7px;color:var(--muted);font-weight:800}.legend-dot::before{content:'';width:10px;height:10px;border-radius:50%;background:var(--dot)}.finance-detail-modal{position:fixed;inset:0;background:rgba(7,24,39,.62);backdrop-filter:blur(8px);display:grid;place-items:center;padding:24px;z-index:90}.finance-detail-box{width:min(1180px,96vw);max-height:90vh;overflow:auto;background:var(--panel);border:1px solid var(--line);border-radius:28px;box-shadow:0 30px 90px rgba(0,0,0,.3);padding:26px}.finance-detail-head{display:flex;justify-content:space-between;gap:16px;align-items:center;margin-bottom:18px}.finance-detail-head h2{margin:0;color:var(--brand2);font-size:26px}.finance-detail-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:18px}.finance-mini{padding:16px;border:1px solid var(--line);border-radius:18px;background:var(--glass)}.finance-detail-chart .chart-visual{height:440px;cursor:default}.axis-label{fill:#64748b;font-size:12px;font-weight:700}.theme-dark .axis-label{fill:#9db0c2}.grid-line{stroke:rgba(100,116,139,.18);stroke-dasharray:5 8}.smooth-path{fill:none;stroke-linecap:round;stroke-linejoin:round;filter:url(#softGlow);stroke-width:4}.smooth-area{opacity:.9}.chart-point{filter:drop-shadow(0 3px 8px rgba(11,49,84,.18))}@media(max-width:1450px){.app-shell,#app.admin-mode .app-shell{grid-template-columns:230px minmax(0,1fr)}.shell{padding:20px 24px 90px}.dashboard-grid{grid-template-columns:minmax(405px,1.26fr) minmax(300px,.98fr) 280px;gap:18px}.stats{gap:16px}.stat{padding:22px}.chart-visual{height:285px}}@media(max-width:1180px){.dashboard-grid{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}.finance-detail-grid{grid-template-columns:1fr}.finance-detail-chart .chart-visual{height:340px}}
 .auth{min-height:100vh;max-width:none;margin:0;padding:24px;place-items:center;background:radial-gradient(circle at 52% 34%,rgba(25,184,95,.13),transparent 28%),radial-gradient(circle at 80% 12%,rgba(15,76,129,.11),transparent 26%),linear-gradient(135deg,#f7fbff,#edf4f8)}.auth .card{width:min(660px,calc(100vw - 32px));padding:34px;border-radius:28px;background:rgba(255,255,255,.92);box-shadow:0 28px 80px rgba(11,49,84,.17);border:1px solid rgba(15,76,129,.13);backdrop-filter:blur(12px)}.auth .brand{justify-content:flex-start}.auth .brand h1{text-transform:uppercase;color:#071827;letter-spacing:.02em}.auth .brand p{color:#5d7083}.auth label{color:#526274}.auth input{background:#fff;border-color:#d7e4ef}.auth input:focus{border-color:#19b85f;box-shadow:0 0 0 4px rgba(25,184,95,.11)}.auth .btn-primary{background:linear-gradient(135deg,#0B3154,#0F4C81);box-shadow:0 12px 24px rgba(11,49,84,.22)}.auth .btn-primary:hover{background:linear-gradient(135deg,#0F4C81,#0b3154)}
 .mobile-menu-btn{display:none;width:44px;height:44px;border-radius:14px;background:var(--panel);border:1px solid var(--line);color:var(--brand2);font-size:20px;padding:0}.empty-state{padding:42px 24px;text-align:center;color:var(--muted);border:1px dashed var(--line);border-radius:20px;background:linear-gradient(180deg,rgba(255,255,255,.48),rgba(73,196,100,.04))}.empty-icon{width:58px;height:58px;border-radius:18px;display:grid;place-items:center;margin:0 auto 14px;background:rgba(73,196,100,.14);color:#139a4f;font-size:26px}.empty-state h3{margin:0 0 6px;color:var(--brand2);font-size:18px}.empty-state p{margin:0 auto;max-width:420px}.section-action-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px}.section-action{padding:18px;text-align:left;border:1px solid var(--line);border-radius:18px;background:var(--glass);box-shadow:0 10px 26px rgba(11,49,84,.06)}.section-action b{display:block;color:var(--brand2);margin-bottom:4px}.mobile-backdrop{display:none}
+.ai-command{margin-bottom:20px;padding:0;overflow:hidden;border-radius:24px;background:linear-gradient(135deg,rgba(6,23,39,.98),rgba(15,76,129,.96));color:#fff;border:1px solid rgba(73,196,100,.22);box-shadow:0 24px 70px rgba(6,23,39,.20)}.ai-command-inner{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(280px,.85fr);gap:18px;padding:22px}.ai-eyebrow{display:inline-flex;align-items:center;gap:8px;padding:5px 10px;border-radius:999px;background:rgba(73,196,100,.14);color:#baf7cc;font-size:11px;text-transform:uppercase;letter-spacing:.08em;font-weight:900}.ai-command h2{margin:12px 0 8px;color:#fff;font-size:28px;letter-spacing:-.03em}.ai-command p{margin:0;color:#d8e8f7;max-width:720px}.ai-input-row{display:grid;grid-template-columns:1fr auto;gap:10px;margin-top:18px}.ai-input-row input{height:50px;border-radius:16px;border-color:rgba(255,255,255,.18);background:rgba(255,255,255,.12);color:#fff}.ai-input-row input::placeholder{color:#b8cbdd}.ai-input-row input:focus{border-color:#49C464;box-shadow:0 0 0 4px rgba(73,196,100,.14)}.ai-input-row button{height:50px;border-radius:16px;background:#49C464;color:#052313;box-shadow:0 12px 24px rgba(73,196,100,.24)}.ai-suggestions{display:flex;flex-wrap:wrap;gap:8px;margin-top:13px}.ai-chip{padding:8px 11px;border-radius:999px;background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.12);color:#fff;font-size:12px}.ai-chip:hover{background:rgba(73,196,100,.16);transform:none}.ai-oracle{border-radius:20px;background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.13);padding:16px;display:grid;gap:12px}.ai-oracle h3{margin:0;color:#fff;font-size:16px}.ai-answer{min-height:112px;border-radius:16px;background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.12);padding:14px;color:#f5fbff;line-height:1.45}.ai-answer b{color:#baf7cc}.ai-insights{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.ai-insight{border-radius:16px;background:rgba(255,255,255,.10);padding:12px}.ai-insight span{display:block;color:#b8cbdd;font-size:11px;text-transform:uppercase;font-weight:900;letter-spacing:.06em}.ai-insight b{display:block;color:#fff;font-size:20px;margin-top:4px}.ai-log{display:grid;gap:10px}.ai-message{padding:12px 14px;border-radius:16px;background:var(--glass);border:1px solid var(--line)}.ai-message.user{background:rgba(73,196,100,.10);border-color:rgba(73,196,100,.28)}.ai-message b{display:block;color:var(--brand2);margin-bottom:4px}.ai-capability-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin-top:16px}.ai-capability{padding:16px;border-radius:18px;border:1px solid var(--line);background:var(--glass)}.ai-capability b{display:block;color:var(--brand2);margin-bottom:4px}@media(max-width:900px){.ai-command-inner{grid-template-columns:1fr;padding:18px}.ai-input-row{grid-template-columns:1fr}.ai-input-row button{width:100%}.ai-insights{grid-template-columns:1fr}.ai-command h2{font-size:23px}}
 .employee-hero{display:grid;grid-template-columns:1.25fr .75fr;gap:18px;margin-bottom:18px}.employee-hero-main{padding:24px;border-radius:24px;background:linear-gradient(135deg,#061727,#0F4C81);color:#fff;box-shadow:var(--shadow-lg);position:relative;overflow:hidden}.employee-hero-main::after{content:'';position:absolute;right:-70px;top:-70px;width:220px;height:220px;border-radius:50%;background:rgba(73,196,100,.16)}.employee-hero-main h2{margin:0 0 8px;color:#fff;font-size:26px}.employee-hero-main p{margin:0;color:#d7e6f5;max-width:640px}.employee-hero-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}.employee-hero-actions .btn-secondary{background:rgba(255,255,255,.14);color:#fff;border:1px solid rgba(255,255,255,.18)}.employee-kpi{display:grid;gap:12px}.employee-mini{padding:18px;border-radius:20px;border:1px solid var(--line);background:var(--glass);box-shadow:var(--shadow)}.employee-mini .t{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:900}.employee-mini .v{font-size:24px;font-weight:900;color:var(--brand2);margin-top:6px}.employee-dashboard{display:grid;grid-template-columns:1.2fr .8fr;gap:16px;margin:18px 0}.employee-chart{height:230px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(180deg,rgba(15,76,129,.04),rgba(73,196,100,.08));padding:18px;display:flex;align-items:end;gap:10px}.employee-bar{flex:1;min-width:18px;border-radius:12px 12px 6px 6px;background:linear-gradient(180deg,#49C464,#0F4C81);position:relative;box-shadow:0 10px 22px rgba(15,76,129,.16)}.employee-bar span{position:absolute;left:50%;bottom:-24px;transform:translateX(-50%);font-size:11px;color:var(--muted);font-weight:800}.employee-list{display:grid;gap:12px}.employee-row{display:grid;grid-template-columns:44px 1fr auto;gap:12px;align-items:center;padding:12px;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.48)}.theme-dark .employee-row{background:rgba(255,255,255,.04)}.employee-avatar{width:44px;height:44px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(135deg,#dff8e8,#eaf3fb);color:#0B3154;font-weight:900}.employee-status{display:inline-flex;align-items:center;padding:4px 10px;border-radius:999px;font-size:11px;font-weight:900;background:#dcfce7;color:#166534}.employee-status.pending{background:#fef3c7;color:#92400e}.employee-status.partial{background:#dbeafe;color:#1d4ed8}.employee-status.absent{background:#fee2e2;color:#991b1b}.employee-status.half{background:#ede9fe;color:#6d28d9}.employee-form-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.employee-form-grid .wide{grid-column:1/-1}.employee-file-note{font-size:12px;color:var(--muted);margin-top:6px}@media(max-width:900px){.employee-hero,.employee-dashboard{grid-template-columns:1fr}.employee-form-grid{grid-template-columns:1fr}.employee-row{grid-template-columns:40px 1fr}.employee-row .actions{grid-column:1/-1}.employee-chart{height:210px;overflow:auto}.employee-hero-main{border-radius:22px;padding:20px}}
 @media(max-width:820px){body{overflow-x:hidden}.app-shell,#app.admin-mode .app-shell{display:block}.mobile-menu-btn{display:grid;place-items:center;flex:0 0 auto}.sidebar{position:fixed;top:0;left:0;width:min(86vw,320px);height:100dvh;transform:translateX(-104%);transition:transform .24s ease;box-shadow:24px 0 60px rgba(0,0,0,.28);z-index:80}.sidebar.open{transform:translateX(0)}body.mobile-nav-open::after{content:'';position:fixed;inset:0;background:rgba(7,24,39,.48);backdrop-filter:blur(3px);z-index:70}.command-header{position:sticky;top:0;display:grid;grid-template-columns:44px 1fr auto;align-items:center;gap:10px;padding:14px 14px}.page-heading h2{font-size:21px}.page-heading p{font-size:12px}.header-tools{grid-column:1/-1;display:grid;grid-template-columns:1fr 44px auto;gap:10px;width:100%}.profile-pill{padding:6px 9px}.profile-pill b,.profile-pill span{display:none}.searchbox{min-width:0;width:100%;height:44px}.theme-toggle{width:44px;height:44px}.shell{padding:16px 14px 96px}.stats{grid-template-columns:1fr;gap:14px}.stat{min-height:128px}.dashboard-grid{grid-template-columns:1fr;gap:14px}.chart-card,.activity-card,.panel{padding:18px;border-radius:20px}.chart-visual{height:240px}.quick-grid{grid-template-columns:1fr}.toolbar{align-items:flex-start}.toolbar .row{width:100%}.toolbar .row button,.toolbar .row select{min-height:44px}.table-wrap{border-radius:16px}.table{min-width:720px}.finance-detail-modal{padding:12px}.finance-detail-box{border-radius:22px;padding:18px}.finance-detail-head{align-items:flex-start}.finance-detail-chart .chart-visual{height:280px}.auth{padding:16px}.auth .card{padding:24px}.auth .grid2{grid-template-columns:1fr}}
 @media(max-width:1180px){.app-shell,#app.admin-mode .app-shell{grid-template-columns:240px 1fr}.dashboard-grid{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}.admin-summary{grid-template-columns:repeat(2,1fr)}.searchbox{min-width:220px}}@media(max-width:820px){.app-shell,#app.admin-mode .app-shell{grid-template-columns:1fr}.sidebar{position:relative;height:auto}.command-header{position:relative;align-items:flex-start;flex-direction:column;padding:18px}.shell{padding:18px}.header-tools,.searchbox{width:100%;min-width:0}.stats,.quick-grid,.admin-summary{grid-template-columns:1fr}}
@@ -109,7 +110,7 @@ import { createClient } from 'https://esm.sh/@supabase/supabase-js@2.43.4';
 
 const PROJECT_URL = 'https://yedcpumndtmdnczalspg.supabase.co';
 const ANON_KEY = 'sb_publishable_gtYK6qmfLMku2oxgBtRPzQ_Jg_iVEL9';
-const APP_VERSION = '2026.05.25.1';
+const APP_VERSION = '2026.06.15.1';
 const supabase = createClient(PROJECT_URL, ANON_KEY, {
   auth: {
     persistSession: true,
@@ -128,9 +129,10 @@ const logo = logoSvg('cuentixBlueLogin');
 document.getElementById('logoA').innerHTML = logo;
 document.getElementById('logoB').innerHTML = logoSvgWhite();
 
-const state = { session:null, profile:null, business:null, data:{}, tab:'resumen', expanded:{resumen:true}, subnav:{}, dataLoaded:false, dataLoading:null, booting:false, adminRefreshTimer:null, search:'', chartRange:'30d' };
+const state = { session:null, profile:null, business:null, data:{}, tab:'resumen', expanded:{resumen:true}, subnav:{}, dataLoaded:false, dataLoading:null, booting:false, adminRefreshTimer:null, search:'', chartRange:'30d', ai:{answer:'Pedime algo como: cargá cliente Pedro que debe 15000, agregá proveedor Luz Norte debo 32000, quién me debe más, o cuánto debo este mes.', log:[]} };
 const navSections = [
   {id:'resumen',label:'Resumen',icon:'⌂',items:['Resumen financiero','Métricas','Actividad reciente','Gráficos','KPIs']},
+  {id:'ia',label:'IA Cuentix',icon:'✦',items:['Copiloto financiero','Cargar con IA','Quién me debe','Cuánto debo','Acciones sugeridas','Comandos rápidos']},
   {id:'clientes',label:'Clientes',icon:'◎',items:['Listado de clientes','Nuevo cliente','Clientes activos','Clientes inactivos','Historial']},
   {id:'cc',label:'Cuenta Corriente',icon:'◫',items:['Listado Ctas Ctes','Nueva Cuenta Corriente','Movimientos','Historial','Clientes asociados']},
   {id:'cobrar',label:'A Cobrar',icon:'▤',items:['Facturas pendientes','Cobros vencidos','Registrar cobro','Historial']},
@@ -516,7 +518,7 @@ function renderBusiness(){
     });
     return;
   }
-  const renderers = {resumen,clientes,cobrar,proveedores,pagar,presupuestos,pagos,cc,empleados,recordatorios,reportes,configuracion};
+  const renderers = {resumen,ia,clientes,cobrar,proveedores,pagar,presupuestos,pagos,cc,empleados,recordatorios,reportes,configuracion};
   const view = renderers[state.tab] || resumen;
   byId('sections').innerHTML = `<section class="section active">${view()}</section>`;
   bindBusinessActions();
@@ -619,7 +621,7 @@ function resumen(){
     ['□','Presupuestos',`${state.data.budgets.length} guardados`],
     ['⚑','Recordatorios',`${state.data.reminders.filter(r=>!r.done).length} pendientes`]
   ];
-  return `<div class="stats">
+  return `${aiCommandCenter('resumen')}<div class="stats">
     ${statCard('Clientes',state.data.clients.length,'Total registrados','◎','clientes')}
     ${statCard('Facturado',money(fact),'Sin movimientos','▤','cobrar')}
     ${statCard('Cobrado',money(cob),groupBreakdown(state.data.payments)||'Sin movimientos','▣','pagos')}
@@ -813,6 +815,156 @@ function employeeStatusBadge(status){
 function employeeOptions(selected=''){
   return `<option value="">Seleccionar empleado</option>${(state.data.employees||[]).map(e=>`<option value="${e.id}" ${e.id===selected?'selected':''}>${esc(e.name)}</option>`).join('')}`;
 }
+function normalizeAiText(text){ return String(text||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/\s+/g,' ').trim(); }
+function aiMoneyNumber(text){
+  const match = String(text||'').replace(/\./g,'').replace(/,/g,'.').match(/(?:\$|ars|pesos|debe|debo|pague|pago|cobro|cobrar|por)?\s*(\d+(?:\.\d+)?)/i);
+  return match ? Number(match[1]) : 0;
+}
+function aiNameAfter(text, keys){
+  const raw = String(text||'').trim().replace(/\s+/g,' ');
+  for(const key of keys){
+    const rx = new RegExp(`${key}\\s+(.+?)(?:\\s+(?:que|me|debe|debo|por|con|cuit|dni|tel|telefono|pague|pago|cobro|cobrar|deuda|factura|importe)\\b|$)`,'i');
+    const m = raw.match(rx);
+    if(m?.[1]) return m[1].replace(/[$\d.,]+/g,'').trim();
+  }
+  return '';
+}
+function aiFinancialSnapshot(){
+  const clientBalances = (state.data.clients||[]).map(c => {
+    const invoiced = (state.data.invoices||[]).filter(i=>i.client_id===c.id).reduce((a,r)=>a+toArs(r.amount,r.currency,r.exchange_rate),0);
+    const paid = (state.data.payments||[]).filter(p=>p.client_id===c.id).reduce((a,r)=>a+toArs(r.amount,r.currency,r.exchange_rate),0);
+    return {id:c.id,name:c.name,balance:Number(c.opening_balance||0)+invoiced-paid};
+  }).filter(x=>Math.abs(x.balance)>0).sort((a,b)=>b.balance-a.balance);
+  const supplierBalances = (state.data.suppliers||[]).map(s => {
+    const debt = (state.data.supplier_movements||[]).filter(i=>i.supplier_id===s.id).reduce((a,r)=>a+toArs(r.amount,r.currency,r.exchange_rate),0);
+    const paid = (state.data.supplier_payments||[]).filter(p=>p.supplier_id===s.id).reduce((a,r)=>a+toArs(r.amount,r.currency,r.exchange_rate),0);
+    return {id:s.id,name:s.name,balance:debt-paid};
+  }).filter(x=>Math.abs(x.balance)>0).sort((a,b)=>b.balance-a.balance);
+  const receivable = clientBalances.reduce((a,r)=>a+Math.max(0,r.balance),0);
+  const payable = supplierBalances.reduce((a,r)=>a+Math.max(0,r.balance),0);
+  const cashIn = sumArs(state.data.payments||[]);
+  const cashOut = sumArs(state.data.supplier_payments||[]);
+  return {clientBalances,supplierBalances,receivable,payable,cashIn,cashOut,net:cashIn-cashOut};
+}
+function aiAnswerFor(query){
+  const q = normalizeAiText(query);
+  const s = aiFinancialSnapshot();
+  if(!q) return state.ai.answer;
+  if(q.includes('quien me debe') || q.includes('me deben') || q.includes('clientes deben')){
+    const top = s.clientBalances.filter(x=>x.balance>0).slice(0,5);
+    if(!top.length) return 'No encontré clientes con saldo pendiente. Por ahora nadie te debe según los movimientos cargados.';
+    return `<b>Te deben ${money(s.receivable)}</b><br>${top.map((x,i)=>`${i+1}. ${esc(x.name)}: ${money(x.balance)}`).join('<br>')}`;
+  }
+  if(q.includes('cuanto debo') || q.includes('a pagar') || q.includes('debo a proveedores')){
+    const top = s.supplierBalances.filter(x=>x.balance>0).slice(0,5);
+    if(!top.length) return 'No encontré deuda pendiente con proveedores.';
+    return `<b>Debés ${money(s.payable)}</b><br>${top.map((x,i)=>`${i+1}. ${esc(x.name)}: ${money(x.balance)}`).join('<br>')}`;
+  }
+  if(q.includes('resumen') || q.includes('estado') || q.includes('situacion')){
+    return `<b>Resumen inteligente</b><br>Por cobrar: ${money(s.receivable)}<br>Por pagar: ${money(s.payable)}<br>Cobrado: ${money(s.cashIn)}<br>Pagado: ${money(s.cashOut)}<br>Flujo neto registrado: ${money(s.net)}`;
+  }
+  if(q.includes('empleado') || q.includes('sueldo')){
+    const e = employeeTotals();
+    return `<b>Empleados</b><br>Activos: ${e.active}<br>Sueldos pagados: ${money(e.paid)}<br>Sueldos pendientes: ${money(e.pending)}`;
+  }
+  return 'Puedo cargar clientes, proveedores, deudas, cobros y pagos desde una frase. También puedo responder: quién me debe, cuánto debo, resumen financiero o sueldos pendientes.';
+}
+function aiCommandCenter(mode='full'){
+  const s = aiFinancialSnapshot();
+  const compact = mode === 'resumen';
+  return `<div class="card ai-command"><div class="ai-command-inner"><div><span class="ai-eyebrow">✦ IA operativa</span><h2>${compact?'Preguntale a CUENTIX antes de entrar a mirar':'Copiloto CUENTIX'}</h2><p>Escribí una orden o pregunta y la IA carga datos, resume deudas y te lleva directo a lo importante.</p><div class="ai-input-row"><input id="aiPrompt" placeholder="Ej: cargá cliente Juan que debe 15000 / quién me debe más"><button type="button" data-ai-run>Resolver</button></div><div class="ai-suggestions"><button class="ai-chip" data-ai-suggest="quién me debe más">Quién me debe</button><button class="ai-chip" data-ai-suggest="cuánto debo a proveedores">Cuánto debo</button><button class="ai-chip" data-ai-suggest="resumen financiero">Resumen</button><button class="ai-chip" data-ai-suggest="cargá cliente Nuevo Cliente que debe 10000">Cargar cliente</button><button class="ai-chip" data-ai-suggest="agregá proveedor Proveedor Demo debo 12000">Cargar proveedor</button></div></div><div class="ai-oracle"><h3>Respuesta anticipada</h3><div class="ai-answer" id="aiAnswer">${state.ai.answer}</div><div class="ai-insights"><div class="ai-insight"><span>Por cobrar</span><b>${money(s.receivable)}</b></div><div class="ai-insight"><span>Por pagar</span><b>${money(s.payable)}</b></div></div></div></div></div>`;
+}
+function ia(){
+  const log = state.ai.log.slice(-6).reverse();
+  return `${aiCommandCenter('full')}<div class="card panel"><div class="toolbar"><h2>Acciones con IA</h2><div class="row"><button class="btn-secondary" data-ai-suggest="quién me debe más">Analizar clientes</button><button class="btn-secondary" data-ai-suggest="cuánto debo a proveedores">Analizar proveedores</button></div></div><div class="ai-capability-grid"><div class="ai-capability"><b>Carga automática</b><span class="small">Cliente, proveedor, deuda, cobro o pago desde lenguaje natural.</span></div><div class="ai-capability"><b>Respuesta previa</b><span class="small">Te dice el dato antes de navegar por tablas.</span></div><div class="ai-capability"><b>Acción directa</b><span class="small">Si entiende la orden, guarda el movimiento y actualiza CUENTIX.</span></div><div class="ai-capability"><b>Control financiero</b><span class="small">Resume por cobrar, por pagar, flujo neto y empleados.</span></div></div>${log.length?`<h2 style="font-size:18px;margin-top:22px">Últimas conversaciones</h2><div class="ai-log">${log.map(x=>`<div class="ai-message ${x.role}"><b>${x.role==='user'?'Usuario':'IA Cuentix'}</b>${x.text}</div>`).join('')}</div>`:emptyState('La IA está lista', 'Probá con: cargá cliente Martín que debe 25000, registrá cobro de Martín por 10000, o quién me debe más.', '✦')}</div>`;
+}
+async function findOrCreateClientByName(name){
+  const existing = (state.data.clients||[]).find(c=>normalizeAiText(c.name)===normalizeAiText(name));
+  if(existing) return existing;
+  const payload = {business_id:state.profile.business_id,name:name||'Cliente sin nombre',tax_id:null,phone:null,email:null,address:null,notes:'Creado por IA Cuentix',status:'pendiente',opening_balance:0};
+  const {data,error} = await supabase.from('clients').insert(payload).select('*').single();
+  if(error) throw error;
+  state.data.clients.unshift(data);
+  return data;
+}
+async function findOrCreateSupplierByName(name){
+  const existing = (state.data.suppliers||[]).find(s=>normalizeAiText(s.name)===normalizeAiText(name));
+  if(existing) return existing;
+  const payload = {business_id:state.profile.business_id,name:name||'Proveedor sin nombre',tax_id:null,phone:null,email:null,address:null,notes:'Creado por IA Cuentix'};
+  const {data,error} = await supabase.from('suppliers').insert(payload).select('*').single();
+  if(error) throw error;
+  state.data.suppliers.unshift(data);
+  return data;
+}
+async function executeAiCommand(text){
+  const q = normalizeAiText(text);
+  const amount = aiMoneyNumber(text);
+  if((q.includes('cliente') || q.includes('cargar cliente') || q.includes('agregar cliente')) && (q.includes('debe') || amount)){
+    const name = aiNameAfter(text,['cliente','cargá cliente','carga cliente','agregá cliente','agrega cliente']) || 'Cliente IA';
+    const client = await findOrCreateClientByName(name);
+    if(amount > 0){
+      const payload = {business_id:state.profile.business_id,client_id:client.id,reference:`IA-${Date.now()}`,issue_date:today(),due_date:today(),type:'Factura C',currency:'ARS',amount,exchange_rate:1,detail:`Carga creada por IA: ${text}`,status:'pendiente'};
+      const {data,error} = await supabase.from('invoices').insert(payload).select('*').single();
+      if(error) throw error;
+      state.data.invoices.unshift(data);
+    }
+    return `Listo: cargué el cliente <b>${esc(client.name)}</b>${amount?` con deuda de <b>${money(amount)}</b>`:''}.`;
+  }
+  if((q.includes('proveedor') || q.includes('agregar proveedor') || q.includes('cargar proveedor')) && (q.includes('debo') || q.includes('deuda') || amount)){
+    const name = aiNameAfter(text,['proveedor','cargá proveedor','carga proveedor','agregá proveedor','agrega proveedor']) || 'Proveedor IA';
+    const supplier = await findOrCreateSupplierByName(name);
+    if(amount > 0){
+      const payload = {business_id:state.profile.business_id,supplier_id:supplier.id,reference:`IA-${Date.now()}`,issue_date:today(),due_date:today(),type:'Factura',currency:'ARS',amount,detail:`Carga creada por IA: ${text}`,status:'pendiente'};
+      const {data,error} = await supabase.from('supplier_movements').insert(payload).select('*').single();
+      if(error) throw error;
+      state.data.supplier_movements.unshift(data);
+    }
+    return `Listo: cargué el proveedor <b>${esc(supplier.name)}</b>${amount?` con deuda de <b>${money(amount)}</b>`:''}.`;
+  }
+  if(q.includes('cobro') || q.includes('cobre') || q.includes('me pago') || q.includes('registrar cobro')){
+    const name = aiNameAfter(text,['de','cliente']) || (state.data.clients?.[0]?.name || 'Cliente IA');
+    const client = await findOrCreateClientByName(name);
+    const payload = {business_id:state.profile.business_id,client_id:client.id,payment_date:today(),method:'efectivo',currency:'ARS',amount:amount||0,exchange_rate:1,reference:`IA-${Date.now()}`,notes:`Cobro creado por IA: ${text}`};
+    const {data,error} = await supabase.from('payments').insert(payload).select('*').single();
+    if(error) throw error;
+    state.data.payments.unshift(data);
+    return `Registré un cobro de <b>${money(amount||0)}</b> para <b>${esc(client.name)}</b>.`;
+  }
+  if(q.includes('pague') || q.includes('pago proveedor') || q.includes('registrar pago proveedor')){
+    const name = aiNameAfter(text,['a','proveedor']) || (state.data.suppliers?.[0]?.name || 'Proveedor IA');
+    const supplier = await findOrCreateSupplierByName(name);
+    const payload = {business_id:state.profile.business_id,supplier_id:supplier.id,payment_date:today(),method:'efectivo',currency:'ARS',amount:amount||0,exchange_rate:1,reference:`IA-${Date.now()}`,notes:`Pago creado por IA: ${text}`};
+    const {data,error} = await supabase.from('supplier_payments').insert(payload).select('*').single();
+    if(error) throw error;
+    state.data.supplier_payments.unshift(data);
+    return `Registré un pago a proveedor de <b>${money(amount||0)}</b> para <b>${esc(supplier.name)}</b>.`;
+  }
+  return aiAnswerFor(text);
+}
+async function runAiFromInput(text){
+  const prompt = text || byId('aiPrompt')?.value || '';
+  if(!prompt.trim()) return;
+  state.ai.log.push({role:'user',text:esc(prompt)});
+  state.ai.answer = 'Analizando y ejecutando...';
+  const answerBox = byId('aiAnswer');
+  if(answerBox) answerBox.innerHTML = state.ai.answer;
+  try{
+    const answer = await executeAiCommand(prompt);
+    state.ai.answer = answer;
+    state.ai.log.push({role:'assistant',text:answer});
+    renderBusiness();
+  }catch(error){
+    state.ai.answer = `No pude ejecutar la acción: ${esc(error.message || error)}. Probá con una frase más directa o cargalo desde el formulario.`;
+    state.ai.log.push({role:'assistant',text:state.ai.answer});
+    renderBusiness();
+  }
+}
+function bindAiActions(){
+  document.querySelectorAll('[data-ai-run]').forEach(b=>b.onclick=()=>runAiFromInput());
+  document.querySelectorAll('[data-ai-suggest]').forEach(b=>b.onclick=()=>runAiFromInput(b.dataset.aiSuggest));
+  const prompt = byId('aiPrompt');
+  if(prompt) prompt.onkeydown = e => { if(e.key === 'Enter'){ e.preventDefault(); runAiFromInput(); } };
+}
 function empleados(){
   const sub = activeSubnav('empleados');
   const totals = employeeTotals();
@@ -964,6 +1116,7 @@ function bindBusinessActions(){
   const themeInlineCard = byId('themeInlineCard');
   if(themeInlineCard) themeInlineCard.onclick = toggleTheme;
   bindEmployeeActions();
+  bindAiActions();
 }
 
 function openForm(type,id){
